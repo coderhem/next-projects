@@ -23,7 +23,7 @@ export default function RootLayout({ children }) {
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
         />
       </head>
-      <body className={`antialiased`}>{children}</body>
+      <body className={`antialiased`} id="dark-mode">{children}</body>
     </html>
   );
 }

@@ -1,0 +1,63 @@
+.nav-wrapper .navbar{
+ @apply
+ hidden
+ lg:block
+}
+
+.nav-wrapper .nav-item {
+  @apply text-white
+hover:text-primary
+focus:text-primary
+active:text-primary
+transition-all
+duration-300
+relative
+before:absolute
+before:-bottom-1
+before:left-0
+before:right-0
+before:bg-primary
+before:w-0
+before:h-1
+before:rounded-b-xl
+before:transition-all
+before:duration-300
+hover:before:w-10/12
+focus:before:w-10/12
+active:before:w-10/12;
+}
+
+.nav-wrapper .hamburger{
+ @apply
+ cursor-pointer
+ flex
+ flex-col
+ items-center;
+}
+
+.nav-wrapper .hamburger.active span{
+ @apply
+ not-odd:hidden
+ first:rotate-45
+ first:translate-x-[1px]
+ first:translate-y-[2px]
+ last:-rotate-45
+ not-last:mb-0
+ last:translate-x-[1px]
+}
+
+.nav-wrapper .hamburger span{
+@apply
+lg:hidden
+flex
+flex-col
+not-last:mb-[6px]
+rounded-sm
+bg-white
+w-8
+h-[3px]
+not-odd:w-5
+group-hover:not-odd:w-8
+transition-all 
+duration-300;
+}

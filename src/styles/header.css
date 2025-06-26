@@ -1,0 +1,32 @@
+.stickyHeader .header{
+ @apply
+ fixed
+ transition-all
+ duration-300
+ right-0
+ top-0
+ left-0
+ z-10
+ bg-black
+ ;
+}
+
+
+.social-icon-wrapper .social-icon{
+ @apply
+ transition-all
+ duration-300
+ bg-transparent
+ border
+ border-white/50
+ flex
+justify-center
+items-center
+rounded-full
+size-8
+hover:bg-white
+hover:text-primary
+text-white/85
+focus:text-primary
+focus:bg-white
+}

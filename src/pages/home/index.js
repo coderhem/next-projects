@@ -10,7 +10,6 @@ import ProgressLine from '@/components/progressBar/progressLine';
 import OurProjects from '@/components/cards/ourProjects';
 import Image from 'next/image';
 
-
 const Homepage = () => {
   return (
     <div>
@@ -76,28 +75,32 @@ const Homepage = () => {
         {/* About Me */}
 
 
-        <section id="ourProjects" className="mb-20">
+        <section id="ourProjects" className="mb-20 w-full">
           <div className="container mb-20">
             <div className="text-center max-w-3xl mx-auto mb-10">
               <SectionTitle
                 titleText="Our"
                 orangeText="Projects"
-                titleDescription="We believe in building meaningful, results-driven digital experiences. Here are some of our recent projects that showcase our skills, creativity, and passion for technology.
-"
+                titleDescription="We believe in building meaningful, results-driven digital experiences. Here are some of our recent projects that showcase our skills, creativity, and passion for technology."
               />
             </div>
-            {jsonData.ourProjectData.map((item, index) => {
-              return (
-                <OurProjects key={index}
-                  imgName={item.projectImage}
-                  imgWidth={item.imgWidth}
-                  imgHeight={item.imgHeight}
-                  imgAlt={item.imgAlt}
-                  ctaText={item.ctaText}
-                  ctaLink={item.ctaLink}
-                />
-              )
-            })}
+            <Row>
+              {jsonData.ourProjectData.map((item, index) => {
+                return (
+                  <Col md={6} lg={4} className='mb-10 h-auto' key={index}>
+                    <OurProjects
+                      imgName={item.imgName}
+                      imgWidth={item.imgWidth}
+                      imgHeight={item.imgHeight}
+                      imgAlt={item.imgAlt}
+                      ctaText={item.ctaText}
+                      ctaLink={item.ctaLink}
+                      descText={item.descText}
+                    />
+                  </Col>
+                )
+              })}
+            </Row>
           </div>
         </section>
 

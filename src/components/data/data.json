@@ -39,13 +39,22 @@
   
   "ourProjectData": [
     {
-      "imgName": "/assets/images/web-designs-image-01.png",
+      "imgName": "/assets/images/web-designs-image.png",
       "imgWidth": "400",
       "imgHeight": "600",
       "imgAlt": "Featured Image",
       "ctaLink": "/home",
       "ctaText": "Project Name",
       "descText": "Developing custom software solutions tailored to your business needs, including backend services, APIs, and enterprise-level applications."
+    },
+    {
+      "imgName": "/assets/images/web-designs-image-03.png",
+      "imgWidth": "400",
+      "imgHeight": "600",
+      "imgAlt": "Featured Image Our Project",
+      "ctaLink": "/about",
+      "ctaText": "Project Name Id",
+      "descText": "Crafting unique brand identities including logo design, brand guidelines, and messaging to help your business stand out in the market."
     },
     {
       "imgName": "/assets/images/web-designs-image-01.png",

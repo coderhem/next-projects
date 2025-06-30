@@ -1,5 +1,8 @@
 import { Ubuntu, Outfit } from "next/font/google";
 import "./globals.css";
+import Header from "@/components/Header/header";
+import Footer from "@/components/footer/footer";
+import Hero from "@/components/Banner/hero";
 
 const ubuntuSans = Ubuntu({
   subsets: ['latin'],
@@ -13,7 +16,6 @@ const OutfitSans = Outfit({
   weight: ['400', '700'],
   variable: '--font-outfit',
 });
-
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${ubuntuSans.variable} ${OutfitSans.variable}`}>
@@ -23,7 +25,13 @@ export default function RootLayout({ children }) {
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
         />
       </head>
-      <body className={`antialiased`} id="dark-mode">{children}</body>
+      <body className={`antialiased`} id="dark-mode">
+        <div className="flex flex-col items-center justify-between min-h-screen">
+          <Header />
+          {children}
+          <Footer />
+        </div>
+      </body>
     </html>
   );
 }

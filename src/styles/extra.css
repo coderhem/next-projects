@@ -1,0 +1,5 @@
+.stretched-link{
+ @apply
+ before:absolute
+ before:inset-0
+}

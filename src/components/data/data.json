@@ -1,40 +1,60 @@
 {
-
-"serviceData" : [
-  {
-   "iconClass": "fa fa-code",
-   "serviceTitle": "Web Development",
-   "descText": "Building responsive, fast, and user-friendly websites using modern technologies like React, Next.js, and Tailwind CSS. From landing pages to complex web applications, we deliver quality digital experiences."
-  },
-  {
-   "iconClass": "fa fa-mobile",
-   "serviceTitle": "Mobile App Development",
-   "descText": "Creating intuitive and performant mobile apps for both Android and iOS platforms, ensuring seamless user engagement and cross-platform compatibility."
-  },
-  {
-   "iconClass": "fa fa-pencil",
-   "serviceTitle": "UI/UX Design",
-   "descText": "Designing visually appealing and user-centered interfaces that improve user experience and boost conversions. Includes wireframes, prototypes, and final designs."
-  },
-  {
-   "iconClass": "fa fa-paint-brush",
-   "serviceTitle": "Graphic Design",
-   "descText": "Offering creative design solutions such as logos, brochures, banners, social media graphics, and more, tailored to your brand identity."
-  },
-  {
-   "iconClass": "fa fa-bullhorn",
-   "serviceTitle": "Digital Marketing",
-   "descText": "Providing SEO, social media management, email marketing, and PPC campaigns to grow your online presence and reach your target audience effectively."
-  },
-  {
-   "iconClass": "fa fa-registered",
-   "serviceTitle": "Branding & Identity",
-   "descText": "Crafting unique brand identities including logo design, brand guidelines, and messaging to help your business stand out in the market."
-  },
-  {
-   "iconClass": "fa fa-cogs",
-   "serviceTitle": "Software Development",
-   "descText": "Developing custom software solutions tailored to your business needs, including backend services, APIs, and enterprise-level applications."
-  }
- ]
+  "serviceData": [
+    {
+      "iconClass": "fa fa-code",
+      "serviceTitle": "Web Development",
+      "descText": "Building responsive, fast, and user-friendly websites using modern technologies like React, Next.js, and Tailwind CSS. From landing pages to complex web applications, we deliver quality digital experiences."
+    },
+    {
+      "iconClass": "fa fa-mobile",
+      "serviceTitle": "Mobile App Development",
+      "descText": "Creating intuitive and performant mobile apps for both Android and iOS platforms, ensuring seamless user engagement and cross-platform compatibility."
+    },
+    {
+      "iconClass": "fa fa-pencil",
+      "serviceTitle": "UI/UX Design",
+      "descText": "Designing visually appealing and user-centered interfaces that improve user experience and boost conversions. Includes wireframes, prototypes, and final designs."
+    },
+    {
+      "iconClass": "fa fa-paint-brush",
+      "serviceTitle": "Graphic Design",
+      "descText": "Offering creative design solutions such as logos, brochures, banners, social media graphics, and more, tailored to your brand identity."
+    },
+    {
+      "iconClass": "fa fa-bullhorn",
+      "serviceTitle": "Digital Marketing",
+      "descText": "Providing SEO, social media management, email marketing, and PPC campaigns to grow your online presence and reach your target audience effectively."
+    },
+    {
+      "iconClass": "fa fa-registered",
+      "serviceTitle": "Branding & Identity",
+      "descText": "Crafting unique brand identities including logo design, brand guidelines, and messaging to help your business stand out in the market."
+    },
+    {
+      "iconClass": "fa fa-cogs",
+      "serviceTitle": "Software Development",
+      "descText": "Developing custom software solutions tailored to your business needs, including backend services, APIs, and enterprise-level applications."
+    }
+  ],
+  
+  "ourProjectData": [
+    {
+      "imgName": "/assets/images/web-designs-image-01.png",
+      "imgWidth": "400",
+      "imgHeight": "600",
+      "imgAlt": "Featured Image",
+      "ctaLink": "/home",
+      "ctaText": "Project Name",
+      "descText": "Developing custom software solutions tailored to your business needs, including backend services, APIs, and enterprise-level applications."
+    },
+    {
+      "imgName": "/assets/images/web-designs-image-01.png",
+      "imgWidth": "400",
+      "imgHeight": "600",
+      "imgAlt": "Featured Image Our Project",
+      "ctaLink": "/about",
+      "ctaText": "Project Name Id",
+      "descText": "Crafting unique brand identities including logo design, brand guidelines, and messaging to help your business stand out in the market."
+    }
+  ]
 }

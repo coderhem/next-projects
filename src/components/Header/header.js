@@ -1,6 +1,7 @@
 'use client';
 import React, { useState, useEffect, useRef } from 'react';
 import NavBar from '../navbar/nav';
+import headerLogo from '../../assets/images/header-logo.png'
 
 const Header = () => {
  const [isOpen, setIsOpen] = useState(false);
@@ -48,8 +49,8 @@ const Header = () => {
     <div className='header transition-all duration-500 py-5 max-sm:pt-20 absolute top-2 left-0 right-0 z-10 border-b-2 border-white/10'>
      <div className="container">
       <div className="flex flex-wrap justify-between items-center">
-       <div className="logo">
-        <h1 className="h5">LOGO</h1>
+       <div className="max-w-40">
+       <img src={headerLogo.src} width={80} height={80} alt="Header Logo Image" loading='lazy'/>
        </div>
        <NavBar />
        <div className="flex gap-2 items-center">

@@ -9,6 +9,8 @@ import aboutFeature from "@/assets/images/banner-image.png"
 import ProgressLine from '@/components/progressBar/progressLine';
 import OurProjects from '@/components/cards/ourProjects';
 import Education from '@/components/cards/education';
+import Experience from '@/components/cards/experience';
+import CounterCard from '@/components/cards/counterCard';
 
 
 const Homepage = () => {
@@ -129,7 +131,52 @@ const Homepage = () => {
             </Row>
           </div>
         </section>
+        {/* Education */}
 
+        <section className="mt-20 bg-[url('../assets/images/counter-bg.jpg')] w-full relative z-[1] before:absolute before:inset-0 before:z-[-1] before:bg-black/60">
+          <div className="container">
+            <Row>
+              <Col>
+                <CounterCard />                
+              </Col>
+            </Row>
+          </div>
+        </section>
+
+        <section id="experience" className='pb-14 lg:pb-20 w-full'>
+          <div className="container">
+            <div className="mb-14 relative before:absolute before:bottom-0 before:left-0 before:right-0 before:bg-gradient-to-l before:from-transparent before:via-primary before:to-transparent before:z-[1] before:w-full before:h-[2px] pb-2">
+              <SectionTitle
+                titleText="Experience"
+              />
+            </div>
+            <Row>
+              {jsonData.experienceData.map((item, index) => {
+                return (
+                  <Col md={6} key={index} className='mb-8'>
+                    <Experience
+                      year={item.year}
+                      postName={item.postName}
+                      postDescription={item.postDescription}
+                      companyName={item.companyName}
+                      siteName={item.siteName}
+                      siteURL={item.siteURL}
+                      targetBlank={item.targetBlank}
+                      timeDuration={item.timeDuration}
+                    />
+                  </Col>
+                )
+              })}
+            </Row>
+          </div>
+        </section>
+        {/* /Experience */}
+
+        <section id='experience' className='pb-14 lg:pb-20'>
+          <div className="container">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime vero inventore, mollitia sapiente quod architecto iusto magnam odio accusantium ab enim ipsum exercitationem culpa saepe praesentium aut nihil sed atque?</p>
+          </div>
+        </section>
 
       </RootLayout>
 

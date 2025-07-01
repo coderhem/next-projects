@@ -36,7 +36,6 @@
       "descText": "Developing custom software solutions tailored to your business needs, including backend services, APIs, and enterprise-level applications."
     }
   ],
-  
   "ourProjectData": [
     {
       "imgName": "/assets/images/web-designs-image.png",
@@ -66,25 +65,56 @@
       "descText": "Crafting unique brand identities including logo design, brand guidelines, and messaging to help your business stand out in the market."
     }
   ],
-  
-  "educationData" : [
+  "educationData": [
     {
-      "year" : "2016",
-      "degreeName" : "Computer Commerce",
-      "achivedGrade" : "Grade : Running",
-      "campusName" : "Indian Primary School"
+      "year": "2016",
+      "degreeName": "Computer Commerce",
+      "achivedGrade": "Grade : Running",
+      "campusName": "Indian Primary School"
     },
     {
-      "year" : "2020",
-      "degreeName" : "Bachelor of Computer Application",
-      "achivedGrade" : "Grade : Running",
-      "campusName" : "Indian Primary School"
+      "year": "2020",
+      "degreeName": "Bachelor of Computer Application",
+      "achivedGrade": "Grade : Running",
+      "campusName": "Indian Primary School"
     },
     {
-      "year" : "2022",
-      "degreeName" : "Master of Computer Application",
-      "achivedGrade" : "Grade : Running",
-      "campusName" : "Indian Primary School"
+      "year": "2022",
+      "degreeName": "Master of Computer Application",
+      "achivedGrade": "Grade : Running",
+      "campusName": "Indian Primary School"
+    }
+  ],
+  "experienceData": [
+    {
+      "year": "2010-2011",
+      "postName": "Intern",
+      "postDescription": "Passionate full-stack developer crafting responsive, user-centric web applications with clean code and creative thinking.",
+      "companyName": "SmartSites Nepal",
+      "siteName": "Visit",
+      "siteURL": "https://www.smartsites.com/",
+      "targetBlank" : "_blank",
+      "timeDuration": "Duration : 1 Years"
+    },
+    {
+      "year": "2011-2013",
+      "postName": "Junior Software Engineer",
+      "postDescription": "Building powerful digital experiences using modern technologies. I turn ideas into interactive, scalable web apps.",
+      "companyName": "SmartSites Nepal",
+      "siteName": "Visit",
+      "siteURL": "https://www.smartsites.com/",
+      "targetBlank": "_blank",
+      "timeDuration": "Duration : 3 Years"
+    },
+    {
+      "year": "2013-2025",
+      "postName": "Senior Engineer",
+      "postDescription": "From frontend finesse to backend logic—here’s where design meets performance.",
+      "companyName": "SmartSites Nepal",
+      "siteName": "Visit",
+      "siteURL": "https://www.smartsites.com/",
+      "targetBlank": "_blank",
+      "timeDuration": "Duration : 12 Years"
     }
   ]
 }

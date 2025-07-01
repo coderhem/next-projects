@@ -8,7 +8,8 @@ import jsonData from '@/components/data/data.json';
 import aboutFeature from "@/assets/images/banner-image.png"
 import ProgressLine from '@/components/progressBar/progressLine';
 import OurProjects from '@/components/cards/ourProjects';
-import Image from 'next/image';
+import Education from '@/components/cards/education';
+
 
 const Homepage = () => {
   return (
@@ -96,6 +97,31 @@ const Homepage = () => {
                       ctaText={item.ctaText}
                       ctaLink={item.ctaLink}
                       descText={item.descText}
+                    />
+                  </Col>
+                )
+              })}
+            </Row>
+          </div>
+        </section>
+        {/* Our Projects */}
+
+        <section id="education" className='pb-14 lg:pb-20 w-full'>
+          <div className="container">
+            <div className="mb-14 relative before:absolute before:bottom-0 before:left-0 before:right-0 before:bg-gradient-to-l before:from-transparent before:via-primary before:to-transparent before:z-[1] before:w-full before:h-[2px] pb-2">
+              <SectionTitle
+                titleText="Education"
+              />
+            </div>
+            <Row>
+              {jsonData.educationData.map((item, index) => {
+                return (
+                  <Col md={6} key={index} className='mb-8'>
+                    <Education
+                      year={item.year}
+                      degreeName={item.degreeName}
+                      campusName={item.campusName}
+                      achivedGrade={item.achivedGrade}
                     />
                   </Col>
                 )

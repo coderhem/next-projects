@@ -65,5 +65,26 @@
       "ctaText": "Project Name Id",
       "descText": "Crafting unique brand identities including logo design, brand guidelines, and messaging to help your business stand out in the market."
     }
+  ],
+  
+  "educationData" : [
+    {
+      "year" : "2016",
+      "degreeName" : "Computer Commerce",
+      "achivedGrade" : "Grade : Running",
+      "campusName" : "Indian Primary School"
+    },
+    {
+      "year" : "2020",
+      "degreeName" : "Bachelor of Computer Application",
+      "achivedGrade" : "Grade : Running",
+      "campusName" : "Indian Primary School"
+    },
+    {
+      "year" : "2022",
+      "degreeName" : "Master of Computer Application",
+      "achivedGrade" : "Grade : Running",
+      "campusName" : "Indian Primary School"
+    }
   ]
 }

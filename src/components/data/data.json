@@ -116,5 +116,23 @@
       "targetBlank": "_blank",
       "timeDuration": "Duration : 12 Years"
     }
+  ],
+  "counterData": [
+    {
+      "targetTitle" : "Achivements",
+      "targetValue" : "5"
+    },
+    {
+      "targetTitle" : "Projects",
+      "targetValue" : "32"
+    },
+    {
+      "targetTitle" : "Travelling Places",
+      "targetValue" : "190"
+    },
+    {
+      "targetTitle" : "Cup of Tea",
+      "targetValue" : "500"
+    }
   ]
 }

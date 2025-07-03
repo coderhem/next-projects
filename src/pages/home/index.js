@@ -15,7 +15,7 @@ import CounterCard from '@/components/cards/counterCard';
 
 const Homepage = () => {
   return (
-    <div>
+    <>
       <RootLayout>
         <Hero />
         <section id="ourServices" className="mb-20">
@@ -133,15 +133,31 @@ const Homepage = () => {
         </section>
         {/* Education */}
 
-        <section className="mt-20 bg-[url('../assets/images/counter-bg.jpg')] w-full relative z-[1] before:absolute before:inset-0 before:z-[-1] before:bg-black/60">
+        <section className="my-20 py-14 lg:py-28 bg-[url('../assets/images/counter-bg.jpg')] bg-no-repeat bg-cover bg-center w-full relative z-[1] before:absolute before:inset-0 before:z-[-1] before:bg-black/50">
           <div className="container">
             <Row>
-              <Col>
-                <CounterCard />                
+              {jsonData.counterData.map((item, index) => {
+                return (
+                  <Col key={index} sm={6} md={4} lg={3} className='mb-10'>
+                    <CounterCard
+                      targetTitle={item.targetTitle}
+                      targetValue={item.targetValue}
+                    />
+                  </Col>
+                )
+              })}
+              <Col lg={12}>
+                <div className="text-center mt-10">
+                  <h2>More projects on <span className='text-primary'>Github</span></h2>
+                  <span className='font-bold text-2xl block mb-10'>I love to solve coding problems & creating new websites
+                  </span>
+                  <a href="#" className='btn btn-primary rounded-full' target='_blank'>Know More</a>
+                </div>
               </Col>
             </Row>
           </div>
         </section>
+        {/* Projects and Achivements */}
 
         <section id="experience" className='pb-14 lg:pb-20 w-full'>
           <div className="container">
@@ -171,16 +187,9 @@ const Homepage = () => {
           </div>
         </section>
         {/* /Experience */}
-
-        <section id='experience' className='pb-14 lg:pb-20'>
-          <div className="container">
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime vero inventore, mollitia sapiente quod architecto iusto magnam odio accusantium ab enim ipsum exercitationem culpa saepe praesentium aut nihil sed atque?</p>
-          </div>
-        </section>
-
       </RootLayout>
 
-    </div>
+    </>
   )
 }
 

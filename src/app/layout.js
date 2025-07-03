@@ -1,8 +1,7 @@
 import { Ubuntu, Outfit } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header/header";
-import Footer from "@/components/footer/footer";
-import Hero from "@/components/Banner/hero";
+import { ThemeProvider } from "next-themes";
 
 const ubuntuSans = Ubuntu({
   subsets: ['latin'],
@@ -25,11 +24,12 @@ export default function RootLayout({ children }) {
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
         />
       </head>
-      <body className={`antialiased`} id="dark-mode">
+      <body className={`antialiased`}>
         <div className="flex flex-col items-center justify-between min-h-screen">
           <Header />
-          {children}
-          <Footer />
+          <ThemeProvider attribute="class" enableSystem defaultTheme="system">
+            {children}
+          </ThemeProvider>
         </div>
       </body>
     </html>

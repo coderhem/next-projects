@@ -20,14 +20,13 @@
     @apply block;
   }
 
-  body.dark-mode a {
+  html.light a {
     @apply !text-black
     hover:!text-primary;
   }
 
-  .toggle-btn{
-    @apply
-    bg-black/5 
+  .toggle-btn {
+    @apply bg-black/5 
     border 
     border-white/60 
     text-white 
@@ -42,25 +41,30 @@
     focus:text-black 
     transition-all 
     duration-300 
-    relative
+    relative;
   }
 
-  #dark-mode.dark-mode .hamburger span {
-    @apply !bg-black;
+  html.light #achivements {
+    @apply text-white;
   }
 
-  body#dark-mode.dark-mode {
-    @apply !bg-gray-200
-    !text-black
-    !border-black;
+  html.light #education .educard {
+    @apply !bg-black/20;
   }
-  body#dark-mode.dark-mode .navbarActive {
-    @apply !bg-white
-    !text-white;
+  html.light #ourProjects .projectCard {
+    @apply !bg-black/20 text-black;
   }
-  body#dark-mode.dark-mode .stickyHeader .header {
-    @apply !bg-gray-200
-    shadow-[0_0_15px_1px_rgba(0,0,0,0.1)]
-    !text-white;
+  html.light #ourProjects .projectCard a {
+    @apply !text-primary;
+  }
+  html.light #aboutMe .aboutFeatureImg {
+    @apply before:!bg-black/30;
+  }
+  html.light #aboutMe .aboutContent small,
+  html.light #aboutMe .aboutContent .percentage {
+    @apply !text-black;
+  }
+  html.light #aboutMe .lineBg {
+    @apply !bg-black/30;
   }
 }

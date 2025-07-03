@@ -12,7 +12,7 @@ const Education = (
  return (
   <>
    {(year || degreeName || campusName || achivedGrade) &&
-    <div className="h-full bg-white/10 p-5 rounded-lg border border-primary/20">
+    <div className="h-full bg-white/10 p-5 rounded-lg border border-primary/20 educard">
      {year &&
       <div className="text-primary mb-3">
        <h2>{year}</h2>

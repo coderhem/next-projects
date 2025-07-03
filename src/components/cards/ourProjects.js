@@ -21,7 +21,7 @@ const OurProjects = (
 
      </div>
      {(ctaLink || descText || ctaText) &&
-      <div className="p-5 bg-white/10 [&_a]:pb-3 rounded-b-lg">
+      <div className="p-5 bg-white/10 [&_a]:pb-3 rounded-b-lg projectCard">
        {ctaLink &&
         <a href={ctaLink} className='stretched-link'>{ctaText}</a>
        }

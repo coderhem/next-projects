@@ -23,9 +23,9 @@ const ProgressLine = ({ progress, label }) => {
   <div className="mt-4">
    <div className="flex justify-between mb-2">
     <small className="text-white/70 text-xs font-semibold block">{label}</small>
-    <div className="text-white/70 text-sm">{count}%</div>
+    <div className="text-white/70 text-sm percentage">{count}%</div>
    </div>
-   <div className="bg-white/20 h-5 rounded-full overflow-hidden relative">
+   <div className="bg-white/20 h-5 rounded-full overflow-hidden relative lineBg">
     <div
      className="bg-primary h-full transition-all duration-700 ease-linear rounded-full"
      style={{ width: `${count}%` }} />

@@ -55,11 +55,11 @@ const Homepage = () => {
               />
             </div>
             <div className="flex flex-wrap items-end -mx-3">
-              <div className="w-full lg:w-1/2 px-3 relative before:absolute 
+              <div className="aboutFeatureImg w-full lg:w-1/2 px-3 relative before:absolute 
                 before:left-1/2 before:-translate-x-1/2 before:right-0 before:bottom-0 before:z-[-1] before:bg-white/30 before:h-9/12 before:w-9/12 before:rounded-tr-full before:rounded-tl-full flex justify-center max-lg:mb-10">
                 <img src={aboutFeature.src} width={400} height={400} alt="About Us Featured Image" loading="lazy" />
               </div>
-              <div className="w-full lg:w-1/2 px-3">
+              <div className="w-full lg:w-1/2 px-3 aboutContent">
                 <p>I’m Govind Sharma, a passionate and detail-oriented frontend developer dedicated to crafting clean, scalable, and responsive web applications. My journey into web development began with a deep curiosity about how digital experiences are built. Over the years, I’ve honed my skills in HTML, CSS, JavaScript, React, and Next.js — tools I now use daily to create modern, high-performance interfaces.
                 </p>
                 <p>
@@ -76,7 +76,6 @@ const Homepage = () => {
 
         </section>
         {/* About Me */}
-
 
         <section id="ourProjects" className="mb-20 w-full">
           <div className="container mb-20">
@@ -133,7 +132,7 @@ const Homepage = () => {
         </section>
         {/* Education */}
 
-        <section className="my-20 py-14 lg:py-28 bg-[url('../assets/images/counter-bg.jpg')] bg-no-repeat bg-cover bg-center w-full relative z-[1] before:absolute before:inset-0 before:z-[-1] before:bg-black/50">
+        <section id='achivements' className="my-20 py-14 lg:py-28 bg-[url('../assets/images/counter-bg.jpg')] bg-no-repeat bg-cover bg-center w-full relative z-[1] before:absolute before:inset-0 before:z-[-1] before:bg-black/50">
           <div className="container">
             <Row>
               {jsonData.counterData.map((item, index) => {
@@ -187,8 +186,8 @@ const Homepage = () => {
           </div>
         </section>
         {/* /Experience */}
-      </RootLayout>
 
+      </RootLayout>
     </>
   )
 }

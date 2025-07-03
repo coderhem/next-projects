@@ -2,22 +2,23 @@
 import React, { useState, useEffect, useRef } from 'react';
 import NavBar from '../navbar/nav';
 import headerLogo from '../../assets/images/header-logo.png'
+import { ThemeToggle } from '@/app/theme';
 
 const Header = () => {
- const [isOpen, setIsOpen] = useState(false);
+ // const [isOpen, setIsOpen] = useState(false);
 
- useEffect(() => {
-  const body = document.body;
-  if (isOpen) {
-   body.classList.add('dark-mode');
-  } else {
-   body.classList.remove('dark-mode');
-  }
- }, [isOpen]);
+ // useEffect(() => {
+ //  const body = document.body;
+ //  if (isOpen) {
+ //   body.classList.add('dark-mode');
+ //  } else {
+ //   body.classList.remove('dark-mode');
+ //  }
+ // }, [isOpen]);
 
- const toggleTheme = () => {
-  setIsOpen(prev => !prev);
- };
+ // const toggleTheme = () => {
+ //  setIsOpen(prev => !prev);
+ // };
 
 
  // Sticky Header
@@ -50,19 +51,22 @@ const Header = () => {
      <div className="container">
       <div className="flex flex-wrap justify-between items-center">
        <div className="max-w-40">
-       <img src={headerLogo.src} width={80} height={80} alt="Header Logo Image" loading='lazy'/>
+        <a href="#home">
+         <img src={headerLogo.src} width={80} height={80} alt="Header Logo Image" loading='lazy' />
+        </a>
        </div>
        <NavBar />
        <div className="flex gap-2 items-center">
-        <a href="#" className="btn btn-primary max-sm:absolute max-sm:top-0 max-sm:left-0 max-sm:right-0 max-sm:w-full max-sm:rounded-none"
+        <a href="tel:9851042367" className="btn btn-primary max-sm:absolute max-sm:top-0 max-sm:left-0 max-sm:right-0 max-sm:w-full max-sm:rounded-none"
         >
          Hire Me
         </a>
-        <a onClick={toggleTheme} className="toggle-btn">
+        {/* <a onClick={toggleTheme} className="toggle-btn">
          <i className={`fa before:text-sm ${isOpen ? 'fa-moon-o' : 'fa-sun-o'}`}
           aria-hidden="true"
          ></i>
-        </a>
+        </a> */}
+        <ThemeToggle/>
        </div>
       </div>
      </div>

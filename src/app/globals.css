@@ -9,14 +9,10 @@
 @import "../styles/extra.css";
 
 :root {
-  --background: #121212;
-  --foreground: #CBCBCB;
   font-family: var(--font-ubuntu);
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
   --color-primary: #ff7601;
   --color-secondary: #00809d;
   --color-red: #ff0000;

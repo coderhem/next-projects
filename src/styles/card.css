@@ -1,0 +1,6 @@
+html.light .project-card{
+ @apply
+ border
+ border-primary
+ rounded-b-lg
+}

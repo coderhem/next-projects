@@ -11,6 +11,15 @@
  ;
 }
 
+html.light .header{
+ @apply
+ shadow-lg
+}
+html.light .stickyHeader .header{
+ @apply
+bg-white
+shadow-xl
+}
 
 .social-icon-wrapper .social-icon{
  @apply

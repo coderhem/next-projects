@@ -1,10 +1,12 @@
 'use client';
-import Footer from "@/components/footer/footer";
+import Footer from "@/components/Footer/footer";
+import Header from "@/components/Header/header";
 import Homepage from "@/pages/home";
 
 export default function Home() {
   return (
     <main className="w-full h-full">
+      <Header />
       <Homepage />
       <Footer />
     </main>

@@ -61,3 +61,14 @@ group-hover:not-odd:w-8
 transition-all 
 duration-300;
 }
+
+html.light .nav-wrapper .hamburger span{
+  @apply
+  bg-black 
+}
+
+html.light .toggle-btn{
+  @apply
+  bg-black/20
+  text-primary
+}

@@ -32,7 +32,7 @@ const CounterCard = (
  return (
   <>
    {targetTitle &&
-    <div className="bg-black text-center h-full p-5 max-w-2xs rounded text-primary [&_p]:text-white/80 min-h-36">
+    <div className="bg-black text-center h-full p-5 sm:max-w-2xs rounded text-primary [&_p]:text-white/80 min-h-36">
      <h2>{counter}</h2>
      <p>{targetTitle}</p>
     </div>

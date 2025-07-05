@@ -1,9 +1,22 @@
-'use client';
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react';
 
 const NavBar = () => {
-
  const [isOpen, setIsOpen] = useState(false);
+ const [topOffset, setTopOffset] = useState(90); // fallback value
+
+ useEffect(() => {
+  const updateTop = () => {
+   const header = document.querySelector('.header'); // make sure this class exists
+   if (header) {
+    setTopOffset(header.offsetHeight);
+   }
+  };
+
+  updateTop(); // on load
+  window.addEventListener('resize', updateTop);
+  return () => window.removeEventListener('resize', updateTop);
+ }, []);
+
  return (
   <>
    <nav className='nav-wrapper'>
@@ -16,18 +29,17 @@ const NavBar = () => {
      </ul>
     </div>
 
-    {/* Hamburger Icon */}
-    <div className={`hamburger group cursor-pointer ${isOpen ? 'active' : ''}`}
+    <div
+     className={`hamburger group cursor-pointer ${isOpen ? 'active' : ''}`}
      onClick={() => setIsOpen(!isOpen)}
     >
-     <span></span>
-     <span></span>
-     <span></span>
+     <span></span><span></span><span></span>
     </div>
 
-    {/* Nav Menu */}
-    <div className={`navbarActive bg-black pt-5 transition-all duration-300 ease-in-out fixed h-full top-[135px] sm:top-[90px]left-0 right-0 w-full  shadow-md z-10 ${isOpen ? 'translate-x-0 top-[135px] sm:top-[90px]' : '-translate-x-full'
-     }`}>
+    <div
+     className={`navbarActive bg-black pt-5 transition-all duration-300 ease-in-out fixed h-full left-0 right-0 w-full shadow-md z-10 ${isOpen ? 'translate-x-0' : '-translate-x-full'}`}
+     style={{ top: `${topOffset}px` }}
+    >
      <div className="container nav-wrapper">
       <ul className='flex flex-col gap-7'>
        <li><a href="#" className="nav-item">Home</a></li>
@@ -37,9 +49,9 @@ const NavBar = () => {
       </ul>
      </div>
     </div>
-   </nav >
+   </nav>
   </>
- )
-}
+ );
+};
 
 export default NavBar;

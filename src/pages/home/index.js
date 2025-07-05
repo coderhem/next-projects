@@ -1,12 +1,12 @@
 import RootLayout from '@/app/layout';
 import Hero from '@/components/Banner/hero';
 import InfoCard from '@/components/cards/infoCard';
-import SectionTitle from '@/components/sectionTitle/sectionTitle';
+import SectionTitle from '@/components/SectionTitle/sectionTitle';
 import React from 'react'
 import { Col, Row } from 'react-grid-system';
 import jsonData from '@/components/data/data.json';
 import aboutFeature from "@/assets/images/banner-image.png"
-import ProgressLine from '@/components/progressBar/progressLine';
+import ProgressLine from '@/components/ProgressBar/progressLine';
 import OurProjects from '@/components/cards/ourProjects';
 import Education from '@/components/cards/education';
 import Experience from '@/components/cards/experience';
@@ -44,8 +44,8 @@ const Homepage = () => {
         </section>
         {/* Services */}
 
-        <section id="aboutMe" className="mb-20">
-          <div className="container mb-20">
+        <section id="aboutMe" className="pb-14 lg:pb-20">
+          <div className="container">
             <div className="text-center max-w-3xl mx-auto mb-10">
               <SectionTitle
                 titleText="About"
@@ -77,8 +77,8 @@ const Homepage = () => {
         </section>
         {/* About Me */}
 
-        <section id="ourProjects" className="mb-20 w-full">
-          <div className="container mb-20">
+        <section id="ourProjects" className="mb-10 md:mb-14 lg:mb-20 w-full">
+          <div className="container">
             <div className="text-center max-w-3xl mx-auto mb-10">
               <SectionTitle
                 titleText="Our"
@@ -86,7 +86,7 @@ const Homepage = () => {
                 titleDescription="We believe in building meaningful, results-driven digital experiences. Here are some of our recent projects that showcase our skills, creativity, and passion for technology."
               />
             </div>
-            <Row>
+            <Row justify='center'>
               {jsonData.ourProjectData.map((item, index) => {
                 return (
                   <Col md={6} lg={4} className='mb-10 h-auto' key={index}>
@@ -109,12 +109,12 @@ const Homepage = () => {
 
         <section id="education" className='pb-14 lg:pb-20 w-full'>
           <div className="container">
-            <div className="mb-14 relative before:absolute before:bottom-0 before:left-0 before:right-0 before:bg-gradient-to-l before:from-transparent before:via-primary before:to-transparent before:z-[1] before:w-full before:h-[2px] pb-2">
+            <div className="relative before:absolute before:bottom-0 before:left-0 before:right-0 before:bg-gradient-to-l before:from-transparent before:via-primary before:to-transparent before:z-[1] before:w-full before:h-[2px] pb-2">
               <SectionTitle
                 titleText="Education"
               />
             </div>
-            <Row>
+            <Row justify='center'>
               {jsonData.educationData.map((item, index) => {
                 return (
                   <Col md={6} key={index} className='mb-8'>
@@ -134,7 +134,7 @@ const Homepage = () => {
 
         <section id='achivements' className="my-20 py-14 lg:py-28 bg-[url('../assets/images/counter-bg.jpg')] bg-no-repeat bg-cover bg-center w-full relative z-[1] before:absolute before:inset-0 before:z-[-1] before:bg-black/50">
           <div className="container">
-            <Row>
+            <Row justify='center'>
               {jsonData.counterData.map((item, index) => {
                 return (
                   <Col key={index} sm={6} md={4} lg={3} className='mb-10'>
@@ -165,7 +165,7 @@ const Homepage = () => {
                 titleText="Experience"
               />
             </div>
-            <Row>
+            <Row justify='center'>
               {jsonData.experienceData.map((item, index) => {
                 return (
                   <Col md={6} key={index} className='mb-8'>

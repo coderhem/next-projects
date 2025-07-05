@@ -1,7 +1,8 @@
 'use client';
 import React, { useState, useEffect, useRef } from 'react';
-import NavBar from '../navbar/nav';
-import headerLogo from '../../assets/images/header-logo.png'
+import NavBar from '../Navbar/nav';
+import headerLogo from '../../assets/images/header-logo-white.png'
+import headerLogoBlack from '../../assets/images/header-logo-black.png'
 import { ThemeToggle } from '@/app/theme';
 
 const Header = () => {
@@ -51,8 +52,11 @@ const Header = () => {
      <div className="container">
       <div className="flex flex-wrap justify-between items-center">
        <div className="max-w-40">
-        <a href="#home">
+        <a href="#home" className='white-logo'>
          <img src={headerLogo.src} width={80} height={80} alt="Header Logo Image" loading='lazy' />
+        </a>
+        <a href="#home" className='black-logo'>
+         <img src={headerLogoBlack.src} width={80} height={80} alt="Header Logo Image" loading='lazy' />
         </a>
        </div>
        <NavBar />

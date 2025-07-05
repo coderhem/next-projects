@@ -67,4 +67,20 @@
   html.light #aboutMe .lineBg {
     @apply !bg-black/30;
   }
+  html.dark .header .white-logo img{
+    @apply 
+    block;
+  }
+  html.light .header .black-logo img{
+    @apply 
+    block;
+  }
+  html.light .header .white-logo img{
+    @apply 
+    hidden;
+  }
+  html.dark .header .black-logo img{
+    @apply 
+    hidden;
+  }
 }

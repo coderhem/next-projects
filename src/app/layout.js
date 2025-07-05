@@ -26,7 +26,6 @@ export default function RootLayout({ children }) {
       </head>
       <body className={`antialiased`}>
         <div className="flex flex-col items-center justify-between min-h-screen">
-          <Header />
           <ThemeProvider attribute="class" enableSystem defaultTheme="system">
             {children}
           </ThemeProvider>

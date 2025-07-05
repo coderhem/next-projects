@@ -14,7 +14,7 @@ const OurProjects = (
 ) => {
  return (
   <>
-   <div className="h-full before:bg-primary/10">
+   <div className="project-card h-full before:bg-primary/10">
     <div className="rounded-3xl relative before:absolute before:inset-0  before:blur-3xl before:z-[-1] group h-full">
      <div className="min-h-80 max-h-80 overflow-hidden group-hover:[&_img]:scale-105 [&_img]:transition-all [&_img]:duration-500 [&_img]:w-full">
       <img src={imgName} width={imgWidth} height={imgHeight} alt={imgAlt} loading='lazy' />

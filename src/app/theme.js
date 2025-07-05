@@ -7,11 +7,11 @@ export function ThemeToggle() {
 
  return (
   <a
-   onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+   onClick={() => setTheme(theme === "light" ? "dark" : "light")}
    className="toggle-btn"
   >
    <i
-    className={`fa before:text-sm ${theme === 'dark' ? 'fa-moon-o' : 'fa-sun-o'}`}
+    className={`fa before:text-sm ${theme === 'dark' ? 'fa-sun-o' : 'fa-moon-o'}`}
     aria-hidden="true"
    ></i>
   </a>

@@ -1,0 +1,12 @@
+html.light .hero .social-icon{
+@apply
+border-primary
+bg-black/5
+}
+
+html.light .hero .heroImage{
+@apply
+before:bg-primary/50
+overflow-hidden
+}
+

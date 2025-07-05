@@ -7,6 +7,7 @@
 @import "../styles/hero.css";
 @import "../styles/header.css";
 @import "../styles/extra.css";
+@import "../styles/card.css";
 
 :root {
   font-family: var(--font-ubuntu);

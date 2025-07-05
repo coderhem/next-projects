@@ -32,8 +32,7 @@ const Hero = (
 ) => {
   return (
     <>
-
-      <div className="relative py-40">
+      <div className="hero relative pb-10 lg:pb-28 pt-52">
         <div className="container [&_h1]:text-primary">
           <div className="flex justify-between items-center flex-wrap lg:-mx-5">
             <div className="w-full lg:w-8/12 lg:px-5 relative z-[1] before:absolute before:z-[-1] before:bg-primary/10 before:size-96 before:top-0 before:left-0 before:rounded-full before:blur-[100px]">
@@ -63,7 +62,7 @@ const Hero = (
                 })}
               </div>
             </div>
-            <div className="w-full lg:w-4/12 lg:px-5 relative before:absolute before:bg-white/15 before:size-80 xl:before:size-96 before:left-0 lg:before:left-1/2 before:bottom-0 lg:before:-translate-x-1/2 before:rounded-full [&_img]:p-5 [&_img]:object-cover [&_img]:object-top before:z-[-1] [&_img]:max-h-96">
+            <div className="heroImage w-full lg:w-4/12 lg:px-5 relative before:absolute before:bg-white/15 before:size-80 xl:before:size-96 before:left-0 lg:before:left-1/2 before:bottom-0 lg:before:-translate-x-1/2 before:rounded-full [&_img]:p-5 [&_img]:object-cover [&_img]:object-top before:z-[-1] [&_img]:max-h-96">
               <img
                 src={bannerImage.src}
                 width={400}

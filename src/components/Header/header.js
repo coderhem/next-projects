@@ -22,7 +22,7 @@ const Header = () => {
  // };
 
 
- // Sticky Header
+ // Sticky Header Code
  const [isScroll, setIsScroll] = useState(false);
  const stickyHeader = useRef(null);
 

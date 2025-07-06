@@ -6,7 +6,7 @@ import React from 'react'
 import { Col, Row } from 'react-grid-system';
 import jsonData from '@/components/data/data.json';
 import aboutFeature from "@/assets/images/banner-image.png"
-import ProgressLine from '@/components/ProgressBar/progressLine';
+import ProgressLine from '@/components/progressBar/progressLine';
 import OurProjects from '@/components/cards/ourProjects';
 import Education from '@/components/cards/education';
 import Experience from '@/components/cards/experience';

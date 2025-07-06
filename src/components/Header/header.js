@@ -1,6 +1,6 @@
 'use client';
 import React, { useState, useEffect, useRef } from 'react';
-import NavBar from '../Navbar/nav';
+import NavBar from '../navbar/nav';
 import headerLogo from '../../assets/images/header-logo-white.png'
 import headerLogoBlack from '../../assets/images/header-logo-black.png'
 import { ThemeToggle } from '@/app/theme';

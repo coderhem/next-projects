@@ -1,5 +1,5 @@
 'use client';
-import Footer from "@/components/Footer/footer";
+import Footer from "@/components/footer/footer";
 import Header from "@/components/Header/header";
 import Homepage from "@/pages/home";
 

@@ -1,7 +1,7 @@
 'use client'
 import React from 'react'
-import SectionTitle from '../SectionTitle/sectionTitle';
 import { Col, Row } from 'react-grid-system';
+import SectionTitle from '../topSectionTitle/sectionTitle';
 
 const Footer = () => {
   return (

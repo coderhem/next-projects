@@ -1,7 +1,6 @@
 import RootLayout from '@/app/layout';
 import Hero from '@/components/Banner/hero';
 import InfoCard from '@/components/cards/infoCard';
-import SectionTitle from '@/components/SectionTitle/sectionTitle';
 import React from 'react'
 import { Col, Row } from 'react-grid-system';
 import jsonData from '@/components/data/data.json';
@@ -11,6 +10,7 @@ import OurProjects from '@/components/cards/ourProjects';
 import Education from '@/components/cards/education';
 import Experience from '@/components/cards/experience';
 import CounterCard from '@/components/cards/counterCard';
+import SectionTitle from '@/components/topSectionTitle/sectionTitle';
 
 
 const Homepage = () => {
@@ -21,7 +21,7 @@ const Homepage = () => {
         <section id="ourServices" className="mb-20">
           <div className="container">
             <div className="text-center mb-20 max-w-3xl mx-auto">
-              <SectionTitle
+              <sectiont
                 titleText="Our"
                 orangeText="Services"
                 titleDescription="We offer a complete range of digital solutions designed to elevate your brand and drive results. Whether you're a startup, small business, or enterprise, we’ve got you covered."

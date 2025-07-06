@@ -109,7 +109,7 @@ const Homepage = () => {
 
         <section id="education" className='pb-14 lg:pb-20 w-full'>
           <div className="container">
-            <div className="relative before:absolute before:bottom-0 before:left-0 before:right-0 before:bg-gradient-to-l before:from-transparent before:via-primary before:to-transparent before:z-[1] before:w-full before:h-[2px] pb-2">
+            <div className="relative before:absolute before:bottom-0 before:left-0 before:right-0 before:bg-gradient-to-l before:from-transparent before:via-primary before:to-transparent before:z-[1] before:w-full before:h-[2px] pb-2 mb-10">
               <SectionTitle
                 titleText="Education"
               />

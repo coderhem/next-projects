@@ -1,0 +1,3 @@
+.swiper-pagination-bullets {
+  @apply pt-10 !static;
+}

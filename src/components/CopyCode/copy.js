@@ -2,7 +2,7 @@
 import React, { useState } from 'react'
 
 
-const CopyCode = ({code}) => {
+const CopyCode = ({ code, buttonClassName }) => {
  const [copied, setCopied] = useState();
  const handleCopy = async () => {
   try {
@@ -17,12 +17,16 @@ const CopyCode = ({code}) => {
   <div>
    <button
     onClick={handleCopy}
-    className="text-[var(--orange)] hover:text-[var(--dark-orange)] transition-all duration-300 cursor-pointer"
+    className={`group text-[var(--orange)] hover:text-[var(--dark-orange)] transition-all duration-300 cursor-pointer ${buttonClassName}`}
    >
-    <i className="fa fa-clipboard pr-[6px]" aria-hidden="true"></i>
-    {copied ? 'Copied!' : 'Copy Code'}
+    <i className={`fa ${copied ? 'fa-check-circle-o text-green-500' : 'fa-clipboard'} pr-[6px]`}
+     aria-hidden="true"
+    ></i>
+    <span className={`${copied ? 'text-green-500' : 'text-[var(--orange)] group-hover:text-[var(--dark-orange)] transition-all duration-300'}`}>
+     {copied ? 'Copied!' : 'Copy'}
+    </span>
    </button>
-   <code className='hidden'>{code}</code>
+   <code dangerouslySetInnerHTML={{ __html: code }} className='hidden opacity-0' />
   </div>
  )
 }

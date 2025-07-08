@@ -26,6 +26,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${inter.variable} ${rubik.variable} antialiased`}>
+      <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+      </head>
       <body>
         <div className="flex flex-col min-h-screen">
           <Header />

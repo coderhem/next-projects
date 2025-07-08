@@ -6,31 +6,9 @@ import herImg01 from "../../assets/images/hero/hero-01.jpg"
 
 import 'swiper/css';
 import 'swiper/css/pagination';
-import 'swiper/css/navigation';
-
-
-const Hero = () => {
- return (
-  <>
-   <div className="container">
-    <div className="flex justify-between -mx-5">
-     <div className="w-full lg:w-1/2 px-5 [&_h1]:text-white [&_h1]:leading-[1.2]">
-      <h1>No More Starting From Scratch.</h1>
-      <p>Copy, Paste, Customize & Build websites with production-ready code. Access ready-made UI snippets and components to supercharge your web development.</p>
-     </div>
-     <div className="w-full lg:w-1/2 px-5">
-      <Swiper
-       pagination={{
-        clickable: true
-       }}
-       navigation={true}
-       modules={[Pagination, Navigation]}
-       className="mySwiper"
-      >
-       <SwiperSlide>
-        <img src={herImg01.src} width={1200} height={500} alt="Hero Image 01" loading='lazy' />
-        {/*
-        <section class="relative pt-[184px] ">
+import CopyCode from '../CopyCode/copy';
+const code1 = `
+     <section class="relative pt-[184px] ">
          <div class="container">
           <div class="flex flex-wrap lg:mx-[-50px] justify-between items-center">
            <div class="md:w-full lg:w-[47%] lg:px-[50px] text-white pb-7 md:pb-10">
@@ -62,8 +40,34 @@ const Hero = () => {
            </div>
           </div>
          </div>
-        </section>
-        */}
+       </section>
+     `;
+
+
+const Hero = () => {
+ return (
+  <>
+   <div className="container">
+    <div className="flex flex-wrap justify-between -mx-5">
+     <div className="w-full lg:w-1/2 px-5 [&_h1]:text-white [&_h1]:leading-[1.2] max-lg:mb-10">
+      <h1>No More Starting From Scratch.</h1>
+      <p>Copy, Paste, Customize & Build websites with production-ready code. Access ready-made UI snippets and components to supercharge your web development.</p>
+     </div>
+     <div className="w-full lg:w-1/2 px-5">
+      <Swiper
+       pagination={{
+        clickable: true
+       }}
+       navigation={true}
+       modules={[Pagination]}
+       className="mySwiper"
+      >
+       <SwiperSlide>
+        <div className="relative">
+         <img src={herImg01.src} width={1200} height={500} alt="Hero Image 01" loading='lazy' />
+         <CopyCode code={code1} />
+        </div>
+
        </SwiperSlide>
        <SwiperSlide>Slide 2</SwiperSlide>
        <SwiperSlide>Slide 3</SwiperSlide>

@@ -10,6 +10,8 @@
   --dark: #333333;
   --primary: #043873;
   --blue: #2563EB;
+  --orange: #FFA500;
+  --dark-orange: #B7410E;
 }
 
 @theme inline {

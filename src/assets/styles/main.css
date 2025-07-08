@@ -16,7 +16,7 @@ figure {
   }
 
   a {
-    @apply text-[var(--primary)] no-underline transition-all hover:text-[var(--primary)]/20;
+    @apply text-[var(--orange)] no-underline transition-all hover:text-[var(--dark-orange)];
   }
 
   picture {

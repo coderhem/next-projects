@@ -1,11 +1,30 @@
-import React from 'react'
-import headerLogo from "../../assets/images/logo.png";
+'use client';
+import React, { useEffect, useState } from 'react'
+import headerLogo from "../../assets/images/header-logo.png";
 import Navbar from '../Navbar/nav';
 
 const Header = () => {
+
+useEffect(() =>{
+  const handleScroll = () =>{
+    if(window.scrollY > 50){
+      document.body.classList.add("sticky");
+    }
+    else{
+      document.body.classList.remove("sticky");
+    }
+  };
+
+  window.addEventListener("scroll", handleScroll);
+
+  return() =>{
+    window.removeEventListener("scroll", handleScroll);
+  };
+}, []);
+
   return (
     <>
-      <header className="bg-white shadow-2xl p-5">
+      <header className="header py-5 fixed top-0 left-0 right-0 z-10">
         <div className="container">
           <div className="flex justify-between items-center -mx-3">
             <div className="w-full lg:w-4/12 px-3">

@@ -1,0 +1,32 @@
+{
+ "slides":[
+  {
+   "imageSrc": "/images/hero-bg-01.jpg",
+   "imgWidth": "400",
+   "imgHeight": "500",
+   "imgAlt": "Hero Image Code First",
+   "copyCode": "Code"
+  },
+  {
+   "imageSrc": "/images/hero-bg-01.jpg",
+   "imgWidth": "400",
+   "imgHeight": "500",
+   "imgAlt": "Hero Image Code First",
+   "copyCode": "Code"
+  },
+  {
+   "imageSrc": "/images/hero-bg-01.jpg",
+   "imgWidth": "400",
+   "imgHeight": "500",
+   "imgAlt": "Hero Image Code First",
+   "copyCode": "Code"
+  },
+  {
+   "imageSrc": "/images/hero-bg-01.jpg",
+   "imgWidth": "400",
+   "imgHeight": "500",
+   "imgAlt": "Hero Image Code First",
+   "copyCode": "Code"
+  }
+ ] 
+}

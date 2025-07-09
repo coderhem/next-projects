@@ -17,19 +17,19 @@ const Hero = () => {
             <p>Copy, Paste, Customize & Build websites with production-ready code. Access ready-made UI snippets and components to supercharge your web development.</p>
           </div>
 
-          <div className="w-full lg:w-1/2 px-5">
+          <div className="w-full lg:w-1/2 px-5 hero-slider">
             <Swiper
               pagination={{
                 clickable: true
               }}
               navigation={true}
               modules={[Pagination]}
-              className="mySwiper"
+              className="min-h-80"
               autoHeight={true}
             >
               {heroData.heroCode1.map((item, index) => {
                 return (
-                  <SwiperSlide key={index}>
+                  <SwiperSlide key={index} className='!h-full'>
                     <DynamicHero
                       imageSrc={item.imageSrc}
                       imgWidth={item.imgWidth}

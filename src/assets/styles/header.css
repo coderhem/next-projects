@@ -1,4 +1,5 @@
-.nav a{
+.nav a,
+.mobile-menu a{
 @apply
 font-medium
 text-base 
@@ -26,4 +27,77 @@ before:duration-300;
  backdrop-blur-[100px]
  transition-all
  duration-500
+}
+
+.hambBurger{
+@apply
+flex flex-col
+cursor-pointer
+lg:hidden
+}
+
+.hambBurger span{
+@apply
+w-8
+h-[3px]
+bg-white
+rounded-xl
+last:w-6
+first:w-5
+transition-all
+duration-300
+block
+not-last:mb-1
+}
+
+.nav{
+ @apply
+hidden
+ lg:block
+ transition-all
+ duration-300
+}
+.mobile-menu{
+ @apply
+ h-lvh
+ w-full
+ bg-[var(--primary)]
+ absolute
+left-0
+right-0
+top-0
+pt-5
+translate-y-full
+transition-all
+duration-300
+}
+
+.active .mobile-menu{
+@apply
+translate-y-0
+z-10
+text-white
+}
+
+.active .nav ul{
+ @apply
+ justify-center
+ flex-col
+ items-center
+}
+
+.active .hambBurger span{
+ @apply
+ block
+ w-8
+ even:hidden
+ first:rotate-45
+ last:-rotate-45
+ first:translate-[1px]
+ not-last:mb-0
+}
+
+body.active{
+ @apply
+ overflow-hidden
 }

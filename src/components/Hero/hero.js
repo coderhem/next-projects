@@ -26,6 +26,7 @@ const Hero = () => {
               modules={[Pagination]}
               className="min-h-80"
               autoHeight={true}
+              loop={true}
             >
               {heroData.heroCode1.map((item, index) => {
                 return (

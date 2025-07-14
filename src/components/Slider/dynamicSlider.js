@@ -6,16 +6,20 @@ const DynamicSlider = ({
  imgWidth,
  imgHeight,
  imgAlt,
- copyCode
+ copyCode,
+ jscopyCode
 }) => {
  return (
   <>
    <div className="container [&_img]:w-full">
     <img src={imageSrc} width={imgWidth} height={imgHeight} alt={imgAlt} loading='lazy' />
-    <CopyCode
-     code={copyCode}
-     buttonClassName='absolute bottom-5 right-5 z-[1] bg-white py-1 px-2 rounded border border-primary'
-    />
+    <div className="absolute bottom-5 right-5 z-[1] flex gap-2 mr-5">
+     <CopyCode
+      code={copyCode}
+      buttonClassName="bg-white py-1 px-2 rounded border border-primary"
+      jsCode={jscopyCode}
+     />
+    </div>
    </div>
   </>
  )

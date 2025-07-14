@@ -21,7 +21,7 @@ const Slider = () => {
           slidesPerView={1}
           navigation
           pagination={{ clickable: true }}
-          autoplay={{ delay: 4000 }}
+          autoplay={{ delay: 800000 }}
           loop={true}
           breakpoints={{
             768: { slidesPerView: 2 }
@@ -36,6 +36,7 @@ const Slider = () => {
                 imgHeight={slide.imgHeight}
                 imgAlt={slide.imgAlt}
                 copyCode={slide.copyCode}
+                jscopyCode={slide.jscopyCode}
               />
             </SwiperSlide>
           ))}

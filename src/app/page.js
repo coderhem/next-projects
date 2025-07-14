@@ -1,5 +1,6 @@
 import Hero from "@/components/Hero/hero";
 import Slider from "@/components/Slider/slider";
+import TwoCol from "@/components/TwoCol/twoCol";
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
         <Hero />
       </section>
       <Slider />
+      <TwoCol />
     </>
   );
 }

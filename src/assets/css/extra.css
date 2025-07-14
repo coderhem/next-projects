@@ -1,0 +1,6 @@
+.hero-list li{
+@apply
+relative
+pl-5
+text-black
+}

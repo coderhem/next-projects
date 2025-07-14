@@ -11,7 +11,7 @@
 		lg:text-lg 
 		text-center 
 		!leading-none 
-		font-normal 
+		font-bold 
 		no-underline 
 		select-none 
 		border 
@@ -30,28 +30,42 @@
     @apply bg-[var(--secondary)] 
     text-white 
     border-[var(--secondary)] 
-    hover:bg-transparent
-    hover:text-white 
-    hover:border-white/75
-    focus:bg-transparent
-    focus:text-white
-    focus:border-white/75
-    focus:ring-[var(--secondary)]/75
-    active:bg-transparent 
-    active:border-[var(--secondary)]/50;
+    hover:bg-white
+    hover:text-[var(--secondary)]  
+    hover:border-[var(--secondary)]
+    focus:bg-white
+    focus:text-[var(--secondary)] 
+    focus:border-[var(--secondary)]/50 
+    focus:ring-[var(--secondary)]
+    active:bg-[var(--secondary)]  
+    active:border-[var(--secondary)];
   }
   .btn-primary {
     @apply bg-[var(--green)] 
     text-[var(--secondary)] 
     border-[var(--primary)] 
-    hover:bg-transparent
-    hover:text-white 
+    hover:bg-white
+    hover:text-[var(--secondary)]  
     hover:border-white/75
-    focus:bg-transparent
-    focus:text-white
+    focus:bg-white
+    focus:text-[var(--secondary)]  
+    focus:border-[var(--green)] 
+    focus:ring-[var(--green)]
+    active:bg-white 
+    active:border-[var(--primary)];
+  }
+  .btn-white {
+    @apply bg-white
+    text-[var(--secondary)] 
+    border-white
+    hover:bg-[var(--primary)]
+    hover:text-white 
+    hover:border-[var(--primary)] 
+    focus:bg-[var(--primary)]
+    focus:text-white 
     focus:border-white/75
-    focus:ring-[var(--primary)]/75
-    active:bg-transparent 
+    focus:ring-[var(--primary)]
+    active:bg-[var(--primary)] 
     active:border-[var(--primary)]/50;
   }
 

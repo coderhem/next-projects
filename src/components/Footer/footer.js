@@ -5,7 +5,7 @@ const Footer = () => {
   <>
 
    <div className="container">
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In consequuntur iusto necessitatibus consectetur quod quia sit, perferendis asperiores quam voluptate cum deserunt iste obcaecati consequatur mollitia molestias velit magni omnis.</p>
+    <p>Footer</p>
    </div>
 
   </>

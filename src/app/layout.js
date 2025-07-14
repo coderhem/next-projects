@@ -37,9 +37,13 @@ export default function RootLayout({ children }) {
       <body
         className={`${nunitoSans.variable} ${poppins.variable}`}
       >
-        <Header />
-        {children}
-        <Footer />
+        <div className="flex flex-col justify-between min-h-screen">
+          <Header />
+          <main className="grow">
+            {children}
+          </main>
+          <Footer />
+        </div>
       </body>
     </html>
   );

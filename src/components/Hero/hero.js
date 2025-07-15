@@ -47,8 +47,8 @@ const Hero = () => {
         className="slider">
         {sliderData.cardHeroData.map((item, index) => {
          return (
-          <SwiperSlide className='px-7'>
-           <CardHero key={index}
+          <SwiperSlide className='px-7' key={index}>
+           <CardHero
             imgSrc={item.imgSrc}
             imgWidth={item.imgWidth}
             imHeight={item.imHeight}

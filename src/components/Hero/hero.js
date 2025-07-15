@@ -2,14 +2,16 @@
 import React from 'react'
 import { Col, Row } from 'react-grid-system';
 import CardHero from '../Cards/CardHero/cardHero';
-import HeroList from '../ListStyle/heroList';
+import sliderData from '../Data/data.json';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Pagination, Autoplay } from 'swiper/modules';
 
-const Hero = (
- {
-  listContent,
-  iconClass,
- }
-) => {
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/pagination';
+
+
+const Hero = () => {
  return (
   <>
    <section className="bg-[url('../assets/images/hero-bg.webp')] py-8 bg-cover bg-top">
@@ -34,13 +36,32 @@ const Hero = (
         <div className="pt-9">
          <a href="#" className='btn btn-secondary'>Who we are</a>
         </div>
-
        </div>
       </Col>
       <Col lg={5}>
-       <div className="">
-        <CardHero />
-       </div>
+       <Swiper
+        pagination={true}
+        modules={[Pagination, Autoplay]}
+        autoplay={{ delay: 3000, disableOnInteraction: false }}
+        loop={true}
+        className="slider">
+        {sliderData.cardHeroData.map((item, index) => {
+         return (
+          <SwiperSlide className='px-7'>
+           <CardHero key={index}
+            imgSrc={item.imgSrc}
+            imgWidth={item.imgWidth}
+            imHeight={item.imHeight}
+            imgAlt={item.imgAlt}
+            fullName={item.fullName}
+            postName={item.postName}
+            ctaText={item.ctaText}
+            ctaLink={item.ctaLink}
+           />
+          </SwiperSlide>
+         )
+        })}
+       </Swiper>
       </Col>
      </Row>
     </div>

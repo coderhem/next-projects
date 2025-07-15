@@ -3,6 +3,7 @@
 @import "../assets/css/typography.css";
 @import "../assets/css/button.css";
 @import "../assets/css/extra.css";
+@import "../assets/css/slider.css";
 
 :root {
   --background: #ffffff;
@@ -13,6 +14,7 @@
   --yellow: #FFA500;
   --blue: #2F80ED;
   --sky-blue: #56CCF2;
+  --sky-blue-100: #7CE7F9;
   --red: #C10101;
   --violet: #D12F82;
 }

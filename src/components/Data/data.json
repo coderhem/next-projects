@@ -1,0 +1,70 @@
+{
+ "cardHeroData": [
+  {
+   "imgSrc": "/images/image.png",
+   "imgWidth": "500",
+   "imgHeight": "600",
+   "imgAlt": "Doctor Image",
+   "fullName": "Hem Raj",
+   "postName": "Developer",
+   "ctaText": "Find Doctors",
+   "ctaLink": "/doctor"
+  },
+  {
+   "imgSrc": "/images/image.png",
+   "imgWidth": "500",
+   "imgHeight": "600",
+   "imgAlt": "Doctor Image",
+   "fullName": "Hem Raj",
+   "postName": "Developer",
+   "ctaText": "Find Doctors",
+   "ctaLink": "/doctor"
+  },
+  {
+   "imgSrc": "/images/image.png",
+   "imgWidth": "500",
+   "imgHeight": "600",
+   "imgAlt": "Doctor Image",
+   "fullName": "Hem Raj",
+   "postName": "Developer",
+   "ctaText": "Find Doctors",
+   "ctaLink": "/doctor"
+  },
+  {
+   "imgSrc": "/images/image.png",
+   "imgWidth": "500",
+   "imgHeight": "600",
+   "imgAlt": "Doctor Image",
+   "fullName": "Hem Raj",
+   "postName": "Developer",
+   "ctaText": "Find Doctors",
+   "ctaLink": "/doctor"
+  }
+ ],
+ "testimonialData": [
+  {
+   "memberName": "Hem Raj",
+   "memberStatus": "Verified Member",
+   "testimonialText": "There are many variations of long passages available but the content majority have suffered to the editor page when looking at its layout alteration in some injected. There are many variations of long passages available but the content majority have. There are many variations of long passages available but injected.",
+   "timeStatus": "2 Days Ago"
+  },
+  {
+   "memberName": "Hem Raj",
+   "memberStatus": "Verified Member",
+   "testimonialText": "There are many variations of long passages available but the content majority have suffered to the editor page when looking at its layout alteration in some injected. There are many variations of long passages available but the content majority have. There are many variations of long passages available but injected.",
+   "timeStatus": "2 Days Ago"
+  },
+  {
+   "memberName": "Hem Raj",
+   "memberStatus": "Verified Member",
+   "testimonialText": "There are many variations of long passages available but the content majority have suffered to the editor page when looking at its layout alteration in some injected. There are many variations of long passages available but the content majority have. There are many variations of long passages available but injected.",
+   "timeStatus": "2 Days Ago"
+  },
+  {
+   "memberName": "Hem Raj",
+   "memberStatus": "Verified Member",
+   "testimonialText": "There are many variations of long passages available but the content majority have suffered to the editor page when looking at its layout alteration in some injected. There are many variations of long passages available but the content majority have. There are many variations of long passages available but injected.",
+   "timeStatus": "2 Days Ago"
+  }
+ ]
+}

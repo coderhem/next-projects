@@ -66,5 +66,43 @@
    "testimonialText": "There are many variations of long passages available but the content majority have suffered to the editor page when looking at its layout alteration in some injected. There are many variations of long passages available but the content majority have. There are many variations of long passages available but injected.",
    "timeStatus": "2 Days Ago"
   }
+ ],
+ "cardInfoData": [
+  {
+   "cardBgClass": "[var(--sky-blue)]",
+   "cardIcon": "fa fa-stethoscope",
+   "cardTitle": "psychiatrist",
+   "cardDescription": "<p>Search for Dr.Carter Clinic expert by specialty, disease, conditione, expertise,or doctor's last name.</p>",
+   "btnClass": "btn btn-white",
+   "ctaText": "Find Doctors",
+   "ctaLink": "/doctors"
+  },
+  {
+   "cardBgClass": "red-800",
+   "cardIcon": "fa fa-stethoscope",
+   "cardTitle": "psychiatrist",
+   "cardDescription": "<p>Search for Dr.Carter Clinic expert by specialty, disease, conditione, expertise,or doctor's last name.</p>",
+   "btnClass": "btn btn-white",
+   "ctaText": "Find Doctors",
+   "ctaLink": "/doctors"
+  },
+  {
+   "cardBgClass": "red-800",
+   "cardIcon": "fa fa-stethoscope",
+   "cardTitle": "psychiatrist",
+   "cardDescription": "<p>Search for Dr.Carter Clinic expert by specialty, disease, conditione, expertise,or doctor's last name.</p>",
+   "btnClass": "btn btn-white",
+   "ctaText": "Find Doctors",
+   "ctaLink": "/doctors"
+  },
+  {
+   "cardBgClass": "red-800",
+   "cardIcon": "fa fa-stethoscope",
+   "cardTitle": "psychiatrist",
+   "cardDescription": "<p>Search for Dr.Carter Clinic expert by specialty, disease, conditione, expertise,or doctor's last name.</p>",
+   "btnClass": "btn btn-white",
+   "ctaText": "Find Doctors",
+   "ctaLink": "/doctors"
+  }
  ]
 }

@@ -42,7 +42,7 @@ const Hero = () => {
        <Swiper
         pagination={true}
         modules={[Pagination, Autoplay]}
-        autoplay={{ delay: 3000, disableOnInteraction: false }}
+        autoplay={{ delay: 6000, disableOnInteraction: false }}
         loop={true}
         className="slider">
         {sliderData.cardHeroData.map((item, index) => {

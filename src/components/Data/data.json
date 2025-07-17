@@ -69,7 +69,7 @@
  ],
  "cardInfoData": [
   {
-   "cardBgClass": "[var(--sky-blue)]",
+   "cardBgClass": "bg-sky-blue",
    "cardIcon": "fa fa-stethoscope",
    "cardTitle": "psychiatrist",
    "cardDescription": "<p>Search for Dr.Carter Clinic expert by specialty, disease, conditione, expertise,or doctor's last name.</p>",
@@ -78,7 +78,7 @@
    "ctaLink": "/doctors"
   },
   {
-   "cardBgClass": "red-800",
+   "cardBgClass": "bg-blue",
    "cardIcon": "fa fa-stethoscope",
    "cardTitle": "psychiatrist",
    "cardDescription": "<p>Search for Dr.Carter Clinic expert by specialty, disease, conditione, expertise,or doctor's last name.</p>",
@@ -87,7 +87,7 @@
    "ctaLink": "/doctors"
   },
   {
-   "cardBgClass": "red-800",
+   "cardBgClass": "bg-dark-blue",
    "cardIcon": "fa fa-stethoscope",
    "cardTitle": "psychiatrist",
    "cardDescription": "<p>Search for Dr.Carter Clinic expert by specialty, disease, conditione, expertise,or doctor's last name.</p>",
@@ -96,7 +96,7 @@
    "ctaLink": "/doctors"
   },
   {
-   "cardBgClass": "red-800",
+   "cardBgClass": "bg-primary",
    "cardIcon": "fa fa-stethoscope",
    "cardTitle": "psychiatrist",
    "cardDescription": "<p>Search for Dr.Carter Clinic expert by specialty, disease, conditione, expertise,or doctor's last name.</p>",

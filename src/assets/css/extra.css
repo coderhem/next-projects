@@ -4,3 +4,23 @@ relative
 pl-5
 text-black
 }
+
+.bg-blue{
+ @apply
+ bg-[var(--blue)];
+}
+
+.bg-dark-blue{
+ @apply
+ bg-[var(--secondary)];
+}
+
+.bg-sky-blue{
+ @apply
+ bg-[var(--sky-blue)];
+}
+
+.bg-primary{
+ @apply
+ bg-[var(--primary)];
+}

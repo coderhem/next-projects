@@ -9,6 +9,7 @@ import 'swiper/css/pagination';
 import CardInfo from "@/components/Cards/cardInfo/cardInfo";
 import infoCardData from "../components/Data/data.json";
 import { Col, Row } from "react-grid-system";
+import CardProcess from "@/components/Cards/cardProcess/cardProcess";
 
 export default function HomePage() {
   return (
@@ -51,14 +52,14 @@ export default function HomePage() {
       </div>
       {/* Testimonial */}
 
-      <section>
+      <section className="bg-[url('../assets/images/card-bg.png')] bg-cover bg-no-repeat bg-center py-10 md:py-14 lg:py-20">
         <div className="container">
           <Row>
             {infoCardData.cardInfoData.map((item, index) => {
               return (
-                <Col md={6} lg={3} key={index}>
+                <Col md={6} lg={4} xl={3} key={index} className="mb-7">
                   <CardInfo
-                    cardColorClass={item.cardColorClass}
+                    cardBgClass={item.cardBgClass}
                     cardIcon={item.cardIcon}
                     cardTitle={item.cardTitle}
                     cardDescription={item.cardDescription}
@@ -73,6 +74,13 @@ export default function HomePage() {
         </div>
       </section>
       {/* Card Information */}
+
+      <section>
+        <div className="container bg-[var(--secondary)] py-20 md:py-24 lg:py-30 rounded-md">
+          <CardProcess />
+        </div>
+      </section>
+      {/* Card Process */}
     </>
   );
 }

@@ -12,16 +12,10 @@ const CardInfo = (
     ctaLink
   }
 ) => {
-  const getBgClass = (bg) => {
-    if (!bg) return 'bg-gray-500';
-    return `bg-${bg}`;
-  };
-  const bgClass = getBgClass(cardBgClass);
-
   return (
     <>
       {(cardIcon || cardTitle || cardDescription || ctaText) &&
-        <div className={`bg-[var(--sky-blue)] text-white text-center [&_h3]:uppercase py-8 px-5 [&_i]:text-5xl max-w-[334px] rounded-md`}>
+        <div className={ `${cardBgClass} text-white text-center [&_h3]:uppercase py-8 px-5 [&_i]:text-5xl md:max-w-[334px] rounded-md`}>
           {cardIcon &&
             <div className="mb-4">
               <i className={cardIcon} aria-hidden="true"></i>

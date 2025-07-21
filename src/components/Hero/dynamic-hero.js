@@ -14,7 +14,7 @@ const DynamicHero = (
 ) => {
  return (
   <>
-   <div className="relative [&_img]:w-full [&_img]:h-full [&_img]:object-cover h-full">
+   <div className="relative [&_img]:w-full [&_img]:h-full min-h-max [&_img]:object-cover h-full">
     <img src={imageSrc} width={imgWidth} height={imgHeight} alt={imgAlt} loading='lazy' />
     <CopyCode
      code={heroCode}

@@ -11,7 +11,7 @@ const DynamicSlider = ({
 }) => {
  return (
   <>
-   <div className="container [&_img]:w-full">
+   <div className="[&_img]:w-full [&_img]:h-full">
     <img src={imageSrc} width={imgWidth} height={imgHeight} alt={imgAlt} loading='lazy' />
     <div className="absolute bottom-5 right-5 z-[1] flex gap-2 mr-5">
      <CopyCode

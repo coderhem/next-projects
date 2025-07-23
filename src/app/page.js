@@ -81,7 +81,7 @@ export default function HomePage() {
           <Row>
             {processData.processData.map((item, index) => {
               return (
-                <Col sm={6} md={4} lg={3} key={index}>
+                <Col sm={6} md={4} lg={3} key={index} className="max-lg:mb-10">
                   <CardProcess
                     cardIcon={item.cardIcon}
                     cardTitle={item.cardTitle}

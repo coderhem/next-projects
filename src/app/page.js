@@ -10,6 +10,7 @@ import CardInfo from "@/components/Cards/cardInfo/cardInfo";
 import infoCardData from "../components/Data/data.json";
 import { Col, Row } from "react-grid-system";
 import CardProcess from "@/components/Cards/cardProcess/cardProcess";
+import processData from "../components/Cards/cardProcess/cardProcessData.json"
 
 export default function HomePage() {
   return (
@@ -75,9 +76,21 @@ export default function HomePage() {
       </section>
       {/* Card Information */}
 
-      <section>
-        <div className="container bg-[var(--secondary)] py-20 md:py-24 lg:py-30 rounded-md">
-          <CardProcess />
+      <section className="bg-[var(--secondary)] py-20 md:py-24 lg:py-30">
+        <div className="container">
+          <Row>
+            {processData.processData.map((item, index) => {
+              return (
+                <Col lg={3} key={index}>
+                  <CardProcess
+                    cardIcon={item.cardIcon}
+                    cardTitle={item.cardTitle}
+                    cardDescription={item.cardDescription}
+                  />
+                </Col>
+              )
+            })}
+          </Row>
         </div>
       </section>
       {/* Card Process */}

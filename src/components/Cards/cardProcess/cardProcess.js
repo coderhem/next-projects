@@ -1,11 +1,28 @@
 import React from 'react'
 
-const CardProcess = () => {
+const CardProcess = (
+ {
+  cardIcon,
+  cardTitle,
+  cardDescription
+
+ }
+) => {
  return (
   <>
-   <div className="bg-[url('../assets/images/icon-bg.png')] bg-top bg-contain bg-no-repeat [&_i]:size-20 text-center">
-    <i class="fa fa-truck pt-7 flex justify-center items-center text-white text-3xl" aria-hidden="true"></i>
-   </div>
+   {(cardIcon || cardDescription || cardTitle) &&
+    <div className="flex items-end gap-1 text-white border-r-2 border-white/30">
+     <div className="bg-[url('../assets/images/icon-bg.png')] bg-top bg-cover bg-no-repeat [&_i]:size-20 text-center text-3xl">
+      <i className={`${cardIcon} !flex justify-center items-center`} aria-hidden="true"></i>
+     </div>
+     {cardTitle && cardDescription &&
+      <div className="[&_p]:!mb-0">
+       <h2 className='h5'>{cardTitle}</h2>
+       <p>{cardDescription}</p>
+      </div>
+     }
+    </div>
+   }
   </>
  )
 }

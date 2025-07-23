@@ -1,0 +1,24 @@
+{
+ "processData" : [
+  {
+   "cardIcon" : "fa fa-truck",
+   "cardTitle" : "Free Delivary",
+   "cardDescription" : "Orders Over $120" 
+  },
+  {
+   "cardIcon" : "fa fa-retweet",
+   "cardTitle" : "Get Refund",
+   "cardDescription" : "30 Days Returns" 
+  },
+  {
+   "cardIcon" : "fa fa-credit-card-alt",
+   "cardTitle" : "Safe Payment",
+   "cardDescription" : "100% Secure Payment" 
+  },
+  {
+   "cardIcon" : "fa fa-headphones",
+   "cardTitle" : "24/7 Support",
+   "cardDescription" : "Feel Free To Call Us" 
+  }
+ ]
+}

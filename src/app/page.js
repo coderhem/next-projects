@@ -11,7 +11,9 @@ import infoCardData from "../components/Data/data.json";
 import { Col, Row } from "react-grid-system";
 import CardProcess from "@/components/Cards/cardProcess/cardProcess";
 import processData from "../components/Cards/cardProcess/cardProcessData.json"
-
+import CardDoctor from "@/components/Cards/cardDoctor/cardDoctor";
+import BlockTitle from "@/components/BlockTitle/blockTitle";
+import doctorImg from "../assets/images/doctor-img.png"
 export default function HomePage() {
   return (
     <>
@@ -76,12 +78,12 @@ export default function HomePage() {
       </section>
       {/* Card Information */}
 
-      <section className="bg-[var(--secondary)] py-20 md:py-24 lg:py-30">
+      <section className="bg-[var(--secondary)] py-12 sm:py-20 md:py-24 lg:py-30">
         <div className="container">
-          <Row>
+          <Row justify="center">
             {processData.processData.map((item, index) => {
               return (
-                <Col sm={6} md={4} lg={3} key={index} className="max-lg:mb-10">
+                <Col md={6} lg={3} key={index} className="max-lg:mb-10 md:not-last:border-r-1 border-white/10 md:not-last:border-b-0 not-last:border-b md:even:border-0 lg:not-last:even:border-r max-md:pb-5">
                   <CardProcess
                     cardIcon={item.cardIcon}
                     cardTitle={item.cardTitle}
@@ -94,6 +96,38 @@ export default function HomePage() {
         </div>
       </section>
       {/* Card Process */}
+      <section className="bg-[var(--green)]/5 py-32">
+        <div className="container">
+          <BlockTitle
+            titleText="Recently Added"
+            greenColor="Doctor"
+            descriptionText="Lorem ipsum dolor sit amet consectetur adipisicing elit. Id iure necessitatibus magni modi aliquam similique numquam, veniam explicabo consequatur ipsum. Maiores excepturi architecto ad natus, unde numquam inventore at voluptatibus."
+            className="max-w-3xl mx-auto mb-10"
+          />
+          <Row>
+            <Col lg={6}>
+              <CardDoctor
+                imgSrc={doctorImg}
+                doctorName="Hem Raj Joshi"
+                doctorPost="(MBBS, MD)"
+                speciality="Gynecologist"
+                experience="21 years years of experience"
+                ctaLink="#"
+              />
+            </Col>
+            <Col lg={6}>
+              <CardDoctor
+                imgSrc={doctorImg}
+                doctorName="Hem Raj Joshi"
+                doctorPost="(MBBS, MD)"
+                speciality="Gynecologist"
+                experience="21 years years of experience"
+                ctaLink="#"
+              />
+            </Col>
+          </Row>
+        </div>
+      </section>
     </>
   );
 }

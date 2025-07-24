@@ -11,7 +11,7 @@ const CardProcess = (
  return (
   <>
    {(cardIcon || cardDescription || cardTitle) &&
-    <div className="flex items-end gap-1 text-white border-r-2 border-white/30">
+    <div className="flex justify-center items-end gap-1 text-white">
      <div className="bg-[url('../assets/images/icon-bg.png')] bg-top bg-cover bg-no-repeat [&_i]:size-20 text-center text-3xl">
       <i className={`${cardIcon} !flex justify-center items-center`} aria-hidden="true"></i>
      </div>

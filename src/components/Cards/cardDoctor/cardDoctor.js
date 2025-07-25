@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import listData from '../../Data/data.json';
 
 const CardDoctor = (
  {
@@ -10,31 +11,70 @@ const CardDoctor = (
   doctorPost,
   speciality,
   experience,
-  ctaLink
+  ctaLink,
+  star,
+  outlineCtaText,
+  secondaryCtaText,
+  btnOutline,
+  btnOutlineLink,
+  btnSecondary,
+  btnSecondaryLink,
+  strongText,
+  listText,
+  iconClass,
+  listDetails = []
  }
 ) => {
  return (
   <>
-   <div className="bg-white shadow px-5 pt-5 rounded-lg">
-    <div className="flex items-center">
-     <figure className='min-w-[200px] max-w-2xs flex-1 [&_img]:w-full'>
-      <img src={imgSrc.src} width={imgWidth} height={imgHeight} alt={imgAlt} loading='lazy' />
-     </figure>
-     <div className="text-black">
-      <h2 className='h4'>{doctorName}</h2>
-      <span>{doctorPost}</span>
-      <div className="[&_p]:!mb-0">
-       <p>{speciality}</p>
-       <p>{experience}</p>
+   <div className="bg-white shadow rounded-lg">
+    <div className="flex items-center px-5 pt-5 gap-7">
+     {imgSrc && (
+      <figure className='min-w-[200px] max-w-60 flex-1 [&_img]:w-full [&_img]:shadow-[0_0_25px_0_rgba(0,191,165,0.3)] [&_img]:rounded-3xl [&_img]:border-2 [&_img]:border-[var(--primary)]/20'>
+       <img src={imgSrc} width={imgWidth} height={imgHeight} alt={imgAlt} loading='lazy' />
+      </figure>
+     )}
+     {(doctorName || doctorPost || speciality || experience || iconClass) &&
+      <div className="text-[var(--gray)]">
+       <h2 className='h5 text-black'>{doctorName}</h2>
+       <span className='text-black font-medium'>{doctorPost}</span>
+       <div className="[&_p]:!mb-1">
+        <p>{speciality}</p>
+        <p>{experience}</p>
+       </div>
+       <div className="icon-heart group mt-2">
+        <a href={ctaLink} className='stretched-link'>
+         <i className={`${iconClass} text-[var(--primary)] focus:text-white group-focus:text-white group-hover:text-white transition-all duration-300`}></i>
+        </a>
+       </div>
       </div>
-      <div className="relative border-[var(--gray)] border inline-flex justify-center items-center size-7 rounded-full group hover:bg-[var(--primary)] hover:border-[var(--primary)] transition-all duration-300">
-       <a href={ctaLink} className='stretched-link'>
-        <i className="fa fa-heart group-hover:text-white transition-all duration-300"></i>
-       </a>
-      </div>
-     </div>
+     }
     </div>
-   </div>
+    {(strongText || listText) &&
+     <div className="pt-5 px-6 pb-5">
+      <ul>
+       {listDetails.map((item, index) => (
+        <li key={index}><strong>{item.strongText}</strong>: {item.listText}</li>
+       ))}
+      </ul>
+      <ul className='pt-2 text-[var(--yellow)] flex gap-1'>
+       {[...Array(5)].map((_, index) => (
+        <li key={index}><i className={`${star} fa fa-star`}></i></li>
+       ))}
+      </ul>
+     </div>
+    }
+    {(btnOutlineLink || btnSecondaryLink) &&
+     <div className="bg-[var(--primary)]/10 py-4 px-5 flex justify-between gap-5 rounded-bl-2xl rounded-br-2xl">
+      {btnOutline &&
+       <a href={btnOutlineLink} className={`${btnOutline}`}>{outlineCtaText}</a>
+      }
+      {btnSecondary &&
+       <a href={btnSecondaryLink} className={`${btnSecondary}`}>{secondaryCtaText}</a>
+      }
+     </div>
+    }
+   </div >
   </>
  )
 }

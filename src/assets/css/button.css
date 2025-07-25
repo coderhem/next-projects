@@ -68,8 +68,37 @@
     active:bg-[var(--primary)] 
     active:border-[var(--primary)]/50;
   }
-
+  .btn-outline {
+    @apply bg-transparent
+    text-[var(--secondary)] 
+    border-[var(--secondary)]
+    hover:bg-[var(--secondary)]
+    hover:text-white 
+    hover:border-[var(--secondary)] 
+    focus:bg-[var(--secondary)]
+    focus:text-white 
+    focus:border-white/75
+    focus:ring-[var(--secondary)]
+    active:bg-[var(--secondary)] 
+    active:border-[var(--secondary)]/50;
+  }
   .btn-block {
     @apply block w-full;
+  }
+  .icon-heart {
+    @apply relative 
+    border-[var(--primary)] 
+    border 
+    inline-flex 
+    justify-center 
+    items-center 
+    size-7 
+    rounded-full  
+    hover:bg-[var(--primary)] 
+    focus:border-[var(--primary)] 
+    focus:bg-[var(--primary)] 
+    hover:border-[var(--primary)] 
+    transition-all 
+    duration-300;
   }
 }

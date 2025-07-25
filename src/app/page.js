@@ -13,7 +13,7 @@ import CardProcess from "@/components/Cards/cardProcess/cardProcess";
 import processData from "../components/Cards/cardProcess/cardProcessData.json"
 import CardDoctor from "@/components/Cards/cardDoctor/cardDoctor";
 import BlockTitle from "@/components/BlockTitle/blockTitle";
-import doctorImg from "../assets/images/doctor-img.png"
+import doctorData from "../components/Data/data.json";
 export default function HomePage() {
   return (
     <>
@@ -105,26 +105,33 @@ export default function HomePage() {
             className="max-w-3xl mx-auto mb-10"
           />
           <Row>
-            <Col lg={6}>
-              <CardDoctor
-                imgSrc={doctorImg}
-                doctorName="Hem Raj Joshi"
-                doctorPost="(MBBS, MD)"
-                speciality="Gynecologist"
-                experience="21 years years of experience"
-                ctaLink="#"
-              />
-            </Col>
-            <Col lg={6}>
-              <CardDoctor
-                imgSrc={doctorImg}
-                doctorName="Hem Raj Joshi"
-                doctorPost="(MBBS, MD)"
-                speciality="Gynecologist"
-                experience="21 years years of experience"
-                ctaLink="#"
-              />
-            </Col>
+            {doctorData.doctorCardData.map((item, index) => {
+              return (
+                <Col lg={6} key={index}>
+                  <CardDoctor
+                    imgSrc={item.imgSrc}
+                    imgWidth={item.imgWidth}
+                    imgHeight={item.imgHeight}
+                    imgAlt={item.imgAlt}
+                    doctorName={item.doctorName}
+                    doctorPost={item.doctorPost}
+                    speciality={item.speciality}
+                    experience={item.experience}
+                    iconClass={item.iconClass}
+                    ctaLink={item.ctaLink}
+                    strongText={item.strongText}
+                    listText={item.listText}
+                    btnClass={item.btnClass}
+                    btnOutline={item.btnOutline}
+                    outlineCtaText={item.outlineCtaText}
+                    btnOutlineLink={item.btnOutlineLink}
+                    btnSecondary={item.btnSecondary}
+                    secondaryCtaText={item.secondaryCtaText}
+                    btnSecondaryLink={item.btnSecondaryLink}
+                  />
+                </Col>
+              )
+            })}
           </Row>
         </div>
       </section>

@@ -104,5 +104,27 @@
    "ctaText": "Find Doctors",
    "ctaLink": "/doctors"
   }
+ ],
+ "doctorCardData": [
+  {
+   "imgSrc": "/images/headshot.png",
+   "imgWidth": "500",
+   "imgHeight": "600",
+   "imgAlt": "Doctor Image",
+   "doctorName": "Hem Raj",
+   "doctorPost": "MBBS",
+   "speciality": "Neuro",
+   "experience": "Above 2 Years",
+   "ctaLink": "#",
+   "iconClass": "fa fa-heart",
+   "ctaText": "Book Now",
+   "btnOutline": "btn btn-outline",
+   "outlineCtaText": "Book Now",
+   "btnOutlineLink": "/home",
+   "btnSecondary": "btn btn-secondary",
+   "secondaryCtaText": "Book Now",
+   "btnSecondaryLink": "/about",
+   "strongText": "Text Test"
+  }
  ]
 }

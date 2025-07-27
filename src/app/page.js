@@ -3,7 +3,7 @@ import Hero from "@/components/Hero/hero";
 import Testimonial from "@/components/Testimonial/testimonial";
 import testimonialSlider from "../components/Data/data.json";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay } from 'swiper/modules';
+import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import CardInfo from "@/components/Cards/cardInfo/cardInfo";
@@ -14,6 +14,7 @@ import processData from "../components/Cards/cardProcess/cardProcessData.json"
 import CardDoctor from "@/components/Cards/cardDoctor/cardDoctor";
 import BlockTitle from "@/components/BlockTitle/blockTitle";
 import doctorData from "../components/Data/data.json";
+import CardClinic from "@/components/Cards/cardClinics";
 export default function HomePage() {
   return (
     <>
@@ -96,6 +97,7 @@ export default function HomePage() {
         </div>
       </section>
       {/* Card Process */}
+
       <section className="bg-[var(--green)]/5 py-32">
         <div className="container">
           <BlockTitle
@@ -104,10 +106,29 @@ export default function HomePage() {
             descriptionText="Lorem ipsum dolor sit amet consectetur adipisicing elit. Id iure necessitatibus magni modi aliquam similique numquam, veniam explicabo consequatur ipsum. Maiores excepturi architecto ad natus, unde numquam inventore at voluptatibus."
             className="max-w-3xl mx-auto mb-10"
           />
-          <Row>
+          <Swiper
+            slidesPerView={3}
+            spaceBetween={10}
+            modules={[Autoplay, Navigation, Pagination]}
+            autoplay={{ delay: 12000, disableOnInteraction: false }}
+            loop={true}
+            pagination={{ clickable: true }}
+            className="slider testimonial"
+            breakpoints={{
+              0: {
+                slidesPerView: 1,
+              },
+              768: {
+                slidesPerView: 2,
+              },
+              1024: {
+                slidesPerView: 3,
+              },
+            }}
+          >
             {doctorData.doctorCardData.map((item, index) => {
               return (
-                <Col lg={6} key={index}>
+                <SwiperSlide key={index}>
                   <CardDoctor
                     imgSrc={item.imgSrc}
                     imgWidth={item.imgWidth}
@@ -129,10 +150,17 @@ export default function HomePage() {
                     secondaryCtaText={item.secondaryCtaText}
                     btnSecondaryLink={item.btnSecondaryLink}
                   />
-                </Col>
+                </SwiperSlide>
               )
             })}
-          </Row>
+          </Swiper>
+        </div>
+      </section>
+      {/* Card Doctors */}
+
+      <section className="pb-10">
+        <div className="container">
+          <CardClinic />
         </div>
       </section>
     </>

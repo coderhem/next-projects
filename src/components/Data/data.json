@@ -116,15 +116,127 @@
    "speciality": "Neuro",
    "experience": "Above 2 Years",
    "ctaLink": "#",
-   "iconClass": "fa fa-heart",
-   "ctaText": "Book Now",
-   "btnOutline": "btn btn-outline",
    "outlineCtaText": "Book Now",
+   "btnOutline": "btn btn-outline",
    "btnOutlineLink": "/home",
    "btnSecondary": "btn btn-secondary",
    "secondaryCtaText": "Book Now",
    "btnSecondaryLink": "/about",
-   "strongText": "Text Test"
+   "iconClass": "fa fa-heart",
+   "strongText": "Test",
+   "listDetails": [
+    {
+     "strongText": "Expertise",
+     "listText": "Obstetrician, Reproductive Endocrinologist, Pelvic..."
+    },
+    {
+     "strongText": "Language",
+     "listText": "English , Nepali , Doteli"
+    },
+    {
+     "strongText": "Session Mode",
+     "listText": "Video call, Chat, Voice call"
+    }
+   ]
+  },
+  {
+   "imgSrc": "/images/headshot.png",
+   "imgWidth": "500",
+   "imgHeight": "600",
+   "imgAlt": "Doctor Image",
+   "doctorName": "Hem Raj Joshi",
+   "doctorPost": "MBBS",
+   "speciality": "Neuro",
+   "experience": "Above 2 Years",
+   "ctaLink": "#",
+   "outlineCtaText": "Book Now",
+   "btnOutline": "btn btn-outline",
+   "btnOutlineLink": "/home",
+   "btnSecondary": "btn btn-secondary",
+   "secondaryCtaText": "Book Now",
+   "btnSecondaryLink": "/about",
+   "iconClass": "fa fa-heart",
+   "strongText": "Test",
+   "listDetails": [
+    {
+     "strongText": "Expertise",
+     "listText": "Obstetrician, Reproductive Endocrinologist, Pelvic..."
+    },
+    {
+     "strongText": "Language",
+     "listText": "English , Nepali , Doteli"
+    },
+    {
+     "strongText": "Session Mode",
+     "listText": "Video call, Chat, Voice call"
+    }
+   ]
+  },
+  {
+   "imgSrc": "/images/headshot.png",
+   "imgWidth": "500",
+   "imgHeight": "600",
+   "imgAlt": "Doctor Image",
+   "doctorName": "Hem Raj",
+   "doctorPost": "MBBS",
+   "speciality": "Neuro",
+   "experience": "Above 2 Years",
+   "ctaLink": "#",
+   "outlineCtaText": "Book Now",
+   "btnOutline": "btn btn-outline",
+   "btnOutlineLink": "/home",
+   "btnSecondary": "btn btn-secondary",
+   "secondaryCtaText": "Book Now",
+   "btnSecondaryLink": "/about",
+   "iconClass": "fa fa-heart",
+   "strongText": "Test",
+   "listDetails": [
+    {
+     "strongText": "Expertise",
+     "listText": "Obstetrician, Reproductive Endocrinologist, Pelvic..."
+    },
+    {
+     "strongText": "Language",
+     "listText": "English , Nepali , Doteli"
+    },
+    {
+     "strongText": "Session Mode",
+     "listText": "Video call, Chat, Voice call"
+    }
+   ]
+  },
+  {
+   "imgSrc": "/images/headshot.png",
+   "imgWidth": "500",
+   "imgHeight": "600",
+   "imgAlt": "Doctor Image",
+   "doctorName": "Hem Raj",
+   "doctorPost": "MBBS",
+   "speciality": "Neuro",
+   "experience": "Above 2 Years",
+   "ctaLink": "#",
+   "outlineCtaText": "Book Now",
+   "btnOutline": "btn btn-outline",
+   "btnOutlineLink": "/home",
+   "btnSecondary": "btn btn-secondary",
+   "secondaryCtaText": "Book Now",
+   "btnSecondaryLink": "/about",
+   "iconClass": "fa fa-heart",
+   "strongText": "Test",
+   "listDetails": [
+    {
+     "strongText": "Expertise",
+     "listText": "Obstetrician, Reproductive Endocrinologist, Pelvic..."
+    },
+    {
+     "strongText": "Language",
+     "listText": "English , Nepali , Doteli"
+    },
+    {
+     "strongText": "Session Mode",
+     "listText": "Video call, Chat, Voice call"
+    }
+   ]
   }
  ]
 }

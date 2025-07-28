@@ -4,8 +4,6 @@ import Testimonial from "@/components/Testimonial/testimonial";
 import testimonialSlider from "../components/Data/data.json";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation, Pagination } from 'swiper/modules';
-import 'swiper/css';
-import 'swiper/css/pagination';
 import CardInfo from "@/components/Cards/cardInfo/cardInfo";
 import infoCardData from "../components/Data/data.json";
 import { Col, Row } from "react-grid-system";
@@ -14,7 +12,11 @@ import processData from "../components/Cards/cardProcess/cardProcessData.json"
 import CardDoctor from "@/components/Cards/cardDoctor/cardDoctor";
 import BlockTitle from "@/components/BlockTitle/blockTitle";
 import doctorData from "../components/Data/data.json";
-import CardClinic from "@/components/Cards/cardClinics";
+import CardClinic from "@/components/Cards/cardClinics/CardClinics";
+import clinicsData from "../components/Data/data.json";
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
 export default function HomePage() {
   return (
     <>
@@ -98,7 +100,7 @@ export default function HomePage() {
       </section>
       {/* Card Process */}
 
-      <section className="bg-[var(--green)]/5 py-32">
+      <section className="bg-[var(--green)]/5 pb-20 pt-32">
         <div className="container">
           <BlockTitle
             titleText="Recently Added"
@@ -158,11 +160,69 @@ export default function HomePage() {
       </section>
       {/* Card Doctors */}
 
-      <section className="pb-10">
+      <section className="pt-10 pb-10">
         <div className="container">
-          <CardClinic />
+          <div className="flex flex-wrap justify-between gap-5 items-center mb-10">
+            <BlockTitle
+              titleText="Recently Added"
+              greenColor="Clinics"
+              className="!mx-0 text-start [&_h2]:!mb-0"
+            />
+            <div className="flex gap-6 justify-center !static">
+              <a href="#" className="custom-next" >
+                <i className="fa fa-arrow-left"></i>
+              </a>
+              <a href="#" className="custom-prev">
+                <i className="fa fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+          <Swiper
+            slidesPerView={3}
+            spaceBetween={10}
+            modules={[Autoplay, Navigation, Pagination]}
+            autoplay={{ delay: 120000, disableOnInteraction: false }}
+            loop={true}
+            navigation={{
+              nextEl: '.custom-next',
+              prevEl: '.custom-prev'
+            }}
+            className="slider clinic-slider"
+            breakpoints={{
+              0: {
+                slidesPerView: 1,
+              },
+              768: {
+                slidesPerView: 2,
+              },
+              1024: {
+                slidesPerView: 3,
+              },
+            }}
+          >
+            {clinicsData.clinicCardData.map((item, index) => {
+              return (
+                <SwiperSlide key={index}>
+                  <CardClinic
+                    clinicName={item.clinicName}
+                    heilightText={item.heilightText}
+                    clinicDescription={item.clinicDescription}
+                    iconClass={item.iconClass}
+                    blueText={item.blueText}
+                    time={item.time}
+                    btnOutlineLink={item.btnOutlineLink}
+                    outlineCtaText={item.outlineCtaText}
+                    btnOutline={item.btnOutline}
+                    btnSecondary={item.btnSecondary}
+                    btnSecondaryLink={item.btnSecondaryLink}
+                    secondaryCtaText={item.secondaryCtaText}
+                  />
+                </SwiperSlide>
+              )
+            })}
+          </Swiper>
         </div>
-      </section>
+      </section >
     </>
   );
 }

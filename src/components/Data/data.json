@@ -238,5 +238,95 @@
     }
    ]
   }
+ ],
+ "clinicCardData": [
+  {
+   "clinicName": "Kharibot",
+   "heilightText": "Clinics",
+   "iconClass": "fa fa-heart",
+   "clinicDescription": " A modern healthcare clinic providing comprehensive medical services, personalized care, and expert consultations to support your well-being. Let me know if you'd like it tailored to a specific type of clinic (e.g., dental, pediatric, physiotherapy, etc.)...",
+   "listDetails": [
+    {
+     "blueText": "Open Hours :",
+     "time": "8:00 AM to 9:00 PM"
+    },
+    {
+     "blueText": "Owner :",
+     "time": "Name of the owner"
+    }
+   ],
+   "btnOutlineLink": "/home",
+   "btnOutline": "btn btn-green-outline",
+   "outlineCtaText": "Learn More",
+   "btnSecondaryLink": "/home",
+   "btnSecondary": "btn btn-green",
+   "secondaryCtaText": "Book Now"
+  },
+  {
+   "clinicName": "Kharibot",
+   "heilightText": "Clinics",
+   "iconClass": "fa fa-heart",
+   "clinicDescription": " A modern healthcare clinic providing comprehensive medical services, personalized care, and expert consultations to support your well-being. Let me know if you'd like it tailored to a specific type of clinic (e.g., dental, pediatric, physiotherapy, etc.)...",
+   "listDetails": [
+    {
+     "blueText": "Open Hours :",
+     "time": "8:00 AM to 9:00 PM"
+    },
+    {
+     "blueText": "Owner :",
+     "time": "Name of the owner"
+    }
+   ],
+   "btnOutlineLink": "/home",
+   "btnOutline": "btn btn-green-outline",
+   "outlineCtaText": "Learn More",
+   "btnSecondaryLink": "/home",
+   "btnSecondary": "btn btn-green",
+   "secondaryCtaText": "Book Now"
+  },
+  {
+   "clinicName": "Kharibot",
+   "heilightText": "Clinics",
+   "iconClass": "fa fa-heart",
+   "clinicDescription": " A modern healthcare clinic providing comprehensive medical services, personalized care, and expert consultations to support your well-being. Let me know if you'd like it tailored to a specific type of clinic (e.g., dental, pediatric, physiotherapy, etc.)...",
+   "listDetails": [
+    {
+     "blueText": "Open Hours :",
+     "time": "8:00 AM to 9:00 PM"
+    },
+    {
+     "blueText": "Owner :",
+     "time": "Name of the owner"
+    }
+   ],
+   "btnOutlineLink": "/home",
+   "btnOutline": "btn btn-green-outline",
+   "outlineCtaText": "Learn More",
+   "btnSecondaryLink": "/home",
+   "btnSecondary": "btn btn-green",
+   "secondaryCtaText": "Book Now"
+  },
+  {
+   "clinicName": "Kharibot",
+   "heilightText": "Clinics",
+   "iconClass": "fa fa-heart",
+   "clinicDescription": " A modern healthcare clinic providing comprehensive medical services, personalized care, and expert consultations to support your well-being. Let me know if you'd like it tailored to a specific type of clinic (e.g., dental, pediatric, physiotherapy, etc.)...",
+   "listDetails": [
+    {
+     "blueText": "Open Hours :",
+     "time": "8:00 AM to 9:00 PM"
+    },
+    {
+     "blueText": "Owner :",
+     "time": "Name of the owner"
+    }
+   ],
+   "btnOutlineLink": "/home",
+   "btnOutline": "btn btn-green-outline",
+   "outlineCtaText": "Learn More",
+   "btnSecondaryLink": "/home",
+   "btnSecondary": "btn btn-green",
+   "secondaryCtaText": "Book Now"
+  }
  ]
 }

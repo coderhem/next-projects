@@ -4,14 +4,14 @@
 		items-center 
 		justify-center 
 		cursor-pointer 
-		px-6 
+		px-5 
 		py-2 
-		h-14
+		h-11
+    lg:h-12
 		text-base 
-		lg:text-lg 
 		text-center 
 		!leading-none 
-		font-bold 
+		font-semibold 
 		no-underline 
 		select-none 
 		border 
@@ -81,6 +81,34 @@
     focus:ring-[var(--secondary)]
     active:bg-[var(--secondary)] 
     active:border-[var(--secondary)]/50;
+  }
+  .btn-green-outline {
+    @apply bg-transparent
+    text-[var(--primary)] 
+    border-[var(--primary)]
+    hover:bg-[var(--primary)]
+    hover:text-white 
+    hover:border-[var(--primary)] 
+    focus:bg-[var(--primary)]
+    focus:text-white 
+    focus:border-white/75
+    focus:ring-[var(--primary)]
+    active:bg-[var(--primary)] 
+    active:border-[var(--primary)]/50;
+  }
+  .btn-green {
+    @apply bg-[var(--primary)] 
+    text-white
+    border-[var(--primary)]
+    hover:bg-transparent
+    hover:text-[var(--primary)]  
+    hover:border-[var(--primary)] 
+    focus:bg-transparent
+    focus:text-[var(--primary)]  
+    focus:border-white/75
+    focus:ring-[var(--primary)]
+    active:bg-transparent
+    active:border-[var(--primary)]/50;
   }
   .btn-block {
     @apply block w-full;

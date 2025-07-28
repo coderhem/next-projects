@@ -1,19 +1,45 @@
-.swiper-pagination{
- @apply
- pt-5
- !static
+.swiper-pagination {
+  @apply pt-5
+ !static;
 }
 
-.slider .swiper-pagination-bullet{
- @apply
-bg-[var(--sky-blue-100)]
+.slider .swiper-pagination-bullet {
+  @apply bg-[var(--sky-blue-100)]
 size-3
 transition-all
 duration-500;
 }
 
-.slider .swiper-pagination-bullet-active{
- @apply
- w-14
+.slider .swiper-pagination-bullet-active {
+  @apply w-14
  rounded-2xl;
+}
+
+.clinic-slider .swiper-button-next,
+.clinic-slider .swiper-button-prev {
+  @apply !static
+!flex;
+}
+.custom-prev,
+.custom-next {
+  @apply bg-[var(--secondary)]
+    text-white 
+    w-10 
+    h-10 
+    flex 
+    items-center 
+    justify-center 
+    rounded-full 
+    z-10 
+    cursor-pointer
+    hover:bg-transparent
+    focus:bg-transparent
+    active:bg-transparent
+    border
+    border-[var(--secondary)]
+    transition-all
+    duration-300
+    hover:text-[var(--secondary)]
+    focus:text-[var(--secondary)]
+    active:text-[var(--secondary)];
 }

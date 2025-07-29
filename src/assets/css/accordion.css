@@ -1,0 +1,36 @@
+.accordion-title {
+  @apply font-bold
+  cursor-pointer
+ text-black
+ flex
+ items-center
+ justify-between;
+}
+
+.accordion-item {
+  @apply bg-white 
+rounded-lg
+shadow-[0px_0px_7px_0_rgba(0,191,165,0.2)]
+py-4 
+pl-11 
+pr-5
+mb-5;
+}
+
+.icon {
+  @apply bg-white
+ border
+ border-[var(--primary)]
+ size-10
+ text-[var(--primary)]
+ rounded-full
+ flex
+ justify-center
+ items-center;
+}
+
+.accordion-content{
+ @apply
+ mt-5
+ /* h-0 */
+}

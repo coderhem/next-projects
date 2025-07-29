@@ -17,6 +17,7 @@ import clinicsData from "../components/Data/data.json";
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
+import CardAccordion from "@/components/Accordion/accordion";
 export default function HomePage() {
   return (
     <>
@@ -223,6 +224,19 @@ export default function HomePage() {
           </Swiper>
         </div>
       </section >
+      {/* Card Clinics */}
+
+      <section className="bg-[var(--sky-blue)]/10 py-20">
+        <div className="container">
+          <BlockTitle
+          titleText="Frequently Asked"
+          greenColor="Questions"
+          descriptionText="Find quick answers to common questions about our clinic, services, appointments, and more."
+          className="mb-10"
+          />
+          <CardAccordion />
+        </div>
+      </section>
     </>
   );
 }

@@ -328,5 +328,52 @@
    "btnSecondary": "btn btn-green",
    "secondaryCtaText": "Book Now"
   }
+ ],
+ "cardAccordionData": [
+  {
+   "accordionTitle": "1. What is an online clinic?",
+   "accordionDescription": "Find quick answers to common questions about our clinic, services, appointments, and more.",
+   "iconClass":"fa fa-chevron-down"
+  },
+  {
+   "accordionTitle": "2. How do I book an appointment?",
+   "accordionDescription": "Find quick answers to common questions about our clinic, services, appointments, and more.",
+   "iconClass":"fa fa-chevron-down"
+  },
+  {
+   "accordionTitle": "3. What services are available online?",
+   "accordionDescription": "Find quick answers to common questions about our clinic, services, appointments, and more.",
+   "iconClass":"fa fa-chevron-down"
+  },
+  {
+   "accordionTitle": "4. Are your doctors licensed?",
+   "accordionDescription": "Find quick answers to common questions about our clinic, services, appointments, and more. Find quick answers to common questions about our clinic, services, appointments, and more. Find quick answers to common questions about our clinic, services, appointments, and more. Find quick answers to common questions about our clinic, services, appointments, and more.",
+   "iconClass":"fa fa-chevron-down"
+  },
+  {
+   "accordionTitle": "5. Can I get a prescription online?",
+   "accordionDescription": "Find quick answers to common questions about our clinic, services, appointments, and more.",
+   "iconClass":"fa fa-chevron-down"
+  },
+  {
+   "accordionTitle": "6. Is my information secure and confidential?",
+   "accordionDescription": "Find quick answers to common questions about our clinic, services, appointments, and more.",
+   "iconClass":"fa fa-chevron-down"
+  },
+  {
+   "accordionTitle": "7. What if I need in-person care?",
+   "accordionDescription": "Find quick answers to common questions about our clinic, services, appointments, and more.",
+   "iconClass":"fa fa-chevron-down"
+  },
+  {
+   "accordionTitle": "8. How do I pay for a consultation?",
+   "accordionDescription": "Find quick answers to common questions about our clinic, services, appointments, and more.",
+   "iconClass":"fa fa-chevron-down"
+  },
+  {
+   "accordionTitle": "9. What if I miss my appointment?",
+   "accordionDescription": "Find quick answers to common questions about our clinic, services, appointments, and more.",
+   "iconClass":"fa fa-chevron-down"
+  }
  ]
 }

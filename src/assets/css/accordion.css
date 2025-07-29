@@ -24,13 +24,14 @@ mb-5;
  size-10
  text-[var(--primary)]
  rounded-full
+ transition-all
+ duration-300
+ hover:bg-[var(--primary)]
+ hover:text-white
+ focus:bg-[var(--primary)]
+ focus:text-white
  flex
  justify-center
  items-center;
 }
 
-.accordion-content{
- @apply
- mt-5
- /* h-0 */
-}

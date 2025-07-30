@@ -6,15 +6,18 @@
 @import "../assets/css/slider.css";
 @import "../assets/css/accordion.css";
 @import "../assets/css/form.css";
+@import "../assets/css/footer.css";
 
 :root {
   --background: #ffffff;
   --foreground: #545454;
   --primary: #00BFA5;
   --secondary: #073763;
+  --secondary-100: #01213D;
   --green: #D0DF56;
   --yellow: #FFA500;
   --blue: #2F80ED;
+  --blue-100: #0176C1;
   --sky-blue: #56CCF2;
   --sky-blue-100: #7CE7F9;
   --red: #C10101;

@@ -1,0 +1,14 @@
+.social-icons {
+  @apply rounded-full 
+  size-11 
+  p-4 
+  flex 
+  justify-center 
+  items-center
+  transition-all
+  duration-300
+  hover:bg-transparent
+  border-2
+  focus:ring-3
+  focus:border-white;
+}

@@ -16,9 +16,12 @@ import CardClinic from "@/components/Cards/cardClinics/CardClinics";
 import clinicsData from "../components/Data/data.json";
 import CardAccordion from "@/components/Accordion/accordion";
 import accordionData from "../components/Data/data.json";
+import contactUsImg from "../assets/images/contact-us-image.jpg";
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
+import CtaBtn from "@/components/CtaBtn/ctaBtn";
+import ContactForm from "@/components/Form/form";
 export default function HomePage() {
   return (
     <>
@@ -244,6 +247,39 @@ export default function HomePage() {
               />
             )
           })}
+        </div>
+      </section>
+      {/* Card Accoidion */}
+
+      <section className="bg-[var(--blue)]/10 py-8">
+        <div className="container">
+          <Row>
+            <Col lg={6}>
+              <div className="text-black max-lg:mb-10">
+                <h2>Connect Us</h2>
+                <p>Fill out our quick and confidential form, and our compassionate team will contact you promptly. Your privacy is our priority, and all information you share with us will remain strictly confidential.</p>
+
+                <CtaBtn
+                  ctaText="9865900739"
+                  ctaLink="tel:9865900739"
+                  iconClass="fa fa-phone"
+                  ctaClass="mt-8 mb-5"
+                />
+                <CtaBtn
+                  ctaText="info@gmail.com"
+                  ctaLink="mailto:info@gmail.com"
+                  iconClass="fa fa-envelope"
+                  ctaClass="mb-12"
+                />
+                <figure>
+                  <img src={contactUsImg.src} width="400" height="400" alt="Contact Us Featured Image" loading="lazy" />
+                </figure>
+              </div>
+            </Col>
+            <Col>
+              <ContactForm />
+            </Col>
+          </Row>
         </div>
       </section>
     </>

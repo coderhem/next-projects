@@ -24,3 +24,22 @@ text-black
  @apply
  bg-[var(--primary)];
 }
+
+.phone-call{
+ @apply
+ bg-[var(--primary)] 
+ size-11
+ flex
+ justify-center
+ items-center
+ rounded-full
+ text-white
+ border-3
+ border-white
+ ring-2
+ ring-[var(--primary)]
+ hover:bg-white
+ hover:text-[var(--primary)]
+ transition-all
+ duration-300
+}

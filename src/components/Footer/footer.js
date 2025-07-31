@@ -168,7 +168,7 @@ const Footer = () => {
      </Row>
     </div>
 
-    <div className="bg-[var(--secondary-100)] py-8 mt-16 text-center">
+    <div className="bg-[var(--secondary-100)] py-8 mt-16 max-md:text-center">
      <div className="container">
       <Row justify='between'>
        <Col md={6}>
@@ -176,7 +176,7 @@ const Footer = () => {
        </Col>
        <Col md={6}>
         <div className="flex justify-center md:justify-end items-center gap-3 max-md:mt-8">
-         <a href="#">Privacy Policy</a> <span>|</span> <a href="#">Terms & Conditions</a>
+         <a href="#" className='text-[var(--red)] hover:text-[var(--red)]/60 focus:text-[var(--red)]/60 transition-all duration-300 !underline hover:!no-underline focus:!no-underline'>Privacy Policy</a> <span>|</span> <a href="#" className='text-[var(--red)] hover:text-[var(--red)]/60 focus:text-[var(--red)]/60 transition-all duration-300 !underline hover:!no-underline focus:!no-underline'>Terms & Conditions</a>
         </div>
        </Col>
       </Row>

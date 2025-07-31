@@ -1,7 +1,26 @@
-import React from 'react';
+'use client';
+import React, { useEffect, useState } from 'react';
 import headerLogo from '../../assets/images/header-logo.webp';
 
 const Header = () => {
+ const [handleScroll, sethandleScroll] = useState(false);
+
+ useEffect(() => {
+  const onScroll = () => {
+   if (window.scrollY > 100) {
+    document.body.classList.add('scrolled');
+    sethandleScroll(true);
+   } else {
+    document.body.classList.remove('scrolled');
+    sethandleScroll(false);
+   }
+  };
+
+  window.addEventListener('scroll', onScroll);
+  return () => {
+   window.removeEventListener('scroll', onScroll);
+  };
+ }, []);
  return (
   <>
    <header className=''>
@@ -24,47 +43,49 @@ const Header = () => {
     </div>
     {/* Top Header */}
 
-    <div className="bg-[var(--primary)] pb-10 pt-28 xl:py-10 relative ">
-     <div className="container">
-      <div className="flex flex-wrap justify-center max-lg:gap-y-5 md:justify-between items-center -mx-2">
-       <div className="max-w-[178px] px-2">
-        <img src={headerLogo.src} width={178} height={52} alt="Header Logo" loading='lazy' />
-       </div>
-       <div className="absolute top-5 left-5 right-5 max-xl:left-1/2 max-xl:-translate-x-1/2 xl:static w-11/12 xl:w-5/12 bg-white rounded-md p-2 flex justify-between items-center shadow-[4px_4px_10.5px_0px_rgba(0,0,0,0.1)]">
-        <div className="w-[10%]">
-         <span className='bg-[var(--primary)] size-10 inline-flex justify-center items-center text-white rounded'>
-          <i className="fa fa-search flex-1 text-center" aria-hidden="true"></i>
-         </span>
+    <div className={`fixed z-10 left-0 right-0 transition-all duration-300 ${handleScroll ? 'top-0' : 'top-[92px] md:top-[76px] lg:top-12'}`}>
+     <div className="bg-[var(--primary)] pb-10 pt-28 xl:py-10 relative ">
+      <div className="container">
+       <div className="flex flex-wrap justify-center max-lg:gap-y-5 md:justify-between items-center -mx-2">
+        <div className="max-w-[178px] px-2">
+         <img src={headerLogo.src} width={178} height={52} alt="Header Logo" loading='lazy' />
         </div>
-        <form action="#" className='w-[90%] flex items-center justify-between'>
-         <div className="px-3 [&_input]:focus-within:outline-0 w-full lg:w-[80%]">
-          <input type="text" name="" id="" className='w-full' placeholder="Find what you're looking for..." />
+        <div className="absolute top-5 left-5 right-5 max-xl:left-1/2 max-xl:-translate-x-1/2 xl:static w-11/12 xl:w-5/12 bg-white rounded-md p-2 flex justify-between items-center shadow-[4px_4px_10.5px_0px_rgba(0,0,0,0.1)]">
+         <div className="w-[10%]">
+          <span className='bg-[var(--primary)] size-10 inline-flex justify-center items-center text-white rounded'>
+           <i className="fa fa-search flex-1 text-center" aria-hidden="true"></i>
+          </span>
          </div>
-         <div className='[&_select]:focus-visible:outline-0 [&_select_option]:px-5 [&_select_option]:block [&_select_option]:my-1 [&_select_option]:bg-sky-300/20 [&_select_option]:min-w-2xs [&_select_option]:cursor-pointer'>
-          <select name="" id="">
-           <option value="">Categories</option>
-           <option value="">Categories 1</option>
-           <option value="">Categories 1</option>
-           <option value="">Categories 2</option>
-          </select>
-         </div>
-        </form>
-       </div>
-       <div className="3/12 px-2">
-        <div className="flex flex-wrap max-lg:justify-center items-center gap-5">
-         <div className="flex gap-1 items-baseline text-white font-bold relative group">
-          <i className="fa fa-home text-2xl group-hover:text-white/80 focus:text-white/80 transition-all duration-300" aria-hidden="true"></i>
-          <span className='flex justify-center items-center size-4 bg-[var(--green)] absolute rounded-full text-xs -top-2 left-2 focus:bg-[var(--secondary)] group-hover:bg-[var(--secondary)] transition-all duration-300'>0</span>
-          <a href="#" className='stretched-link group-hover:text-white/80 focus:text-white/80'>Clinics</a>
-         </div>
-         <div className="flex gap-1 items-baseline text-white font-bold relative group">
-          <i className="fa fa-user-md text-2xl group-hover:text-white/80 focus:text-white/80 transition-all duration-300" aria-hidden="true"></i>
-          <span className='flex justify-center items-center size-4 bg-[var(--green)] absolute rounded-full text-xs -top-2 left-2 focus:bg-[var(--secondary)] group-hover:bg-[var(--secondary)] transition-all duration-300'>0</span>
-          <a href="#" className='stretched-link group-hover:text-white/80 focus:text-white/80'>Doctors</a>
-         </div>
-         <div className="max-sm:w-full flex gap-8 justify-center">
-          <a href="#" className='btn btn-secondary font-bold'>Get Membership</a>
-          <a href="#" className='btn btn-primary font-bold'>Offers</a>
+         <form action="#" className='w-[90%] flex items-center justify-between'>
+          <div className="px-3 [&_input]:focus-within:outline-0 w-full lg:w-[80%]">
+           <input type="text" name="" id="" className='w-full' placeholder="Find what you're looking for..." />
+          </div>
+          <div className='[&_select]:focus-visible:outline-0 [&_select_option]:px-5 [&_select_option]:block [&_select_option]:my-1 [&_select_option]:bg-sky-300/20 [&_select_option]:min-w-2xs [&_select_option]:cursor-pointer'>
+           <select name="" id="">
+            <option value="">Categories</option>
+            <option value="">Categories 1</option>
+            <option value="">Categories 1</option>
+            <option value="">Categories 2</option>
+           </select>
+          </div>
+         </form>
+        </div>
+        <div className="3/12 px-2">
+         <div className="flex flex-wrap max-lg:justify-center items-center gap-5">
+          <div className="flex gap-1 items-baseline text-white font-bold relative group">
+           <i className="fa fa-home text-2xl group-hover:text-white/80 focus:text-white/80 transition-all duration-300" aria-hidden="true"></i>
+           <span className='flex justify-center items-center size-4 bg-[var(--green)] absolute rounded-full text-xs -top-2 left-2 focus:bg-[var(--secondary)] group-hover:bg-[var(--secondary)] transition-all duration-300'>0</span>
+           <a href="#" className='stretched-link group-hover:text-white/80 focus:text-white/80'>Clinics</a>
+          </div>
+          <div className="flex gap-1 items-baseline text-white font-bold relative group">
+           <i className="fa fa-user-md text-2xl group-hover:text-white/80 focus:text-white/80 transition-all duration-300" aria-hidden="true"></i>
+           <span className='flex justify-center items-center size-4 bg-[var(--green)] absolute rounded-full text-xs -top-2 left-2 focus:bg-[var(--secondary)] group-hover:bg-[var(--secondary)] transition-all duration-300'>0</span>
+           <a href="#" className='stretched-link group-hover:text-white/80 focus:text-white/80'>Doctors</a>
+          </div>
+          <div className="max-sm:w-full flex gap-8 justify-center">
+           <a href="#" className='btn btn-secondary font-bold'>Get Membership</a>
+           <a href="#" className='btn btn-primary font-bold'>Offers</a>
+          </div>
          </div>
         </div>
        </div>

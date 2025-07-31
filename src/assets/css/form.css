@@ -25,3 +25,20 @@
  placeholder:font-bold
  w-full
 }
+
+/* Error */
+
+.error-message{
+ @apply
+ text-red-700
+ text-sm
+ pt-2
+ pl-7
+ hidden
+}
+
+.error .error-message{
+ @apply
+ block
+}
+

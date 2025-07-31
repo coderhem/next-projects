@@ -6,6 +6,10 @@
  items-center
  justify-between;
 }
+.accordion-title strong{
+  @apply
+  flex-1;
+}
 
 .accordion-item {
   @apply bg-white 
@@ -34,4 +38,3 @@ mb-5;
  justify-center
  items-center;
 }
-

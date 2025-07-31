@@ -1,6 +1,20 @@
-import React from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 
 const ContactForm = () => {
+ const [input, setInput] = useState('');
+ const [error, setIsError] = useState(false);
+ const inputRef = useRef(null);
+
+ useEffect(() => {
+  if (input.trim() === '') {
+   setIsError(true);
+   inputRef.current?.classList.add('error');
+  } else {
+   setIsError(false);
+   inputRef.current?.classList.remove('error');
+  }
+ }, [input]);
+
  return (
   <>
    <div className="bg-white shadow-[0px_0px_15px_0_rgba(0,191,165,0.2)] pt-9 pb-5 px-8">
@@ -9,8 +23,9 @@ const ContactForm = () => {
     </div>
     <div className="">
      <form action="" className='form'>
-      <div className="form-group !w-full">
-       <input type="text" className='form-control' name='fullName' placeholder='Full Name' />
+      <div className="form-group !w-full" ref={inputRef}>
+       <input type="text" required className='form-control' name='fullName' placeholder='Full Name' />
+       <p className='error-message'>This field is required*</p>
       </div>
       <div className="form-group">
        <input type="email" className='form-control' name='fullName' placeholder='Email' />

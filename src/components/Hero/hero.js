@@ -14,9 +14,9 @@ import 'swiper/css/pagination';
 const Hero = () => {
  return (
   <>
-   <section className="bg-[url('../assets/images/hero-bg.webp')] py-8 bg-cover bg-top">
+   <section className="pt-80 md:pt-72 lg:pt-44 bg-[url('../assets/images/hero-bg.webp')] py-8 bg-cover bg-top relative max-lg:before:absolute before:inset-0 before:bg-gradient-to-b before:to-[var(--secondary)] before:from-transparent before:from-40%">
     <div className="container">
-     <Row>
+     <Row align='center'>
       <Col lg={7} className='mb-10'>
        <div className="[&_h1]:text-black">
         <span className='text-[var(--primary)] font-bold uppercase'>Entrust your health our doctors</span>

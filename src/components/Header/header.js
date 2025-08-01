@@ -1,13 +1,17 @@
 'use client';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import headerLogo from '../../assets/images/header-logo.webp';
 
 const Header = () => {
  const [handleScroll, sethandleScroll] = useState(false);
+ const elementRef = useRef(null);
+ const topValue = useRef(null);
+ const [headerHeight, setHeaderHeight] = useState(0);
+ const [isTopValue, setIsTopValue] = useState(0);
 
  useEffect(() => {
   const onScroll = () => {
-   if (window.scrollY > 100) {
+   if (window.scrollY > 3) {
     document.body.classList.add('scrolled');
     sethandleScroll(true);
    } else {
@@ -21,10 +25,23 @@ const Header = () => {
    window.removeEventListener('scroll', onScroll);
   };
  }, []);
+ // Header 
+
+ useEffect(() => {
+  if (elementRef.current) {
+   const height = elementRef.current.offsetHeight;
+   setHeaderHeight(height);
+  }
+  if (topValue.current) {
+   const height = topValue.current.offsetHeight;
+   setIsTopValue(height);
+  }
+ }, []);
+
  return (
   <>
-   <header className=''>
-    <div className="bg-[var(--green)] text-[var(--secondary)] font-extrabold py-3 text-sm md:text-base">
+   <header className='' style={{ marginBottom: `${headerHeight}px` }}>
+    <div className="bg-[var(--green)] text-[var(--secondary)] font-extrabold py-3 text-sm md:text-base" ref={topValue}>
      <div className="container">
       <div className="flex flex-wrap gap-y-1 gap-2 justify-center lg:justify-between items-center">
        <span className='text-center lg:text-start'>Get 20% off on your first consultation! Book Now.</span>
@@ -43,8 +60,9 @@ const Header = () => {
     </div>
     {/* Top Header */}
 
-    <div className={`fixed z-10 left-0 right-0 transition-all duration-300 ${handleScroll ? 'top-0' : 'top-[92px] md:top-[76px] lg:top-12'}`}>
-     <div className="bg-[var(--primary)] pb-10 pt-28 xl:py-10 relative ">
+    <div className="fixed z-10 left-0 right-0 transition-all duration-300"
+     style={{ top: handleScroll ? 0 : `${isTopValue}px` }} ref={elementRef}>
+     <div className="bg-[var(--primary)] pb-10 pt-28 xl:py-10 relative">
       <div className="container">
        <div className="flex flex-wrap justify-center max-lg:gap-y-5 md:justify-between items-center -mx-2">
         <div className="max-w-[178px] px-2">

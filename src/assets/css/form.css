@@ -1,44 +1,67 @@
-.form{
- @apply
- flex
+.form {
+  @apply flex
  -mx-3
- flex-wrap
+ flex-wrap;
 }
 
-.form-group{
- @apply
- mb-6
+.form-group {
+  @apply mb-5
  w-full
  lg:w-1/2
- px-3
+ px-3;
 }
 
-.form-control{
- @apply
- border
+.form-control {
+  @apply border
  border-[var(--primary)]/20
- h-16
+ h-12
  py-2
- px-7
+ px-5 
  focus-visible:outline-0
- text-black
+ text-[var(--gray)]
+ text-sm
  placeholder:font-bold
- w-full
+ w-full;
+}
+
+select.form-control {
+  @apply appearance-none
+ bg-[url('../assets/images/dropdown-icon.png')]
+ bg-no-repeat
+ bg-[right_10px_center]
+ bg-auto;
+}
+
+select.form-control {
+  @apply cursor-pointer;
+}
+select.form-control option {
+  @apply bg-blue-200/50
+  text-[var(--secondary)]
+  border-2
+  border-blue-200/50
+  !rounded-2xl
+ !cursor-pointer;
+}
+
+textarea.form-control {
+  @apply !h-16;
 }
 
 /* Error */
 
-.error-message{
- @apply
- text-red-700
+.error {
+  @apply text-[var(--red)] text-xs pt-3;
+}
+
+.error-message {
+  @apply text-red-700
  text-sm
  pt-2
  pl-7
- hidden
+ hidden;
 }
 
-.error .error-message{
- @apply
- block
+.error .error-message {
+  @apply block;
 }
-

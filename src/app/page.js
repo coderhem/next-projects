@@ -137,6 +137,7 @@ export default function HomePage() {
               return (
                 <SwiperSlide key={index}>
                   <CardDoctor
+                    id={item.id}
                     imgSrc={item.imgSrc}
                     imgWidth={item.imgWidth}
                     imgHeight={item.imgHeight}
@@ -230,7 +231,7 @@ export default function HomePage() {
       </section >
       {/* Card Clinics */}
 
-      <section className="bg-[var(--sky-blue)]/10 py-20">
+      <section className="bg-[var(--sky-blue)]/10 pt-20 pb-4">
         <div className="container">
           <BlockTitle
             titleText="Frequently Asked"

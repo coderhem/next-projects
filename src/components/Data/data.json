@@ -107,11 +107,12 @@
  ],
  "doctorCardData": [
   {
+   "id" : "1",
    "imgSrc": "/images/headshot.png",
    "imgWidth": "500",
    "imgHeight": "600",
    "imgAlt": "Doctor Image",
-   "doctorName": "Hem Raj",
+   "doctorName": "Uddhav Joshi",
    "doctorPost": "MBBS",
    "speciality": "Neuro",
    "experience": "Above 2 Years",
@@ -140,6 +141,7 @@
    ]
   },
   {
+   "id" : "2",
    "imgSrc": "/images/headshot.png",
    "imgWidth": "500",
    "imgHeight": "600",
@@ -173,11 +175,12 @@
    ]
   },
   {
+   "id" : "3",
    "imgSrc": "/images/headshot.png",
    "imgWidth": "500",
    "imgHeight": "600",
    "imgAlt": "Doctor Image",
-   "doctorName": "Hem Raj",
+   "doctorName": "Rajan Adhikari",
    "doctorPost": "MBBS",
    "speciality": "Neuro",
    "experience": "Above 2 Years",
@@ -206,11 +209,12 @@
    ]
   },
   {
+   "id" : "4",
    "imgSrc": "/images/headshot.png",
    "imgWidth": "500",
    "imgHeight": "600",
    "imgAlt": "Doctor Image",
-   "doctorName": "Hem Raj",
+   "doctorName": "Sumesh Maharjan",
    "doctorPost": "MBBS",
    "speciality": "Neuro",
    "experience": "Above 2 Years",

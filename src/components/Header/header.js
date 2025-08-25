@@ -1,6 +1,7 @@
 'use client';
 import React, { useEffect, useRef, useState } from 'react';
 import headerLogo from '../../assets/images/header-logo.webp';
+import { json } from 'zod';
 
 const Header = () => {
  const [handleScroll, sethandleScroll] = useState(false);
@@ -36,6 +37,14 @@ const Header = () => {
    const height = topValue.current.offsetHeight;
    setIsTopValue(height);
   }
+ }, []);
+
+ const [doctors, setDoctors] = useState([]);
+
+ useEffect(() => {
+  const storedData = localStorage.getItem('doctorName');
+  const parsedData = storedData ? JSON.parse(storedData) : [];
+  setDoctors(parsedData);
  }, []);
 
  return (
@@ -98,7 +107,14 @@ const Header = () => {
           <div className="flex gap-1 items-baseline text-white font-bold relative group">
            <i className="fa fa-user-md text-2xl group-hover:text-white/80 focus:text-white/80 transition-all duration-300" aria-hidden="true"></i>
            <span className='flex justify-center items-center size-4 bg-[var(--green)] absolute rounded-full text-xs -top-2 left-2 focus:bg-[var(--secondary)] group-hover:bg-[var(--secondary)] transition-all duration-300'>0</span>
-           <a href="#" className='stretched-link group-hover:text-white/80 focus:text-white/80'>Doctors</a>
+           <div className="relative group cursor-pointer">
+            <a href="#" className='stretched-link group-hover:text-white/80 focus:text-white/80'>Doctors</a>
+            <ul className='bg-white p-3 min-h-max min-w-max text-[var(--primary)] group-hover:block hidden absolute inset-0 [&_li]:mb-2'>
+             {doctors.map((item, idx) => (
+              <li key={idx}><a href="#">{item[0]?.[0]?.name}</a></li>
+             ))}
+            </ul>
+           </div>
           </div>
           <div className="max-sm:w-full flex gap-8 justify-center">
            <a href="#" className='btn btn-secondary font-bold'>Get Membership</a>

@@ -7,7 +7,7 @@
    "imgAlt": "Doctor Image",
    "fullName": "Hem Raj",
    "postName": "Developer",
-   "ctaText": "Find Doctors",
+   "ctaText": "Know More",
    "ctaLink": "/doctors"
   },
   {
@@ -17,7 +17,7 @@
    "imgAlt": "Doctor Image",
    "fullName": "Hem Raj",
    "postName": "Developer",
-   "ctaText": "Find Doctors",
+   "ctaText": "Know More",
    "ctaLink": "/doctors"
   },
   {
@@ -27,7 +27,7 @@
    "imgAlt": "Doctor Image",
    "fullName": "Hem Raj",
    "postName": "Developer",
-   "ctaText": "Find Doctors",
+   "ctaText": "Know More",
    "ctaLink": "/doctors"
   },
   {
@@ -37,7 +37,7 @@
    "imgAlt": "Doctor Image",
    "fullName": "Hem Raj",
    "postName": "Developer",
-   "ctaText": "Find Doctors",
+   "ctaText": "Know More",
    "ctaLink": "/doctors"
   }
  ],
@@ -74,7 +74,7 @@
    "cardTitle": "psychiatrist",
    "cardDescription": "<p>Search for Dr.Carter Clinic expert by specialty, disease, conditione, expertise,or doctor's last name.</p>",
    "btnClass": "btn btn-white",
-   "ctaText": "Find Doctors",
+   "ctaText": "Know More",
    "ctaLink": "/doctors"
   },
   {
@@ -83,7 +83,7 @@
    "cardTitle": "psychiatrist",
    "cardDescription": "<p>Search for Dr.Carter Clinic expert by specialty, disease, conditione, expertise,or doctor's last name.</p>",
    "btnClass": "btn btn-white",
-   "ctaText": "Find Doctors",
+   "ctaText": "Know More",
    "ctaLink": "/doctors"
   },
   {
@@ -92,7 +92,16 @@
    "cardTitle": "psychiatrist",
    "cardDescription": "<p>Search for Dr.Carter Clinic expert by specialty, disease, conditione, expertise,or doctor's last name.</p>",
    "btnClass": "btn btn-white",
-   "ctaText": "Find Doctors",
+   "ctaText": "Know More",
+   "ctaLink": "/doctors"
+  },
+  {
+   "cardBgClass": "bg-dark-blue",
+   "cardIcon": "fa fa-stethoscope",
+   "cardTitle": "psychiatrist",
+   "cardDescription": "<p>Search for Dr.Carter Clinic expert by specialty, disease, conditione, expertise,or doctor's last name.</p>",
+   "btnClass": "btn btn-white",
+   "ctaText": "Know More",
    "ctaLink": "/doctors"
   },
   {
@@ -101,7 +110,7 @@
    "cardTitle": "psychiatrist",
    "cardDescription": "<p>Search for Dr.Carter Clinic expert by specialty, disease, conditione, expertise,or doctor's last name.</p>",
    "btnClass": "btn btn-white",
-   "ctaText": "Find Doctors",
+   "ctaText": "Know More",
    "ctaLink": "/doctors"
   }
  ],
@@ -117,7 +126,7 @@
    "speciality": "Neuro",
    "experience": "Above 2 Years",
    "ctaLink": "#",
-   "outlineCtaText": "Book Now",
+   "outlineCtaText": "Consult Now",
    "btnOutline": "btn btn-outline",
    "btnOutlineLink": "/home",
    "btnSecondary": "btn btn-secondary",

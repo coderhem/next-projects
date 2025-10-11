@@ -26,86 +26,73 @@ export default function HomePage() {
   return (
     <>
       <Hero />
-      <div className="container">
-        <Swiper
-          slidesPerView={3}
-          spaceBetween={10}
-          modules={[Autoplay]}
-          autoplay={{ delay: 12000, disableOnInteraction: false }}
-          loop={true}
-          className="slider testimonial"
-          breakpoints={{
-            0: {
-              slidesPerView: 1,
-            },
-            768: {
-              slidesPerView: 2,
-            },
-            1024: {
-              slidesPerView: 3,
-            },
-          }}
-        >
-          {testimonialSlider.testimonialData.map((item, index) => {
-            return (
-              <SwiperSlide key={index}>
-                <Testimonial
-                  memberName={item.memberName}
-                  memberStatus={item.memberStatus}
-                  testimonialText={item.testimonialText}
-                  timeStatus={item.timeStatus}
-                />
-              </SwiperSlide>
-            );
-          })}
-
-        </Swiper>
-      </div>
-      {/* Testimonial */}
-
-      <section className="bg-[url('../assets/images/card-bg.png')] bg-cover bg-no-repeat bg-center py-10 md:py-14 lg:py-20">
+      <section className="py-10 md:py-14">
         <div className="container">
-          <Row>
-            {infoCardData.cardInfoData.map((item, index) => {
-              return (
-                <Col md={6} lg={4} xl={3} key={index} className="mb-7">
-                  <CardInfo
-                    cardBgClass={item.cardBgClass}
-                    cardIcon={item.cardIcon}
-                    cardTitle={item.cardTitle}
-                    cardDescription={item.cardDescription}
-                    btnClass={item.btnClass}
-                    ctaText={item.ctaText}
-                    ctaLink={item.ctaLink}
-                  />
-                </Col>
-              )
-            })}
-          </Row>
+          <div className="flex items-center justify-between gap-10">
+            <div className="mb-10 max-w-4xl">
+              <h2 className=" text-black mb-2">Specializations</h2>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam dolorum porro deleniti? Sequi quos accusamus totam suscipit dignissimos, aperiam aut vel culpa. Rem voluptates id, ut nisi asperiores corporis fugiat.</p>
+            </div>
+            <div className="flex gap-6 justify-center">
+              <a href="#" className="custom-next" >
+                <i className="fa fa-arrow-left"></i>
+              </a>
+              <a href="#" className="custom-prev">
+                <i className="fa fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div className="bg-[url('../assets/images/card-bg.png')] bg-cover bg-no-repeat bg-center ">
+          <div className="container">
+            <Swiper
+              slidesPerView={3}
+              spaceBetween={30}
+              modules={[Autoplay, Navigation, Pagination]}
+              autoplay={{ delay: 12000, disableOnInteraction: false }}
+              loop={true}
+              navigation={{
+                nextEl: '.custom-next',
+                prevEl: '.custom-prev'
+              }}
+              pagination={{ clickable: true }}
+              className="slider clinic-slider"
+              breakpoints={{
+                0: {
+                  slidesPerView: 1,
+                },
+                768: {
+                  slidesPerView: 2,
+                },
+                1024: {
+                  slidesPerView: 4.5,
+                },
+              }}
+            >
+              {infoCardData.cardInfoData.map((item, index) => {
+                return (
+                  <SwiperSlide key={index}>
+                    <CardInfo
+                      cardBgClass={item.cardBgClass}
+                      cardIcon={item.cardIcon}
+                      cardTitle={item.cardTitle}
+                      cardDescription={item.cardDescription}
+                      btnClass={item.btnClass}
+                      ctaText={item.ctaText}
+                      ctaLink={item.ctaLink}
+                    />
+                  </SwiperSlide>
+
+                )
+              })}
+            </Swiper>
+
+          </div>
         </div>
       </section>
       {/* Card Information */}
 
-      <section className="bg-secondary py-12 sm:py-20 md:py-24 lg:py-30">
-        <div className="container">
-          <Row justify="center">
-            {processData.processData.map((item, index) => {
-              return (
-                <Col md={6} lg={3} key={index} className="max-lg:mb-10 md:not-last:border-r-1 border-white/10 md:not-last:border-b-0 not-last:border-b md:even:border-0 lg:not-last:even:border-r max-md:pb-5">
-                  <CardProcess
-                    cardIcon={item.cardIcon}
-                    cardTitle={item.cardTitle}
-                    cardDescription={item.cardDescription}
-                  />
-                </Col>
-              )
-            })}
-          </Row>
-        </div>
-      </section>
-      {/* Card Process */}
-
-      <section className="bg-secondary/5 pb-20 pt-32">
+      <section className="bg-secondary/5 py-10 md:py-14 lg:py-20">
         <div className="container">
           <BlockTitle
             titleText="Recently Added"
@@ -230,6 +217,62 @@ export default function HomePage() {
         </div>
       </section >
       {/* Card Clinics */}
+
+      <div className="container">
+        <Swiper
+          slidesPerView={3}
+          spaceBetween={10}
+          modules={[Autoplay]}
+          autoplay={{ delay: 12000, disableOnInteraction: false }}
+          loop={true}
+          className="slider testimonial"
+          breakpoints={{
+            0: {
+              slidesPerView: 1,
+            },
+            768: {
+              slidesPerView: 2,
+            },
+            1024: {
+              slidesPerView: 3,
+            },
+          }}
+        >
+          {testimonialSlider.testimonialData.map((item, index) => {
+            return (
+              <SwiperSlide key={index}>
+                <Testimonial
+                  memberName={item.memberName}
+                  memberStatus={item.memberStatus}
+                  testimonialText={item.testimonialText}
+                  timeStatus={item.timeStatus}
+                />
+              </SwiperSlide>
+            );
+          })}
+
+        </Swiper>
+      </div>
+      {/* Testimonial */}
+
+      <section className="bg-secondary py-12 sm:py-20 md:py-24 lg:py-30">
+        <div className="container">
+          <Row justify="center">
+            {processData.processData.map((item, index) => {
+              return (
+                <Col md={6} lg={3} key={index} className="max-lg:mb-10 md:not-last:border-r-1 border-white/10 md:not-last:border-b-0 not-last:border-b md:even:border-0 lg:not-last:even:border-r max-md:pb-5">
+                  <CardProcess
+                    cardIcon={item.cardIcon}
+                    cardTitle={item.cardTitle}
+                    cardDescription={item.cardDescription}
+                  />
+                </Col>
+              )
+            })}
+          </Row>
+        </div>
+      </section>
+      {/* Card Process */}
 
       <section className="bg-sky-blue/10 pt-20 pb-4">
         <div className="container">

@@ -34,7 +34,7 @@ const Hero = () => {
          })}
         </ul >
         <div className="pt-9">
-         <a href="#" className='btn btn-secondary'>Who we are</a>
+         <a href="/about" className='btn btn-secondary'>Who we are</a>
         </div>
        </div>
       </Col>

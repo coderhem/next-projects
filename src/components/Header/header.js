@@ -120,8 +120,8 @@ const Header = () => {
            </div>
           </div>
           <div className="max-sm:w-full flex gap-8 justify-center">
-           <a href="#" className='btn btn-secondary font-bold'>Get Membership</a>
-           <a href="#" className='btn btn-primary font-bold'>Offers</a>
+           <a href="/membership" className='btn btn-secondary font-bold'>Get Membership</a>
+           <a href="/login" className='btn btn-primary font-bold'>Login</a>
           </div>
          </div>
         </div>

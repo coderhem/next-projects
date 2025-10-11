@@ -21,6 +21,9 @@
  text-gray
  text-sm
  placeholder:font-bold
+ focus-within:border-primary
+ transition-all
+ duration-300
  w-full;
 }
 
@@ -46,6 +49,21 @@ select.form-control option {
 
 textarea.form-control {
   @apply !h-16;
+}
+
+.membership-form .form-control {
+  @apply placeholder:text-black/70
+placeholder:font-medium
+transition-all
+duration-300
+focus-within:border-primary
+font-medium
+text-black;
+}
+
+.membership-form select.form-control{
+  @apply
+  text-black/70
 }
 
 /* Error */

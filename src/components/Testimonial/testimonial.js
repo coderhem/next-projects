@@ -15,14 +15,14 @@ const Testimonial = (
           <div className="bg-white shadow-[7px_8px_15px_0_rgba(0,191,165,0.2)] pl-11 pt-9 pr-7 pb-6 rounded-lg">
             <div className="flex justify-between mb-6">
               {memberName &&
-                <div className="[&_h2]:mb-[2px] [&_h2]:text-[var(--secondary)]">
+                <div className="[&_h2]:mb-[2px] [&_h2]:text-secondary">
                   <h2 className='h4'>{memberName}</h2>
-                  <span className='text-[var(--primary)] pb-1'>
-                    <i className="fa fa-check-circle text-[var(--primary)] pr-1"></i>
+                  <span className='text-primary pb-1'>
+                    <i className="fa fa-check-circle text-primary pr-1"></i>
                     {memberStatus}</span>
                 </div>
               }
-              <div className="flex text-[var(--yellow)]">
+              <div className="flex text-yellow">
                 <i className="fa fa-star" aria-hidden="true"></i>
                 <i className="fa fa-star" aria-hidden="true"></i>
                 <i className="fa fa-star" aria-hidden="true"></i>
@@ -33,7 +33,7 @@ const Testimonial = (
             {testimonialText &&
               <div className="mb-2">
                 <p>{testimonialText}</p>
-                <div className="flex items-center gap-1 text-[var(--primary)] justify-end">
+                <div className="flex items-center gap-1 text-primary justify-end">
                   <i className="fa fa-clock" aria-hidden="true"></i>
                   <span>{timeStatus}</span>
                 </div>

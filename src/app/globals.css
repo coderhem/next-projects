@@ -11,18 +11,6 @@
 :root {
   --background: #ffffff;
   --foreground: #545454;
-  --primary: #00BFA5;
-  --secondary: #073763;
-  --secondary-100: #01213D;
-  --green: #D0DF56;
-  --yellow: #FFA500;
-  --blue: #2F80ED;
-  --blue-100: #0176C1;
-  --sky-blue: #56CCF2;
-  --sky-blue-100: #7CE7F9;
-  --red: #FF0000;
-  --violet: #D12F82;
-  --gray: #545454;
 }
 
 @theme inline {
@@ -30,12 +18,28 @@
   --color-foreground: var(--foreground);
   --font-nunito: var(--font-nunito-sans);
   --font-poppins: var(--font-poppins);
+  --color-green: #d0df56;
+  --color-sky-blue-100: #7ce7f9;
+  --color-yellow-150: #d0df56;
+  --color-primary: #00bfa5;
+  --color-secondary: #073763;
+  --color-secondary-100: #01213d;
+  --color-yellow: #ffa500;
+  /* --yellow-100: #D0DF56; */
+  --color-blue: #2f80ed;
+  --color-blue-100: #0176c1;
+  --color-sky-blue: #56ccf2;
+  /* --color-sky-blue-100: #7ce7f9; */
+  --color-red: #ff0000;
+  --color-violet: #d12f82;
+  --color-gray: #545454;
+  --color-dark: #545454;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #fff;
-    --foreground: #545454;
+    /* --foreground: #545454; */
   }
 }
 

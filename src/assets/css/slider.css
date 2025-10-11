@@ -4,7 +4,7 @@
 }
 
 .slider .swiper-pagination-bullet {
-  @apply bg-[var(--sky-blue-100)]
+  @apply bg-sky-blue-100
 size-3
 transition-all
 duration-500;
@@ -22,7 +22,7 @@ duration-500;
 }
 .custom-prev,
 .custom-next {
-  @apply bg-[var(--secondary)]
+  @apply bg-secondary
     text-white 
     w-10 
     h-10 
@@ -36,14 +36,13 @@ duration-500;
     focus:bg-transparent
     active:bg-transparent
     border
-    border-[var(--secondary)]
+    border-secondary
     transition-all
     duration-300
-    hover:text-[var(--secondary)]
-    focus:text-[var(--secondary)]
-    active:text-[var(--secondary)];
+    hover:text-secondary
+    focus:text-secondary
+    active:text-secondary;
 }
-
 
 /* Hide scrollbar for Chrome, Safari and Opera */
 .scrollbar-hidden::-webkit-scrollbar {
@@ -52,6 +51,6 @@ duration-500;
 
 /* Hide scrollbar for IE, Edge and Firefox */
 .scrollbar-hidden {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;     /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }

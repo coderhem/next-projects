@@ -2,6 +2,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import headerLogo from '../../assets/images/header-logo.webp';
 import { json } from 'zod';
+import Link from 'next/link';
 
 const Header = () => {
  const [handleScroll, sethandleScroll] = useState(false);
@@ -50,18 +51,18 @@ const Header = () => {
  return (
   <>
    <header className='' style={{ marginBottom: `${headerHeight}px` }}>
-    <div className="bg-[var(--green)] text-[var(--secondary)] font-extrabold py-3 text-sm md:text-base" ref={topValue}>
+    <div className="bg-green text-secondary font-extrabold py-3 text-sm md:text-base" ref={topValue}>
      <div className="container">
       <div className="flex flex-wrap gap-y-1 gap-2 justify-center lg:justify-between items-center">
        <span className='text-center lg:text-start'>Get 20% off on your first consultation! Book Now.</span>
        <div className="flex justify-center flex-wrap gap-y-1 gap-5">
         <div className="relative flex items-center gap-2 group">
-         <i className="fa fa-phone-square group-hover:text-[var(--secondary)]/80 focus:text-[var(--secondary)]/80 transition-all" aria-hidden="true"></i>
-         <a href="tel:0123456789" className='stretched-link !text-[var(--secondary)] group-hover:!text-[var(--secondary)]/80 group-hover:!underline focus:text-[var(--secondary)]'>Office: 0123456789</a>
+         <i className="fa fa-phone-square group-hover:text-secondary/80 focus:text-secondary/80 transition-all" aria-hidden="true"></i>
+         <a href="tel:0123456789" className='stretched-link !text-secondary group-hover:!text-secondary/80 group-hover:!underline focus:text-secondary'>Office: 0123456789</a>
         </div>
         <div className="relative flex items-center gap-2 group">
-         <i className="fa fa-ambulance group-hover:text-[var(--secondary)]/80 focus:text-[var(--secondary)]/80 transition-all" aria-hidden="true"></i>
-         <a href="tel:0123456789" className='stretched-link !text-[var(--secondary)] group-hover:!text-[var(--secondary)]/80 group-hover:!underline focus:text-[var(--secondary)]'>Emergency Line: 0123456789</a>
+         <i className="fa fa-ambulance group-hover:text-secondary/80 focus:text-secondary/80 transition-all" aria-hidden="true"></i>
+         <a href="tel:0123456789" className='stretched-link !text-secondary group-hover:!text-secondary/80 group-hover:!underline focus:text-secondary'>Emergency Line: 0123456789</a>
         </div>
        </div>
       </div>
@@ -71,15 +72,17 @@ const Header = () => {
 
     <div className="fixed z-10 left-0 right-0 transition-all duration-300"
      style={{ top: handleScroll ? 0 : `${isTopValue}px` }} ref={elementRef}>
-     <div className="bg-[var(--primary)] pb-10 pt-28 xl:py-10 relative">
+     <div className="bg-primary pb-10 pt-28 xl:py-10 relative">
       <div className="container">
        <div className="flex flex-wrap justify-center max-lg:gap-y-5 md:justify-between items-center -mx-2">
         <div className="max-w-[178px] px-2">
-         <img src={headerLogo.src} width={178} height={52} alt="Header Logo" loading='lazy' />
+         <Link href="/">
+          <img src={headerLogo.src} width={178} height={52} alt="Header Logo" loading='lazy' />
+         </Link>
         </div>
         <div className="absolute top-5 left-5 right-5 max-xl:left-1/2 max-xl:-translate-x-1/2 xl:static w-11/12 xl:w-5/12 bg-white rounded-md p-2 flex justify-between items-center shadow-[4px_4px_10.5px_0px_rgba(0,0,0,0.1)]">
          <div className="w-[10%]">
-          <span className='bg-[var(--primary)] size-10 inline-flex justify-center items-center text-white rounded'>
+          <span className='bg-primary size-10 inline-flex justify-center items-center text-white rounded'>
            <i className="fa fa-search flex-1 text-center" aria-hidden="true"></i>
           </span>
          </div>
@@ -101,15 +104,15 @@ const Header = () => {
          <div className="flex flex-wrap max-lg:justify-center items-center gap-5">
           <div className="flex gap-1 items-baseline text-white font-bold relative group">
            <i className="fa fa-home text-2xl group-hover:text-white/80 focus:text-white/80 transition-all duration-300" aria-hidden="true"></i>
-           <span className='flex justify-center items-center size-4 bg-[var(--green)] absolute rounded-full text-xs -top-2 left-2 focus:bg-[var(--secondary)] group-hover:bg-[var(--secondary)] transition-all duration-300'>0</span>
+           <span className='flex justify-center items-center size-4 bg-green)] aolute rounded-full text-xs -top-2 left-2 focus:bg-secondary group-hover:bg-secondary transition-all duration-300'>0</span>
            <a href="#" className='stretched-link group-hover:text-white/80 focus:text-white/80'>Clinics</a>
           </div>
           <div className="flex gap-1 items-baseline text-white font-bold relative group">
            <i className="fa fa-user-md text-2xl group-hover:text-white/80 focus:text-white/80 transition-all duration-300" aria-hidden="true"></i>
-           <span className='flex justify-center items-center size-4 bg-[var(--green)] absolute rounded-full text-xs -top-2 left-2 focus:bg-[var(--secondary)] group-hover:bg-[var(--secondary)] transition-all duration-300'>0</span>
+           <span className='flex justify-center items-center size-4 bg-green)] aolute rounded-full text-xs -top-2 left-2 focus:bg-secondary group-hover:bg-secondary transition-all duration-300'>0</span>
            <div className="relative group cursor-pointer">
             <a href="#" className='stretched-link group-hover:text-white/80 focus:text-white/80'>Doctors</a>
-            <ul className='bg-white p-3 min-h-max min-w-max text-[var(--primary)] group-hover:block hidden absolute inset-0 [&_li]:mb-2'>
+            <ul className='bg-white p-3 min-h-max min-w-max text-primary group-hover:block hidden absolute inset-0 [&_li]:mb-2'>
              {doctors.map((item, idx) => (
               <li key={idx}><a href="#">{item[0]?.[0]?.name}</a></li>
              ))}

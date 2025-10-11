@@ -14,19 +14,19 @@ import 'swiper/css/pagination';
 const Hero = () => {
  return (
   <>
-   <section className="bg-[url('../assets/images/hero-bg.webp')] py-8 bg-cover bg-top relative max-lg:before:absolute before:inset-0 before:bg-gradient-to-b before:to-[var(--secondary)] before:from-transparent before:from-40%">
+   <section className="bg-[url('../assets/images/hero-bg.webp')] py-8 bg-cover bg-top relative max-lg:before:absolute before:inset-0 before:bg-gradient-to-b before:to-secondary before:from-transparent before:from-40%">
     <div className="container">
      <Row align='center'>
       <Col lg={7} className='mb-10'>
        <div className="[&_h1]:text-black">
-        <span className='text-[var(--primary)] font-bold uppercase'>Entrust your health our doctors</span>
-        <h1>The Relentless Pursuit <span className='text-[var(--primary)]'>of Better Care</span></h1>
+        <span className='text-primary font-bold uppercase'>Entrust your health our doctors</span>
+        <h1>The Relentless Pursuit <span className='text-primary'>of Better Care</span></h1>
         <ul className="pt-5 [&_li]:relative [&_li]:pl-6 [&_li]:not-last:mb-3">
          {listData.map((item, index) => {
           return (
            <li key={index}>
             {item.iconClass &&
-             <i className={`${item.iconClass} absolute left-0 top-1 text-[var(--primary)]`}></i>
+             <i className={`${item.iconClass} absolute left-0 top-1 text-primary`}></i>
             }
             {item.listContent}
            </li>

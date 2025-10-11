@@ -26,10 +26,10 @@ const CardClinic = (
      }
      <div className="px-5">
       <div className="flex justify-between gap-5 items-center">
-       <h2 className='h6'>{clinicName} <span className='text-[var(--primary)]'>{heilightText}</span></h2>
+       <h2 className='h6'>{clinicName} <span className='text-primary'>{heilightText}</span></h2>
        <div className="icon-heart group mt-2 mb-4">
         <a href="#" className='stretched-link'>
-         <i className={`${iconClass} text-[var(--primary)] focus:text-white group-focus:text-white group-hover:text-white transition-all duration-300`}></i>
+         <i className={`${iconClass} text-primary focus:text-white group-focus:text-white group-hover:text-white transition-all duration-300`}></i>
         </a>
        </div>
       </div>
@@ -38,7 +38,7 @@ const CardClinic = (
        <ul>
         {listData.clinicCardData[0].listDetails.map((item, index) => {
          return (
-          <li key={index}><strong className='text-[var(--primary)]'>{item.blueText}</strong> {item.time}</li>
+          <li key={index}><strong className='text-primary'>{item.blueText}</strong> {item.time}</li>
          )
         })}
        </ul>

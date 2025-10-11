@@ -7,27 +7,27 @@ text-black
 
 .bg-blue{
  @apply
- bg-[var(--blue)];
+ bg-blue;
 }
 
 .bg-dark-blue{
  @apply
- bg-[var(--secondary)];
+ bg-secondary;
 }
 
 .bg-sky-blue{
  @apply
- bg-[var(--sky-blue)];
+ bg-sky-blue;
 }
 
 .bg-primary{
  @apply
- bg-[var(--primary)];
+ bg-primary;
 }
 
 .phone-call{
  @apply
- bg-[var(--primary)] 
+ bg-primary
  size-11
  flex
  justify-center
@@ -37,9 +37,9 @@ text-black
  border-3
  border-white
  ring-2
- ring-[var(--primary)]
+ ring-primary
  hover:bg-white
- hover:text-[var(--primary)]
+ hover:text-primary
  transition-all
  duration-300
 }

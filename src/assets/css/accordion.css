@@ -24,15 +24,15 @@ mb-5;
 .icon {
   @apply bg-white
  border
- border-[var(--primary)]
+ border-primary
  size-10
- text-[var(--primary)]
+ text-primary
  rounded-full
  transition-all
  duration-300
- hover:bg-[var(--primary)]
+ hover:bg-primary
  hover:text-white
- focus:bg-[var(--primary)]
+ focus:bg-primary
  focus:text-white
  flex
  justify-center

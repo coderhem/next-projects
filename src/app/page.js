@@ -86,7 +86,7 @@ export default function HomePage() {
       </section>
       {/* Card Information */}
 
-      <section className="bg-[var(--secondary)] py-12 sm:py-20 md:py-24 lg:py-30">
+      <section className="bg-secondary py-12 sm:py-20 md:py-24 lg:py-30">
         <div className="container">
           <Row justify="center">
             {processData.processData.map((item, index) => {
@@ -105,7 +105,7 @@ export default function HomePage() {
       </section>
       {/* Card Process */}
 
-      <section className="bg-[var(--green)]/5 pb-20 pt-32">
+      <section className="bg-secondary/5 pb-20 pt-32">
         <div className="container">
           <BlockTitle
             titleText="Recently Added"
@@ -231,7 +231,7 @@ export default function HomePage() {
       </section >
       {/* Card Clinics */}
 
-      <section className="bg-[var(--sky-blue)]/10 pt-20 pb-4">
+      <section className="bg-sky-blue/10 pt-20 pb-4">
         <div className="container">
           <BlockTitle
             titleText="Frequently Asked"
@@ -252,7 +252,7 @@ export default function HomePage() {
       </section>
       {/* Card Accoidion */}
 
-      <section className="bg-[var(--blue)]/10 py-8">
+      <section className="bg-blue/10 py-8">
         <div className="container">
           <Row>
             <Col lg={6}>

@@ -8,8 +8,7 @@
    font-family: Poppins;
     @apply
     font-[var(--font-weight-bold)]
-    capitalize
-    text-[var(--dark)];
+    capitalize;
   }
   h1,.h1{
     @apply

@@ -8,7 +8,7 @@
    "fullName": "Hem Raj",
    "postName": "Developer",
    "ctaText": "Find Doctors",
-   "ctaLink": "/doctor"
+   "ctaLink": "/doctors"
   },
   {
    "imgSrc": "/images/image.png",
@@ -18,7 +18,7 @@
    "fullName": "Hem Raj",
    "postName": "Developer",
    "ctaText": "Find Doctors",
-   "ctaLink": "/doctor"
+   "ctaLink": "/doctors"
   },
   {
    "imgSrc": "/images/image.png",
@@ -28,7 +28,7 @@
    "fullName": "Hem Raj",
    "postName": "Developer",
    "ctaText": "Find Doctors",
-   "ctaLink": "/doctor"
+   "ctaLink": "/doctors"
   },
   {
    "imgSrc": "/images/image.png",
@@ -38,7 +38,7 @@
    "fullName": "Hem Raj",
    "postName": "Developer",
    "ctaText": "Find Doctors",
-   "ctaLink": "/doctor"
+   "ctaLink": "/doctors"
   }
  ],
  "testimonialData": [
@@ -107,7 +107,7 @@
  ],
  "doctorCardData": [
   {
-   "id" : "1",
+   "id": "1",
    "imgSrc": "/images/headshot.png",
    "imgWidth": "500",
    "imgHeight": "600",
@@ -141,7 +141,7 @@
    ]
   },
   {
-   "id" : "2",
+   "id": "2",
    "imgSrc": "/images/headshot.png",
    "imgWidth": "500",
    "imgHeight": "600",
@@ -175,7 +175,7 @@
    ]
   },
   {
-   "id" : "3",
+   "id": "3",
    "imgSrc": "/images/headshot.png",
    "imgWidth": "500",
    "imgHeight": "600",
@@ -209,7 +209,7 @@
    ]
   },
   {
-   "id" : "4",
+   "id": "4",
    "imgSrc": "/images/headshot.png",
    "imgWidth": "500",
    "imgHeight": "600",
@@ -337,47 +337,95 @@
   {
    "accordionTitle": "1. What is an online clinic?",
    "accordionDescription": "Find quick answers to common questions about our clinic, services, appointments, and more.",
-   "iconClass":"fa fa-chevron-down"
+   "iconClass": "fa fa-chevron-down"
   },
   {
    "accordionTitle": "2. How do I book an appointment?",
    "accordionDescription": "Find quick answers to common questions about our clinic, services, appointments, and more.",
-   "iconClass":"fa fa-chevron-down"
+   "iconClass": "fa fa-chevron-down"
   },
   {
    "accordionTitle": "3. What services are available online?",
    "accordionDescription": "Find quick answers to common questions about our clinic, services, appointments, and more.",
-   "iconClass":"fa fa-chevron-down"
+   "iconClass": "fa fa-chevron-down"
   },
   {
    "accordionTitle": "4. Are your doctors licensed?",
    "accordionDescription": "Find quick answers to common questions about our clinic, services, appointments, and more. Find quick answers to common questions about our clinic, services, appointments, and more. Find quick answers to common questions about our clinic, services, appointments, and more. Find quick answers to common questions about our clinic, services, appointments, and more.",
-   "iconClass":"fa fa-chevron-down"
+   "iconClass": "fa fa-chevron-down"
   },
   {
    "accordionTitle": "5. Can I get a prescription online?",
    "accordionDescription": "Find quick answers to common questions about our clinic, services, appointments, and more.",
-   "iconClass":"fa fa-chevron-down"
+   "iconClass": "fa fa-chevron-down"
   },
   {
    "accordionTitle": "6. Is my information secure and confidential?",
    "accordionDescription": "Find quick answers to common questions about our clinic, services, appointments, and more.",
-   "iconClass":"fa fa-chevron-down"
+   "iconClass": "fa fa-chevron-down"
   },
   {
    "accordionTitle": "7. What if I need in-person care?",
    "accordionDescription": "Find quick answers to common questions about our clinic, services, appointments, and more.",
-   "iconClass":"fa fa-chevron-down"
+   "iconClass": "fa fa-chevron-down"
   },
   {
    "accordionTitle": "8. How do I pay for a consultation?",
    "accordionDescription": "Find quick answers to common questions about our clinic, services, appointments, and more.",
-   "iconClass":"fa fa-chevron-down"
+   "iconClass": "fa fa-chevron-down"
   },
   {
    "accordionTitle": "9. What if I miss my appointment?",
    "accordionDescription": "Find quick answers to common questions about our clinic, services, appointments, and more.",
-   "iconClass":"fa fa-chevron-down"
+   "iconClass": "fa fa-chevron-down"
+  }
+ ],
+ "specializationsData": [
+  {
+   "specializations": [
+    "Allergist",
+    "Anesthesiologist",
+    "Cardiologist",
+    "Cardiothoracic",
+    "Colorectal",
+    "Critical Care",
+    "Dentist",
+    "Dermatologist",
+    "Dermatopathologist",
+    "Diabetologist",
+    "Emergency",
+    "Endocrinologist",
+    "ENT Specialist",
+    "Family Physician",
+    "Gastroenterologist",
+    "General Physician",
+    "General Surgeon",
+    "Geriatrician",
+    "Gynecologist",
+    "Hematologist",
+    "Hepatologist",
+    "Infectious Disease",
+    "Internal Medicine",
+    "Neonatologist",
+    "Nephrologist",
+    "Neurologist",
+    "Neurosurgeon",
+    "Oncologist",
+    "Ophthalmologist",
+    "Optometrist",
+    "Orthopedic",
+    "Pathologist",
+    "Pediatrician",
+    "Plastic Surgeon",
+    "Psychiatrist",
+    "Pulmonologists",
+    "Radiologist",
+    "Rheumatologist",
+    "Sports Specialist",
+    "Thoracic Surgeon",
+    "Urologist",
+    "Vascular Surgeon"
+   ]
   }
  ]
 }

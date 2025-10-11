@@ -44,9 +44,9 @@ const ContactForm = () => {
 
   return (
     <>
-      <div className="bg-white shadow-[0px_0px_15px_0_rgba(0,191,165,0.2)] pt-9 pb-5 px-8">
+      <div className="bg-white shadow-[0px_0px_15px_0_rgba(0,191,165,0.2 pt-9 pb-5 px-8">
         <div className="mb-6 text-black">
-          <h2>Still <span className='text-[var(--primary)]'>Have Questions?</span></h2>
+          <h2>Still <span className='text-primary'>Have Questions?</span></h2>
         </div>
         <div className="">
           <form onSubmit={handleSubmit(onsubmit)} className='form'>
@@ -104,7 +104,7 @@ const ContactForm = () => {
               <textarea name="" id="" className='form-control !h-20'></textarea>
             </div>
             <div className="w-full">
-              <button type='submit' className='bg-[var(--primary)] border-[var(--primary)] btn btn-secondary !w-full'>
+              <button type='submit' className='bg-primary border-primary btn btn-secondary !w-full'>
                 Submit Now
               </button>
             </div>

@@ -8,27 +8,27 @@ const Footer = () => {
   {
    iconClass: "fa fa-facebook",
    socialLink: "/facebook.com",
-   anchorClass: "bg-[var(--blue-100)] border-[var(--blue-100)] focus:ring-[var(--blue-100)]"
+   anchorClass: "bg-blue-100 border-blue-100 focus:ring-blue-100"
   },
   {
    iconClass: "fa fa-youtube",
    socialLink: "/youtube.com",
-   anchorClass: "bg-[var(--red)] border-[var(--red)] focus:ring-[var(--red)]"
+   anchorClass: "bg-red border-red focus:ring-red"
   },
   {
    iconClass: "fa fa-instagram",
    socialLink: "/instagram.com",
-   anchorClass: "bg-[var(--violet)] border-[var(--violet)] focus:ring-[var(--violet)]"
+   anchorClass: "bg-violet border-violet focus:ring-violet"
   },
   {
    iconClass: "fa fa-linkedin",
    socialLink: "/linkedin.com",
-   anchorClass: "bg-[var(--blue)] border-[var(--blue)] focus:ring-[var(--blue)]"
+   anchorClass: "bg-blue border-blue focus:ring-blue"
   },
   {
    iconClass: "fa fa-twitter",
    socialLink: "/twitter.com",
-   anchorClass: "bg-[var(--sky-blue)] border-[var(--sky-blue)] focus:ring-[var(--sky-blue)]"
+   anchorClass: "bg-sky-blue border-sky-blue focus:ring-sky-blue"
   }
  ]
  const footerLink = [
@@ -112,7 +112,7 @@ const Footer = () => {
  ]
  return (
   <>
-   <footer className='mt-18 md:mt-20 lg:mt-28 pt-7 bg-[var(--secondary)] text-white'>
+   <footer className='mt-18 md:mt-20 lg:mt-28 pt-7 bg-secondary text-white'>
     <div className="container">
      <div className="border-b border-white/30 pb-8 lg:pb-4 mb-16">
       <Row justify='between' align='center'>
@@ -153,7 +153,7 @@ const Footer = () => {
              <li key={linkIndex}>
               <a
                href={linkItem.ctaLink}
-               className="hover:text-[var(--primary)] hover:!underline"
+               className="hover:text-primary hover:!underline"
               >
                {linkItem.ctaText}
               </a>
@@ -168,7 +168,7 @@ const Footer = () => {
      </Row>
     </div>
 
-    <div className="bg-[var(--secondary-100)] py-8 mt-16 max-md:text-center">
+    <div className="bg-secondary-100 py-8 mt-16 max-md:text-center">
      <div className="container">
       <Row justify='between'>
        <Col md={6}>
@@ -176,7 +176,7 @@ const Footer = () => {
        </Col>
        <Col md={6}>
         <div className="flex justify-center md:justify-end items-center gap-3 max-md:mt-8">
-         <a href="#" className='text-[var(--red)] hover:text-[var(--red)]/60 focus:text-[var(--red)]/60 transition-all duration-300 !underline hover:!no-underline focus:!no-underline'>Privacy Policy</a> <span>|</span> <a href="#" className='text-[var(--red)] hover:text-[var(--red)]/60 focus:text-[var(--red)]/60 transition-all duration-300 !underline hover:!no-underline focus:!no-underline'>Terms & Conditions</a>
+         <a href="#" className='text-red hover:text-red/60 focus:text-red/60 transition-all duration-300 !underline hover:!no-underline focus:!no-underline'>Privacy Policy</a> <span>|</span> <a href="#" className='text-red hover:text-red/60 focus:text-red/60 transition-all duration-300 !underline hover:!no-underline focus:!no-underline'>Terms & Conditions</a>
         </div>
        </Col>
       </Row>

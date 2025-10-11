@@ -16,7 +16,7 @@ const CardAccordion = (
         <div className="accordion-item">
           <div className='accordion-title' onClick={() => { setIsOpen(!isOpen) }}>
             <strong>{accordionTitle}</strong>
-            <div className={`icon ${isOpen ? 'rotate-180 !bg-[var(--primary)] !text-white' : ''}`}>
+            <div className={`icon ${isOpen ? 'rotate-180 !bg-primary !text-white' : ''}`}>
               <i className={iconClass}></i>
             </div>
           </div>

@@ -17,7 +17,7 @@ const CardHero = (
  return (
   <>
    {imgSrc &&
-    <div className="relative z-[2] before:absolute before:w-full before:h-full before:-left-5 before:right-0 before:top-0 before:bottom-0 before:z-[-1] before:rounded-full before:bg-[var(--sky-blue)] max-w-96 rounded-full [&_img]:border-8 [&_img]:border-white mx-auto [&_img]:w-full [&_img]:rounded-full mb-10">
+    <div className="relative z-[2] before:absolute before:w-full before:h-full before:-left-5 before:right-0 before:top-0 before:bottom-0 before:z-[-1] before:rounded-full before:bg-sky-blue max-w-96 rounded-full [&_img]:border-8 [&_img]:border-white mx-auto [&_img]:w-full [&_img]:rounded-full mb-10">
      <img src={imgSrc} width={imgWidth} height={imgHeight} alt={imgAlt} loading='lazy' />
     </div>
    }

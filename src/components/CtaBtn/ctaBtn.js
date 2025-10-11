@@ -16,7 +16,7 @@ const CtaBtn = (
      <a href={ctaLink} className={`${ctaBtnClass} stretched-link phone-call`}>
       <i className={`${iconClass}`}></i>
      </a>
-     <span className="group-hover:text-[var(--primary)] transition-all duration-300">{ctaText}</span>
+     <span className="group-hover:text-primary transition-all duration-300">{ctaText}</span>
     </div>
    }
   </>

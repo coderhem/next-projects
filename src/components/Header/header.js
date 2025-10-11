@@ -42,11 +42,11 @@ const Header = () => {
 
  const [doctors, setDoctors] = useState([]);
 
- useEffect(() => {
-  const storedData = localStorage.getItem('doctorName');
-  const parsedData = storedData ? JSON.parse(storedData) : [];
-  setDoctors(parsedData);
- }, []);
+ // useEffect(() => {
+ //  const storedData = localStorage.getItem('doctorName');
+ //  const parsedData = storedData ? JSON.parse(storedData) : [];
+ //  setDoctors(parsedData);
+ // }, []);
 
  return (
   <>

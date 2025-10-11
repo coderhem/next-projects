@@ -34,8 +34,11 @@ const CardDoctor = (
   }, [activeMap]);
 
   const [doctorNameList, setDoctorName] = useState(() => {
-    const saved = localStorage.getItem('doctorName');
-    return saved ? JSON.parse(saved) : [];
+    if (typeof window !== "undefined") {
+      const saved = localStorage.getItem("doctorName");
+      return saved ? JSON.parse(saved) : [];
+    }
+    return [];
   });
 
   console.log(doctorNameList, "Test1");
@@ -45,10 +48,10 @@ const CardDoctor = (
   }, [doctorNameList]);
 
   const toggleActive = (id, name) => {
-    const newDoctor = {name : name}
+    const newDoctor = { name: name }
     setActiveMap(prev => ({ ...prev, [id]: !prev[id] }));
     setDoctorName([{ ...doctorNameList, newDoctor }])
-    
+
   };
 
   return (

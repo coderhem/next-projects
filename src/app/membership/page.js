@@ -13,6 +13,13 @@ const Membership = () => {
             message: "Name is required*",
          }),
 
+      password: z
+         .string({ required_error: "Password is required*" })
+         .min(1, "Password is required*")
+         .refine((val) => val !== null && val !== "", {
+            message: "Password is required*",
+         }),
+
       email: z.string().email("Email is required*").optional(),
 
       phone: z
@@ -114,6 +121,20 @@ const Membership = () => {
                            </p>
                         )}
                      </div>
+                     <div className="form-group">
+                        <input
+                           type="password"
+                           placeholder="Password"
+                           id="password"
+                           className="form-control"
+                           {...register("password")}
+                        />
+                        {errors?.password && (
+                           <p className="text-red-700 text-xs pt-2">
+                              {errors.password.message}
+                           </p>
+                        )}
+                     </div>
 
                      <div className="form-group">
                         <select
@@ -155,7 +176,7 @@ const Membership = () => {
                            </p>
                         )}
                      </div>
-                     <div className="form-group !w-full">
+                     <div className="form-group">
                         <input
                            type="text"
                            placeholder="Address"

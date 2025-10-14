@@ -57,8 +57,9 @@ const ContactForm = () => {
       </div>
 
       {submitted ? (
-        <div className="text-green-600 text-lg font-semibold">
-          Thank you! Your form has been submitted successfully.
+        <div className="bg-green-600/10 p-2 text-green-600 text-base font-semibold text-center">
+          <p><strong className="text-lg">Thank you for connecting with us!</strong> <br /> We’ve received your message and will get back to you soon. <br /> Need quick help? Call us at <strong><a href="tel:9865900739" className="!underline hover:!no-underline">+977-98659000739</a></strong>
+          </p>
         </div>
       ) : (
         <form onSubmit={handleSubmit(onsubmit)} className="form">

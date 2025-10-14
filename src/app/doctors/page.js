@@ -65,7 +65,7 @@ const Doctors = () => {
 
       <div className="w-full lg:w-4/12 border border-primary/20 p-5">
        <form action="">
-        <div className="mb-4">
+        <div className="mb-4 pl-3">
          <h4 className='h3 text-black'>Have Problem? <span className='text-primary'>Ask Me</span></h4>
         </div>
         <div className="form-group !w-full">
@@ -76,9 +76,10 @@ const Doctors = () => {
         </div>
         <div className="form-group !w-full">
          <select name="select" id="" className='form-control w-full'>
-          <option value="Cardio">Cardio</option>
-          <option value="Cardio">Cardio</option>
-          <option value="Cardio">Cardio</option>
+          <option value="">Paitents Condition</option>
+          <option value="Minor">Minor</option>
+          <option value="Medium">Medium</option>
+          <option value="Major">Major</option>
          </select>
         </div>
         <div className="form-group !w-full h-32">

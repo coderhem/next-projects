@@ -13,7 +13,7 @@ const Login = () => {
       <form action="/login">
        <div className="form-group !w-full">
         <label htmlFor="username" className="text-black/70 mb-2 block text-sm font-medium">
-         Username
+         Email
         </label>
         <input type="text" name="username" id="username" className="form-control text-base" required />
         <span className="text-xs text-red hidden">User Not Found</span>

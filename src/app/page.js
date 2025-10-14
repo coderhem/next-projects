@@ -95,12 +95,19 @@ export default function HomePage() {
 
       <section className="bg-secondary/5 py-10 md:py-14 lg:py-20">
         <div className="container">
-          <BlockTitle
-            titleText="Recently Added"
-            greenColor="Doctor"
-            descriptionText="Lorem ipsum dolor sit amet consectetur adipisicing elit. Id iure necessitatibus magni modi aliquam similique numquam, veniam explicabo consequatur ipsum. Maiores excepturi architecto ad natus, unde numquam inventore at voluptatibus."
-            className="max-w-3xl mx-auto mb-10"
-          />
+          <Row justify="between">
+            <Col md={6} lg={8}>
+              <BlockTitle
+                titleText="Recently Added"
+                greenColor="Doctor"
+                descriptionText="Lorem ipsum dolor sit amet consectetur adipisicing elit. Id iure necessitatibus magni modi aliquam similique numquam, veniam explicabo consequatur ipsum. Maiores excepturi architecto ad natus, unde numquam inventore at voluptatibus."
+                className="text-start mb-10 !max-w-full"
+              />
+            </Col>
+            <Col md={4} lg={3} className="flex justify-end">
+              <a href="/doctors" className="btn btn-secondary">View All</a>
+            </Col>
+          </Row>
           <Swiper
             slidesPerView={3}
             spaceBetween={10}

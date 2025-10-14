@@ -22,6 +22,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import CtaBtn from "@/components/CtaBtn/ctaBtn";
 import ContactForm from "@/components/Form/form";
+import Image from "next/image";
 export default function HomePage() {
   return (
     <>
@@ -316,7 +317,13 @@ export default function HomePage() {
                   ctaClass="mb-12"
                 />
                 <figure>
-                  <img src={contactUsImg.src} width="400" height="400" alt="Contact Us Featured Image" loading="lazy" />
+                  <Image
+                    src={contactUsImg}
+                    width={400}
+                    height={400}
+                    alt="Contact Us Featured Image"
+                    placeholder="blur"
+                  />
                 </figure>
               </div>
             </Col>

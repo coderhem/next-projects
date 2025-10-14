@@ -30,7 +30,7 @@ duration-500;
     items-center 
     justify-center 
     rounded-full 
-    z-10 
+    z-1 
     cursor-pointer
     hover:bg-transparent
     focus:bg-transparent

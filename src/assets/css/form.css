@@ -61,9 +61,54 @@ font-medium
 text-black;
 }
 
-.membership-form select.form-control{
-  @apply
-  text-black/70
+.membership-form select.form-control {
+  @apply text-black/70;
+}
+
+.success-msg {
+  @apply bg-white 
+  shadow 
+  py-1 
+  px-4 
+  inline-block 
+  fixed 
+  bottom-0 
+  left-1/2 
+  -translate-1/2 
+  z-10 
+  before:absolute
+  before:bg-green-600
+  before:left-0
+  before:right-0
+  before:bottom-0
+  before:h-[6px];
+  animation: hideMsg 5s forwards;
+}
+
+@keyframes hideMsg {
+  0% {
+    opacity: 1;
+  }
+  99% {
+    opacity: 0.9;
+  } /* stay visible until the end */
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}
+
+.success-msg::before {
+  animation: shrinkBar 5s forwards;
+}
+
+@keyframes shrinkBar {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 0%;
+  }
 }
 
 /* Error */

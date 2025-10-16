@@ -1,7 +1,8 @@
 'use client';
 import React from 'react';
-import footerLogo from "../../assets/images/header-logo.png";
+import footerLogo from "../../assets/images/footer-logo.png";
 import { Col, Row } from 'react-grid-system';
+import Image from 'next/image';
 
 const Footer = () => {
  const socailIconData = [
@@ -83,19 +84,11 @@ const Footer = () => {
    linkList: [
     {
      ctaText: "Book Appointment",
-     ctaLink: "/"
+     ctaLink: "/membership"
     },
     {
      ctaText: "My Account",
-     ctaLink: "/about"
-    },
-    {
-     ctaText: "Login",
-     ctaLink: "/contact"
-    },
-    {
-     ctaText: "Signup",
-     ctaLink: "/faq"
+     ctaLink: "/login"
     }
    ]
   },
@@ -119,7 +112,12 @@ const Footer = () => {
        <Col lg={5}>
         <a href="#">
          <figure className="mb-2">
-          <img src={footerLogo.src} width="178" height="52" alt="" loading='lazy' />
+          <Image
+           src={footerLogo} 
+           width="178" 
+           height="52" 
+           alt="Footer Logo" 
+           loading='lazy' />
          </figure>
         </a>
         <p>A trusted clinic offering quality healthcare services, expert consultations, and patient-focused care for individuals and families.</p>

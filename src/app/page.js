@@ -29,7 +29,7 @@ export default function HomePage() {
       <Hero />
       <section className="py-10 md:py-14">
         <div className="container">
-          <div className="flex items-center justify-between gap-10">
+          <div className="flex justify-between gap-10">
             <div className="mb-10 max-w-4xl">
               <h2 className=" text-black mb-2">Specializations</h2>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam dolorum porro deleniti? Sequi quos accusamus totam suscipit dignissimos, aperiam aut vel culpa. Rem voluptates id, ut nisi asperiores corporis fugiat.</p>

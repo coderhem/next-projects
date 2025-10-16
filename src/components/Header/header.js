@@ -88,7 +88,7 @@ const Header = () => {
          </div>
          <form action="#" className='w-[90%] flex items-center justify-between'>
           <div className="px-3 [&_input]:focus-within:outline-0 w-full lg:w-[80%]">
-           <input type="text" name="" id="" className='w-full' placeholder="Find what you're looking for..." />
+           <input type="text" name="search-bar" id="searchBar" className='w-full' placeholder="Find what you're looking for..." />
           </div>
           {/* <div className='[&_select]:focus-visible:outline-0 [&_select_option]:px-5 [&_select_option]:block [&_select_option]:my-1 [&_select_option]:bg-sky-300/20 [&_select_option]:min-w-2xs [&_select_option]:cursor-pointer'>
            <select name="" id="">

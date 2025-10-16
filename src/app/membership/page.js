@@ -206,7 +206,8 @@ const Membership = () => {
                </div>
             </div>
          </section>
-         {/* ✅ Success Message */}
+         
+         {/* Success Message */}
          {successMsg && (
             <div className="success-msg">
                <p className="text-green-600 text-center pt-4 font-semibold">

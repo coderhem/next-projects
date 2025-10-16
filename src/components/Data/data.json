@@ -74,7 +74,7 @@
    "cardTitle": "psychiatrist",
    "cardDescription": "<p>Search for Dr.Carter Clinic expert by specialty, disease, conditione, expertise,or doctor's last name.</p>",
    "btnClass": "btn btn-white",
-   "ctaText": "Know More",
+   "ctaText": "Find Doctors",
    "ctaLink": "/doctors"
   },
   {
@@ -83,7 +83,7 @@
    "cardTitle": "psychiatrist",
    "cardDescription": "<p>Search for Dr.Carter Clinic expert by specialty, disease, conditione, expertise,or doctor's last name.</p>",
    "btnClass": "btn btn-white",
-   "ctaText": "Know More",
+   "ctaText": "Find Doctors",
    "ctaLink": "/doctors"
   },
   {
@@ -92,7 +92,7 @@
    "cardTitle": "psychiatrist",
    "cardDescription": "<p>Search for Dr.Carter Clinic expert by specialty, disease, conditione, expertise,or doctor's last name.</p>",
    "btnClass": "btn btn-white",
-   "ctaText": "Know More",
+   "ctaText": "Find Doctors",
    "ctaLink": "/doctors"
   },
   {
@@ -101,7 +101,7 @@
    "cardTitle": "psychiatrist",
    "cardDescription": "<p>Search for Dr.Carter Clinic expert by specialty, disease, conditione, expertise,or doctor's last name.</p>",
    "btnClass": "btn btn-white",
-   "ctaText": "Know More",
+   "ctaText": "Find Doctors",
    "ctaLink": "/doctors"
   },
   {
@@ -110,7 +110,7 @@
    "cardTitle": "psychiatrist",
    "cardDescription": "<p>Search for Dr.Carter Clinic expert by specialty, disease, conditione, expertise,or doctor's last name.</p>",
    "btnClass": "btn btn-white",
-   "ctaText": "Know More",
+   "ctaText": "Find Doctors",
    "ctaLink": "/doctors"
   }
  ],
@@ -128,10 +128,10 @@
    "ctaLink": "#",
    "outlineCtaText": "Consult Now",
    "btnOutline": "btn btn-outline",
-   "btnOutlineLink": "/home",
+   "btnOutlineLink": "/doctors",
    "btnSecondary": "btn btn-secondary",
    "secondaryCtaText": "Book Now",
-   "btnSecondaryLink": "/about",
+   "btnSecondaryLink": "/membership",
    "iconClass": "fa fa-heart",
    "strongText": "Test",
    "listDetails": [
@@ -160,12 +160,12 @@
    "speciality": "Neuro",
    "experience": "Above 2 Years",
    "ctaLink": "#",
-   "outlineCtaText": "Book Now",
+   "outlineCtaText": "Consult Now",
    "btnOutline": "btn btn-outline",
-   "btnOutlineLink": "/home",
+   "btnOutlineLink": "/doctors",
    "btnSecondary": "btn btn-secondary",
    "secondaryCtaText": "Book Now",
-   "btnSecondaryLink": "/about",
+   "btnSecondaryLink": "/membership",
    "iconClass": "fa fa-heart",
    "strongText": "Test",
    "listDetails": [
@@ -194,12 +194,12 @@
    "speciality": "Neuro",
    "experience": "Above 2 Years",
    "ctaLink": "#",
-   "outlineCtaText": "Book Now",
+   "outlineCtaText": "Consult Now",
+   "btnOutlineLink": "/doctors",
    "btnOutline": "btn btn-outline",
-   "btnOutlineLink": "/home",
    "btnSecondary": "btn btn-secondary",
    "secondaryCtaText": "Book Now",
-   "btnSecondaryLink": "/about",
+   "btnSecondaryLink": "/membership",
    "iconClass": "fa fa-heart",
    "strongText": "Test",
    "listDetails": [
@@ -228,12 +228,12 @@
    "speciality": "Neuro",
    "experience": "Above 2 Years",
    "ctaLink": "#",
-   "outlineCtaText": "Book Now",
+   "outlineCtaText": "Consult Now",
    "btnOutline": "btn btn-outline",
-   "btnOutlineLink": "/home",
+   "btnOutlineLink": "/doctors",
    "btnSecondary": "btn btn-secondary",
    "secondaryCtaText": "Book Now",
-   "btnSecondaryLink": "/about",
+   "btnSecondaryLink": "/membership",
    "iconClass": "fa fa-heart",
    "strongText": "Test",
    "listDetails": [

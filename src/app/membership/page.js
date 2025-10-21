@@ -6,29 +6,25 @@ import { z } from "zod";
 
 const Membership = () => {
    const bookSchema = z.object({
-      fullName: z
+      name: z
          .string({ required_error: "Name is required*" })
          .min(1, "Name is required*")
          .refine((val) => val !== null && val !== "", {
             message: "Name is required*",
          }),
-
       password: z
          .string({ required_error: "Password is required*" })
          .min(1, "Password is required*")
          .refine((val) => val !== null && val !== "", {
             message: "Password is required*",
          }),
-
       email: z.string().email("Email is required*").optional(),
-
       phone: z
          .string()
          .refine((val) => val !== null && val !== "", {
             message: "Phone number is required*",
          })
          .regex(/^\d{10}$/, "Number must be 10 digits"),
-
       genderSelect: z.string().refine((val) => val !== "", {
          message: "Please select a Gender",
       }),
@@ -46,14 +42,32 @@ const Membership = () => {
       resolver: zodResolver(bookSchema),
    });
 
-
    const [successMsg, setSuccessMsg] = useState(""); // success message state
 
-   const onSubmit = (data) => {
-      console.log("Form Submitted:", data);
-      reset(); // reset form
-      setSuccessMsg("Your membership request has been submitted successfully!"); // set success message
-      setTimeout(() => setSuccessMsg(""), 5000); // remove message after 5s
+   const onSubmit = async (data) => {
+      try {
+         const res = await fetch("/api/users", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(data),
+         });
+
+         const result = await res.json();
+
+         if (res.ok) {
+            console.log("Form Submitted:", result);
+            reset(); // reset form
+            setSuccessMsg(
+               "Your membership request has been submitted successfully!"
+            );
+            setTimeout(() => setSuccessMsg(""), 5000); // remove message after 5s
+         } else {
+            alert("Error: " + result.details);
+         }
+      } catch (err) {
+         console.error("Submission error:", err);
+         alert("Something went wrong!");
+      }
    };
 
    return (
@@ -81,13 +95,13 @@ const Membership = () => {
                         <input
                            type="text"
                            placeholder="Full Name"
-                           id="fullName"
+                           id="name"
                            className="form-control"
-                           {...register("fullName")}
+                           {...register("name")}
                         />
-                        {errors?.fullName && (
+                        {errors?.name && (
                            <p className="text-red-700 text-xs pt-2">
-                              {errors.fullName.message}
+                              {errors.name.message}
                            </p>
                         )}
                      </div>
@@ -206,7 +220,7 @@ const Membership = () => {
                </div>
             </div>
          </section>
-         
+
          {/* Success Message */}
          {successMsg && (
             <div className="success-msg">

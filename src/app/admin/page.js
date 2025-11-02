@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react'
 
 const Admin = () => {
@@ -11,8 +12,8 @@ const Admin = () => {
         <h2 className="py-4 text-xl text-black font-bold border-b border-black/20">My <span className='text-blue'>Dashboard</span></h2>
         <nav className="">
          <ul className="mt-3">
-          <li><a href="#" className="block p-2 rounded text-primary font-bold hover:text-black hover:bg-gray-200">Bookings</a></li>
-          <li><a href="#" className="block p-2 rounded text-primary font-bold hover:text-black hover:bg-gray-200">Customers</a></li>
+          <li><Link href="/customers" className="block p-2 rounded text-primary font-bold hover:text-black hover:bg-gray-200">Bookings</Link></li>
+          <li><Link href="/customers" className="block p-2 rounded text-primary font-bold hover:text-black hover:bg-gray-200">Customers</Link></li>
           <li><a href="#" className="block p-2 rounded text-primary font-bold hover:text-black hover:bg-gray-200">Clinics</a></li>
          </ul>
         </nav>

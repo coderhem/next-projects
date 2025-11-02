@@ -1,0 +1,32 @@
+.customer-table {
+  counter-reset: counters;
+  @apply overflow-x-scroll;
+}
+
+.customer-table table {
+  @apply w-full
+ overflow-x-scroll;
+}
+.customer-table th {
+  @apply px-4
+ py-2
+ border
+ border-primary/30
+ bg-primary/10;
+}
+.customer-table td {
+  @apply 
+  /* min-w-40 */
+  /* w-1/6 */
+  max-w-max
+  px-4
+ py-2
+ border
+ text-black/80
+ border-primary/30;
+}
+
+.customer-table td:first-child::before{
+  counter-increment: counters;
+  content: " " counter(counters, decimal-leading-zero) ". ";
+}

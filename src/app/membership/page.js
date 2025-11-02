@@ -31,6 +31,7 @@ const Membership = () => {
       bloodGroupSelect: z.string().refine((val) => val !== "", {
          message: "Please select a Blood Group",
       }),
+      address: z.string().optional(),
    });
 
    const {

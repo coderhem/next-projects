@@ -1,8 +1,6 @@
 import { connectDB } from "@/database/connection";
 import User from "@/models/User";
 
-// ✅ All CRUD in one API route
-
 export async function POST(req) {
  try {
   await connectDB();

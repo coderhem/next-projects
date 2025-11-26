@@ -130,4 +130,10 @@
     transition-all 
     duration-300;
   }
+  button{
+    @apply
+    cursor-pointer
+    transition-all
+    duration-300
+  }
 }

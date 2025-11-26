@@ -102,12 +102,12 @@ const Header = () => {
         </div>
         <div className="3/12 px-2">
          <div className="flex flex-wrap max-lg:justify-center items-center gap-5">
-          <div className="flex gap-1 items-baseline text-white font-bold relative group">
+          {/* <div className="flex gap-1 items-baseline text-white font-bold relative group">
            <i className="fa fa-home text-2xl group-hover:text-white/80 focus:text-white/80 transition-all duration-300" aria-hidden="true"></i>
            <span className='flex justify-center items-center size-4 bg-green)] aolute rounded-full text-xs -top-2 left-2 focus:bg-secondary group-hover:bg-secondary transition-all duration-300'>0</span>
            <a href="#" className='stretched-link group-hover:text-white/80 focus:text-white/80'>Clinics</a>
-          </div>
-          <div className="flex gap-1 items-baseline text-white font-bold relative group">
+          </div> */}
+          {/* <div className="flex gap-1 items-baseline text-white font-bold relative group">
            <i className="fa fa-user-md text-2xl group-hover:text-white/80 focus:text-white/80 transition-all duration-300" aria-hidden="true"></i>
            <span className='flex justify-center items-center size-4 bg-green)] aolute rounded-full text-xs -top-2 left-2 focus:bg-secondary group-hover:bg-secondary transition-all duration-300'>0</span>
            <div className="relative group cursor-pointer">
@@ -118,7 +118,7 @@ const Header = () => {
              ))}
             </ul>
            </div>
-          </div>
+          </div> */}
           <div className="max-sm:w-full flex gap-8 justify-center">
            <Link href="/membership" className='btn btn-secondary font-bold'>Get Membership</Link>
            <Link href="/login" className='btn btn-primary font-bold'>Login</Link>

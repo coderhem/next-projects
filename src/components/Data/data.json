@@ -117,11 +117,11 @@
  "doctorCardData": [
   {
    "id": "1",
-   "imgSrc": "/images/headshot.png",
+   "imgSrc": "/images/chakradev.jpeg",
    "imgWidth": "500",
    "imgHeight": "600",
    "imgAlt": "Doctor Image",
-   "doctorName": "Uddhav Joshi",
+   "doctorName": "Chakra Dev Bhatta",
    "doctorPost": "MBBS",
    "speciality": "Neuro",
    "experience": "Above 2 Years",
@@ -185,11 +185,11 @@
   },
   {
    "id": "3",
-   "imgSrc": "/images/headshot.png",
+   "imgSrc": "/images/chakradev.jpeg",
    "imgWidth": "500",
    "imgHeight": "600",
    "imgAlt": "Doctor Image",
-   "doctorName": "Rajan Adhikari",
+   "doctorName": "Chakra Dev Bhatta",
    "doctorPost": "MBBS",
    "speciality": "Neuro",
    "experience": "Above 2 Years",

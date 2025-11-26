@@ -87,3 +87,25 @@ export async function DELETE(req) {
   return Response.json({ error: "Server error", details: err.message }, { status: 500 });
  }
 }
+
+/* Password check */
+export async function PATCH(req) {
+  try {
+    await connectDB();
+    const { email, password } = await req.json();
+
+    const user = await User.findOne({ email });
+    if (!user) {
+      return Response.json({ success: false, message: "User not found" }, { status: 404 });
+    }
+
+    if (user.password !== password) {
+      return Response.json({ success: false, message: "Incorrect password" }, { status: 401 });
+    }
+
+    return Response.json({ success: true, message: "Login successful", user }, { status: 200 });
+  } catch (err) {
+    console.error("PATCH (Login) error:", err);
+    return Response.json({ error: "Server error", details: err.message }, { status: 500 });
+  }
+}

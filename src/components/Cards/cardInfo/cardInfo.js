@@ -30,7 +30,7 @@ const CardInfo = (
             <div dangerouslySetInnerHTML={{ __html: cardDescription }} />
           }
           {ctaLink && btnClass && ctaText &&
-            <div div className="pt-7">
+            <div className="pt-7">
               <a href={ctaLink} className={btnClass} target={targetBlank}>{ctaText}</a>
             </div>
           }

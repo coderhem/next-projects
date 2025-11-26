@@ -9,6 +9,7 @@ import { Pagination, Autoplay } from 'swiper/modules';
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
+import Link from 'next/link';
 
 
 const Hero = () => {
@@ -34,7 +35,7 @@ const Hero = () => {
          })}
         </ul >
         <div className="pt-9">
-         <a href="/about" className='btn btn-secondary'>Who we are</a>
+         <Link href="/about" className='btn btn-secondary'>Who we are</Link>
         </div>
        </div>
       </Col>

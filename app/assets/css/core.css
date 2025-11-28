@@ -1,0 +1,16 @@
+body {
+  @apply font-lato text-secondary;
+}
+
+.container {
+  @apply 
+  mx-auto
+  px-4;
+}
+
+a{
+  @apply
+  transition-all
+  text-brown
+  hover:text-brown/80
+}

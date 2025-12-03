@@ -24,5 +24,35 @@
    "targetValue": "_blank",
    "relValue": "noopener noreferrer"
   }
+ ],
+ "navLinks": [
+  {
+   "navAnchorText": "Home",
+   "navAnchorLink": "/"
+  },
+  {
+   "navAnchorText": "About Us",
+   "navAnchorLink": "/about-us"
+  },
+  {
+   "navAnchorText": "Shop",
+   "navAnchorLink": "/shop"
+  },
+  {
+   "navAnchorText": "Customize",
+   "navAnchorLink": "/customize"
+  },
+  {
+   "navAnchorText": "Gallery",
+   "navAnchorLink": "/gallery"
+  },
+  {
+   "navAnchorText": "Services",
+   "navAnchorLink": "/services"
+  },
+  {
+   "navAnchorText": "Blog",
+   "navAnchorLink": "/blog"
+  }
  ]
 }

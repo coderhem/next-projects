@@ -1,0 +1,126 @@
+.header{
+ @apply
+ fixed 
+ left-0
+ right-0;
+}
+
+.main-header{
+ @apply
+ transition-all
+ duration-300
+ py-5
+ bg-white
+ shadow
+}
+
+
+.top-header{
+ @apply
+ transition-all
+ duration-300
+}
+
+.navbar li a{
+ @apply
+text-primary
+hover:text-secondary
+focus:text-secondary
+active:text-secondary
+font-semibold
+transition-all
+duration-200
+relative
+pb-1
+before:absolute
+before:transition-all
+before:duration-300
+before:bottom-0
+before:bg-secondary
+before:left-0
+before:w-0
+before:h-0.5
+hover:before:w-9/12
+focus:before:w-9/12
+active:before:w-9/12
+}
+
+.navbar li.active a{
+@apply
+active:text-secondary
+}
+
+.hamBurger{
+ @apply
+ lg:hidden
+ flex
+ flex-col
+ gap-y-1.5
+}
+
+.hamBurger span{
+ @apply
+inline-block
+bg-primary
+w-8
+h-[3px]
+rounded-full
+transition-all
+duration-300
+}
+
+body.active .hamBurger span:nth-child(2){
+  @apply opacity-0;
+}
+
+body.active .hamBurger span:nth-child(1){
+  @apply translate-y-2.5 rotate-135;
+}
+
+body.active .hamBurger span:nth-child(3){
+  @apply -translate-y-2 -rotate-135;
+}
+
+.mobile-navbar{
+@apply
+fixed
+left-0
+right-0
+-translate-x-full
+bg-secondary
+transition-all
+duration-300
+w-full
+px-5
+pt-5
+h-dvh
+[&_li]:not-last:mb-5
+[&_a]:text-white;
+}
+
+.mobile-navbar li a{
+ @apply
+relative
+pb-1
+before:absolute
+before:transition-all
+before:duration-300
+before:bottom-0
+before:bg-white
+before:left-0
+before:w-0
+before:h-0.5
+hover:before:w-9/12
+focus:before:w-9/12
+active:before:w-9/12
+}
+
+
+body.active{
+@apply overflow-hidden touch-none text-primary;
+}
+
+body.active .mobile-navbar{
+ @apply
+ translate-0;
+}

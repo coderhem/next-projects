@@ -3,6 +3,10 @@
 @import "./assets/css/typography.css";
 @import "./assets/css/helper.css";
 @import "./assets/css/header.css";
+@import "./assets/css/slider.css";
+@import "./assets/css/animations.css";
+@import "./assets/css/buttons.css";
+@import "./assets/css/form.css";
 
 @theme inline {
   --color-background: var(--background);
@@ -23,6 +27,9 @@
   --color-cream: #F7F3ED;
   --color-lovry: #ede7e1;
   --color-taupe: #b99e7d;
+  --color-pink: #FF6666;
+  --color-pink-100: #FF1493;
+  --color-light-pink: #FFC0CB;
 }
 
 @media (prefers-color-scheme: dark) {

@@ -1,0 +1,53 @@
+.swiper-pagination{
+ @apply
+ -bottom-10;
+}
+
+.card-swiper .swiper-pagination{
+ @apply
+ !static
+ mt-5
+}
+
+.swiper-pagination .swiper-pagination-bullet{
+ @apply
+ bg-primary
+ transition-all
+ duration-500;
+}
+
+.swiper-pagination .swiper-pagination-bullet-active{
+ @apply
+ rounded-md
+w-10;
+}
+
+.hero-swiper{
+ @apply
+ relative
+ overflow-hidden
+ before:absolute
+ before:inset-0
+ before:transition-all
+ before:duration-300
+ before:rounded-2xl
+ lg:hover:before:bg-black/70
+ max-lg:before:bg-black/40
+ before:z-10
+ cursor-pointer;
+}
+
+.cta-wrapper{
+ @apply
+ transition-all
+ duration-300
+ absolute
+ max-lg:top-1/2
+ left-1/2
+ max-lg:-translate-y-1/2
+ max-lg:-translate-x-1/2
+ lg:-translate-x-1/2
+ /* -bottom-full */
+ /* -translate-y-1/2 */
+ z-10
+}

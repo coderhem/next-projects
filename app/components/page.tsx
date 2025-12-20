@@ -17,6 +17,10 @@ const Components = () => {
     <hr className='py-3' />
     <h6>This is a Heading 6</h6>
     <hr className='py-3' />
+    <a href="#" className='btn btn-primary'>Test</a>
+    <a href="#" className='btn btn-white'>Test</a>
+    <a href="#" className='btn btn-outline'>Test</a>
+    <a href="#" className='btn btn-secondary'>Test</a>
    </div>
 
   </>

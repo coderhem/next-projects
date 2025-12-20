@@ -1,6 +1,7 @@
 .header{
  @apply
  fixed 
+ z-10
  left-0
  right-0;
 }
@@ -19,7 +20,9 @@
  @apply
  transition-all
  duration-300
+ h-full
 }
+
 
 .navbar li a{
  @apply

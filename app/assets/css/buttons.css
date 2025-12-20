@@ -1,15 +1,15 @@
-@layer components {
   .btn {
     @apply inline-flex 
 		items-center 
 		justify-center 
-		cursor-pointer 
-		px-7 
+		cursor-pointer
+		px-4
+		md:px-7 
 		py-4 
 		text-base 
 		text-center 
-		!leading-5 
-		font-lead
+		leading-5! 
+		font-lato
 		font-semibold 
 		no-underline 
 		select-none 
@@ -19,30 +19,150 @@
 		ease-in-out 
 		duration-500 
 		focus:outline-none 
-		focus:ring 
+		focus:ring-2 
 		focus:ring-offset-1 
-		focus:ring-opacity-50 
-		disabled:opacity-75 
+		/* focus:ring-opacity-50  */
+		/* disabled:opacity-75  */
 		disabled:cursor-not-allowed
 		uppercase;
   }
 
   .btn-primary {
-    @apply bg-primary 
+    @apply 
+    bg-primary 
     text-white 
     border-primary 
-    hover:bg-primary/75 
-    hover:text-white 
+				relative
+				z-1
+				before:absolute
+				before:inset-0
+				before:h-0
+				before:-z-1
+				before:transition-all
+				before:duration-300
+				hover:before:h-full
+				focus:before:h-full
+				active:before:h-full
+				before:bg-white
+    hover:text-primary 
     hover:border-primary/75
     focus:bg-primary/75
-    focus:text-white 
+    focus:text-primary 
     focus:border-primary/75
     focus:ring-primary/75
     active:bg-primary/50 
     active:border-primary/50;
   }
+  .btn-secondary {
+    @apply 
+     bg-secondary 
+    text-white 
+    border-secondary 
+				relative
+				z-1
+				before:absolute
+				before:inset-0
+				before:h-0
+				before:-z-1
+				before:transition-all
+				before:duration-300
+				hover:before:h-full
+				focus:before:h-full
+				active:before:h-full
+				before:bg-white
+    hover:text-secondary 
+    hover:border-secondary
+    focus:text-secondary 
+    focus:border-secondary/75
+    focus:ring-secondary/75
+    active:border-secondary/50;
+  }
+  .btn-white {
+    @apply 
+     bg-white 
+    text-secondary 
+    border-white
+				rounded-full 
+				relative
+				z-1
+				before:absolute
+				before:inset-0
+				before:h-0
+				before:-z-1
+				before:transition-all
+				before:duration-300
+				before:rounded-full
+				hover:before:h-full
+				focus:before:h-full
+				active:before:h-full
+				before:bg-primary
+    hover:text-secondary 
+    hover:border-secondary
+    focus:text-secondary 
+    focus:border-secondary/75
+    focus:ring-secondary/75
+    active:border-secondary/50;
+  }
+  .btn-outline {
+    @apply 
+    bg-transparent 
+    text-white 
+    border-white 
+				relative
+				z-1
+				before:absolute
+				before:inset-0
+				before:h-0
+				before:-z-1
+				before:transition-all
+				before:duration-300
+				hover:before:h-full
+				focus:before:h-full
+				active:before:h-full
+				before:bg-white
+    hover:text-secondary 
+    hover:border-white
+    focus:text-secondary 
+    focus:border-secondary/75
+    focus:ring-white/75
+    active:border-white/50;
+  }
+  .btn-green {
+    @apply
+				h-10
+				px-4
+				py-3
+				rounded-full
+				text-xs
+    bg-green 
+    text-white 
+    border-green 
+				relative
+				z-1
+				before:absolute
+				before:inset-0
+				before:w-0
+				before:-z-1
+				before:transition-all
+				before:duration-300
+				hover:before:w-full
+				focus:before:w-full
+				active:before:w-full
+				before:bg-white
+				before:rounded-full
+    hover:text-green 
+    hover:border-green
+    focus:text-green 
+    focus:border-secondary/75
+    focus:ring-green/75
+    active:border-green/50;
+  }
 
   .btn-block {
     @apply block w-full;
   }
-}
+		.stretched-link{
+			@apply
+			before:absolute
+			before:inset-0
+		}

@@ -1,0 +1,14 @@
+{
+ "heroSliderData": [
+  {
+   "imgSrc": "/images/frame-photo-2.png",
+   "imgWidth": 400,
+   "imgHeight": 400,
+   "imgAlt": "Hero Slider Image",
+   "btnText": "Shop Now",
+   "btnLink": "/shop",
+   "secondBtnText": "Customize Your Frame",
+   "secondBtnLink": "/customize"
+  }
+ ]
+}

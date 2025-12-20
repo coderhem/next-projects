@@ -1,0 +1,78 @@
+.form-control {
+  @apply block 
+  w-full 
+  h-12 
+  lg:h-14 
+  px-2 
+  py-4 
+  lg:pl-6 
+  font-sans 
+  font-normal 
+  leading-tight 
+  text-lg 
+  text-white
+  bg-transparent
+  bg-clip-padding 
+  rounded-sm
+  placeholder:text-white/80
+  transition 
+  ease-in-out 
+  duration-500 
+  focus:text-white 
+  focus:border-primary 
+  focus:outline-none 
+  focus:shadow-lg;
+}
+.form-section-0 .form-control{
+  @apply 
+  border-b
+  border-white/30
+  pb-8;
+}
+
+select.form-control {
+  @apply focus:text-white focus:bg-white;
+}
+
+textarea.form-control {
+  @apply h-8 resize-none overflow-hidden;
+}
+
+.form-group {
+  @apply mb-4;
+}
+
+
+.search-form{
+ @apply
+ max-sm:w-full
+}
+
+.search-form .form-group{
+ @apply
+ mb-0
+ relative;
+} 
+.search-form .form-control{
+ @apply
+ md:min-w-2xs
+ md:max-w-2xs
+ w-full
+ h-11
+ py-3
+ pr-11
+ pl-5
+ text-sm
+ bg-white
+ text-secondary
+ placeholder:text-secondary/50;
+}
+
+.search-form .form-group .fa.fa-search{
+ @apply
+absolute
+top-1/2
+-translate-y-1/2
+right-5
+text-secondary/20
+}

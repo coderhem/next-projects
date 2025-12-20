@@ -76,17 +76,15 @@ const Header: React.FC = ({ }) => {
  return (
   <>
 
+   {/* Start Top Header */}
    <header className='header' ref={headerRef}>
     <div className="bg-primary py-3 text-center top-header">
      <div className="container">
-      <div className="flex flex-wrap items-center justify-center lg:justify-between gap-3">
-       <div className="text-light-gray [&_a]:underline  [&_a]:hover:no-underline">
-        <span>Grand Opening Buy form <a href="#">Here !</a> and Grab 20% Off All Premium Frames at FrameHub! </span>
-       </div>
+      <div className="flex flex-wrap items-center justify-center md:justify-between gap-y-4 gap-3">
        {topHeaderData.topHeader && topHeaderData.topHeader.length > 0 && (
-        <ul className='flex gap-3'>
+        <ul className='flex gap-3 [&_li_a]:bg-lovry [&_li_a]:border [&_li_a]:border-brown/30 [&_li_a]:rounded-full [&_li_a]:p-2 [&_li_a]:size-10 [&_li_a]:inline-flex [&_li_a]:justify-center [&_li_a]:items-center [&_li_a]:hover:bg-green [&_li_a]:focus:bg-green [&_li_a]:active:bg-green [&_li_a]:focus:text-white! [&_li_a]:active:text-white! [&_li_a]:hover:text-white! [&_li_a]:transition-all [&_li_a]:duration-300 [&_li_a]:text-xl [&_li_a]:focus:ring-3 [&_li_a]:focus:border-white [&_li_a]:focus:ring-light-gray/70'>
          {topHeaderData.topHeader.map((item: topHeaderItem, index: number) => (
-          <li key={index} className='[&_a]:bg-lovry [&_a]:border [&_a]:border-brown/30 [&_a]:rounded-full [&_a]:p-2 [&_a]:size-10 [&_a]:inline-flex [&_a]:justify-center [&_a]:items-center [&_a]:hover:bg-transparent [&_a]:transition-all [&_a]:duration-300 [&_a]:text-xl [&_a]:focus:ring-3 [&_a]:focus:border-white [&_a]:focus:ring-light-gray/70'>
+          <li key={index}>
            <a href={item.anchorLink} target={item.targetValue} rel={item.relValue}>
             {item.iconClass &&
              <i className={item.iconClass}></i>
@@ -100,15 +98,38 @@ const Header: React.FC = ({ }) => {
          ))}
         </ul>
        )}
+       <div className="flex items-center -mx-5">
+        <div className="px-5">
+         <div className="[&_a]:text-white! [&_a]:text-2xl [&_a]:relative flex gap-8">
+          <Link href="/cart">
+           <i className="fa fa-shopping-cart" aria-hidden="true"></i>
+           <span className='absolute bg-pink -right-3 text-white text-xs rounded-full size-4 inline-flex justify-center items-center'>0</span>
+          </Link>
+          <Link href="/login">
+           <i className="fa fa-user" aria-hidden="true"></i>
+          </Link>
+         </div>
+        </div>
+        <div className="search-form px-5">
+         <form action="" id='search-form'>
+          <div className="form-group">
+           <input type="text" placeholder='Search Here...' id='search' name='search' className='form-control' />
+           <i className="fa fa-search"></i>
+          </div>
+         </form>
+        </div>
+        {/* <span>Grand Opening Buy form <a href="#">Here !</a> and Grab 20% Off All Premium Frames at FrameHub! </span> */}
+       </div>
       </div>
      </div>
     </div >
-    {/* Top Header */}
+    {/* Ends Top Header */}
+
     <div className="main-header">
      <div className="container">
       <div className="flex items-center justify-between">
        <div className="relative">
-        <figure>
+        <figure className='max-w-48 md:max-w-full'>
          <Image
           src={headerLogo}
           width={250}
@@ -130,7 +151,7 @@ const Header: React.FC = ({ }) => {
        </nav>
        <nav className='mobile-navbar' style={{ top: headerHeight }}>
         {navLinksData.navLinks && navLinksData.navLinks.length > 0 && (
-         <ul>
+         <ul className='container'>
           {navLinksData.navLinks?.map((item: headerLinks, index: number) => (
            <li key={index}><Link href={item.navAnchorLink}>{item.navAnchorText}</Link></li>
           ))}

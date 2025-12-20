@@ -28,7 +28,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${fontRubik.variable} ${fontLato.variable} antialiased h-screen flex flex-col`}
+        className={`${fontRubik.variable} ${fontLato.variable} antialiased flex flex-col`}
       >
         <Header />
         <main className="flex-1">

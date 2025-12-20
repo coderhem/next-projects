@@ -36,9 +36,7 @@ export default function Home() {
               <p>Personalize your photo with the perfect size, frame, and style to match your space, turning your favorite moments into beautifully framed wall art that reflects your taste and décor.</p>
             </div>
           </div>
-          <div className="shadow">
-            <CustomizeCard />
-          </div>
+          <CustomizeCard />
         </div>
       </section>
       {/* End Custimize Card */}

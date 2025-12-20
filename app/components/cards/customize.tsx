@@ -57,7 +57,7 @@ const CustomizeCard: React.FC = () => {
       {customizeSliderContent.customizeSliderData.map(
         (item: CardSlider, index: number) => (
           <SwiperSlide key={index}>
-            <div className="card-swiper shadow border border-primary/20 rounded-md bg-white p-4 flex flex-col items-center">
+            <div className="card-swiper border border-primary/20 rounded-md bg-white p-4 flex flex-col items-center">
 
               {/* Frame + Image */}
               <div className="relative w-[200px] h-72 overflow-hidden">

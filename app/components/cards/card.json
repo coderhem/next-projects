@@ -76,81 +76,92 @@
    "priceText": 900
   }
  ],
- "customizeSliderData": [
-  {
-   "imgSrc": "/images/frame-photo-3.png",
-   "imgWidth": 400,
-   "imgHeight": 400,
-   "imgAlt": "Hero Slider Image",
-   "btnText": "Shop Now",
-   "btnLink": "/shop",
-   "secondBtnText": "Customize Your Frame",
-   "secondBtnLink": "/customize",
-   "frameDescription": "Bring warmth and elegance to your space with premium handcrafted wooden frames.",
-   "cartButton": "Add to Cart",
-   "cartBtnClass": "btn btn-green",
-   "cartBtnLink": "/shop",
-   "priceText": 750
-  },
-  {
-   "imgSrc": "/images/frame-photo-3.png",
-   "imgWidth": 400,
-   "imgHeight": 400,
-   "imgAlt": "Hero Slider Image",
-   "btnText": "Shop Now",
-   "btnLink": "/shop",
-   "secondBtnText": "Customize Your Frame",
-   "secondBtnLink": "/customize",
-   "frameDescription": "Bring warmth and elegance to your space with premium handcrafted wooden frames.",
-   "cartButton": "Add to Cart",
-   "cartBtnClass": "btn btn-green",
-   "cartBtnLink": "/shop",
-   "priceText": 750
-  },
-  {
-   "imgSrc": "/images/frame-photo-3.png",
-   "imgWidth": 400,
-   "imgHeight": 400,
-   "imgAlt": "Hero Slider Image",
-   "btnText": "Shop Now",
-   "btnLink": "/shop",
-   "secondBtnText": "Customize Your Frame",
-   "secondBtnLink": "/customize",
-   "frameDescription": "Bring warmth and elegance to your space with premium handcrafted wooden frames.",
-   "cartButton": "Add to Cart",
-   "cartBtnClass": "btn btn-green",
-   "cartBtnLink": "/shop",
-   "priceText": 750
-  },
-  {
-   "imgSrc": "/images/frame-photo-3.png",
-   "imgWidth": 400,
-   "imgHeight": 400,
-   "imgAlt": "Hero Slider Image",
-   "btnText": "Shop Now",
-   "btnLink": "/shop",
-   "secondBtnText": "Customize Your Frame",
-   "secondBtnLink": "/customize",
-   "frameDescription": "Bring warmth and elegance to your space with premium handcrafted wooden frames.",
-   "cartButton": "Add to Cart",
-   "cartBtnClass": "btn btn-green",
-   "cartBtnLink": "/shop",
-   "priceText": 750
-  },
-  {
-   "imgSrc": "/images/frame-photo-3.png",
-   "imgWidth": 400,
-   "imgHeight": 400,
-   "imgAlt": "Hero Slider Image",
-   "btnText": "Shop Now",
-   "btnLink": "/shop",
-   "secondBtnText": "Customize Your Frame",
-   "secondBtnLink": "/customize",
-   "frameDescription": "Bring warmth and elegance to your space with premium handcrafted wooden frames.",
-   "cartButton": "Add to Cart",
-   "cartBtnClass": "btn btn-green",
-   "cartBtnLink": "/shop",
-   "priceText": 900
-  }
- ]
+   "customizeSliderData": [
+    {
+      "id": 1,
+      "badge": "Best Deal",
+      "frameImage": "/images/frame-photo-3.png",
+      "designImage": "/images/frame-design.jpg",
+      "uploadPosition": {
+        "top": "20.6%",
+        "left": "20.6%",
+        "width": "118px",
+        "height": "170px"
+      }
+    },
+    {
+      "id": 1,
+      "badge": "Best Deal",
+      "frameImage": "/images/frame-photo-3.png",
+      "designImage": "/images/frame-design.jpg",
+      "uploadPosition": {
+        "top": "20.6%",
+        "left": "20.6%",
+        "width": "118px",
+        "height": "170px"
+      }
+    },
+    {
+      "id": 1,
+      "badge": "Best Deal",
+      "frameImage": "/images/frame-photo-3.png",
+      "designImage": "/images/frame-design.jpg",
+      "uploadPosition": {
+        "top": "20.6%",
+        "left": "20.6%",
+        "width": "118px",
+        "height": "170px"
+      }
+    },
+    {
+      "id": 1,
+      "badge": "Best Deal",
+      "frameImage": "/images/frame-photo-3.png",
+      "designImage": "/images/frame-design.jpg",
+      "uploadPosition": {
+        "top": "20.6%",
+        "left": "20.6%",
+        "width": "118px",
+        "height": "170px"
+      }
+    },
+    {
+      "id": 1,
+      "badge": "Best Deal",
+      "frameImage": "/images/frame-photo-3.png",
+      "designImage": "/images/frame-design.jpg",
+      "uploadPosition": {
+        "top": "20.6%",
+        "left": "20.6%",
+        "width": "118px",
+        "height": "170px"
+      }
+    },
+    {
+      "id": 1,
+      "badge": "Best Deal",
+      "frameImage": "/images/frame-photo-3.png",
+      "designImage": "/images/frame-design.jpg",
+      "uploadPosition": {
+        "top": "20.6%",
+        "left": "20.6%",
+        "width": "118px",
+        "height": "170px"
+      }
+    },
+    {
+      "id": 1,
+      "badge": "Best Deal",
+      "frameImage": "/images/frame-photo-3.png",
+      "designImage": "/images/frame-design.jpg",
+      "uploadPosition": {
+        "top": "20.6%",
+        "left": "20.6%",
+        "width": "118px",
+        "height": "170px"
+      }
+    }
+  ]
+
+
 }

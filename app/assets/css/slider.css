@@ -51,3 +51,52 @@ w-10;
  /* -translate-y-1/2 */
  z-10
 }
+
+.card-swiper .swiper-button-next,
+.card-swiper .swiper-button-prev{
+ @apply
+ bg-green
+   border
+ border-green
+   transition-all
+   duration-300
+   size-10
+   flex
+   justify-center
+   items-center
+   rounded-full
+   hover:bg-transparent
+}
+
+.card-swiper .swiper-button-next svg,
+.card-swiper .swiper-button-prev svg{
+  @apply
+  w-4
+  h-4;
+}
+
+.card-swiper .swiper-button-next svg path,
+.card-swiper .swiper-button-prev svg path{
+  @apply
+    transition-all
+    duration-300
+  fill-white
+}
+.card-swiper .swiper-button-next:hover svg path,
+.card-swiper .swiper-button-prev:hover svg path,
+.card-swiper .swiper-button-next:focus svg path,
+.card-swiper .swiper-button-prev:focus svg path{
+  @apply
+  fill-green
+}
+
+.card-swiper .swiper-pagination-progressbar .swiper-pagination-progressbar-fill{
+  @apply
+  bg-primary
+  rounded-full!;
+}
+
+.card-swiper .swiper-pagination.swiper-pagination-progressbar{
+  @apply
+rounded-full!;
+}

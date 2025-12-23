@@ -1,76 +1,91 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination } from "swiper/modules";
+import { Pagination, Autoplay, Navigation } from "swiper/modules";
+import { Fancybox } from "@fancyapps/ui";
+import Image from "next/image";
+
+import data from "./card.json";
+
+import "@fancyapps/ui/dist/fancybox/fancybox.css";
 import "swiper/css";
 import "swiper/css/pagination";
-import customizeSliderContent from "./card.json";
-import Image from "next/image";
-import { Fancybox } from "@fancyapps/ui/dist/fancybox/";
-import "@fancyapps/ui/dist/fancybox/fancybox.css";
-import heic2any from "heic2any";
+import 'swiper/css/navigation';
 
-
-
-interface CardSlider {
-  imgSrc: string;
-  imgAlt: string;
-  imgWidth: number;
-  imgHeight: number;
+interface SliderItem {
+  id: number;
+  badge: string;
+  frameImage: string;
+  designImage: string;
+  uploadPosition: {
+    top: string;
+    left: string;
+    width: string;
+    height: string;
+  };
 }
-Fancybox.bind("[data-fancybox]", {});
 
-const CustomizeCard: React.FC = () => {
+let heic2any: any = null;
 
-  // store uploaded image per slide
+const CustomizeCard = () => {
+  const items: SliderItem[] = data.customizeSliderData;
+
   const [uploadedImages, setUploadedImages] = useState<(string | null)[]>(
-    Array(customizeSliderContent.customizeSliderData.length).fill(null)
+    Array(items.length).fill(null)
   );
 
-  const handleUpload = async (
-    index: number,
-    e: React.ChangeEvent<HTMLInputElement>
-  ) => {
-    const inputFile = e.target.files?.[0];
-    if (!inputFile) return;
+  /* Fancybox */
+  useEffect(() => {
+    Fancybox.bind("[data-fancybox]", {});
+    return () => Fancybox.destroy();
+  }, []);
 
-    let finalFile: File = inputFile;
+  /* Load HEIC converter */
+  useEffect(() => {
+    import("heic2any").then((mod) => (heic2any = mod.default));
+  }, []);
 
-    // Convert HEIC / HEIF → JPG
-    if (
-      inputFile.type === "image/heic" ||
-      inputFile.type === "image/heif"
-    ) {
-      const convertedBlob = (await heic2any({
-        blob: inputFile,
-        toType: "image/jpeg",
-        quality: 0.9,
-      })) as Blob;
+  const handleUpload = useCallback(
+    async (index: number, e: React.ChangeEvent<HTMLInputElement>) => {
+      const file = e.target.files?.[0];
+      if (!file) return;
 
-      // ✅ Convert Blob to File
-      finalFile = new File(
-        [convertedBlob],
-        inputFile.name.replace(/\.(heic|heif)$/i, ".jpg"),
-        { type: "image/jpeg" }
-      );
-    }
+      let finalFile = file;
 
-    const reader = new FileReader();
-    reader.onload = () => {
-      setUploadedImages((prev) => {
-        const updated = [...prev];
-        updated[index] = reader.result as string;
-        return updated;
-      });
-    };
+      if (
+        (file.type === "image/heic" || file.type === "image/heif") &&
+        heic2any
+      ) {
+        const blob = await heic2any({
+          blob: file,
+          toType: "image/jpeg",
+          quality: 0.9,
+        });
 
-    reader.readAsDataURL(finalFile);
-  };
+        finalFile = new File(
+          [blob],
+          file.name.replace(/\.(heic|heif)$/i, ".jpg"),
+          { type: "image/jpeg" }
+        );
+      }
+
+      const reader = new FileReader();
+      reader.onload = () =>
+        setUploadedImages((prev) => {
+          const copy = [...prev];
+          copy[index] = reader.result as string;
+          return copy;
+        });
+
+      reader.readAsDataURL(finalFile);
+    },
+    []
+  );
 
   return (
     <Swiper
-      modules={[Pagination, Autoplay]}
+      modules={[Autoplay, Pagination, Navigation]}
       slidesPerView={1}
       spaceBetween={10}
       breakpoints={{
@@ -78,61 +93,83 @@ const CustomizeCard: React.FC = () => {
         768: { slidesPerView: 3 },
         1024: { slidesPerView: 4 },
       }}
-      pagination={{ clickable: true }}
+          pagination={{
+          type: 'progressbar',
+        }}
+        navigation={true}
       autoplay={false}
       loop
       className="card-swiper pb-11"
     >
-      {customizeSliderContent.customizeSliderData.map(
-        (item: CardSlider, index: number) => (
-          <SwiperSlide key={index}>
-            <div className="card-swiper border border-primary/20 rounded-md bg-white p-4 flex flex-col items-center relative z-1 overflow-hidden before:absolute before:top-0 before:left-0 before:w-full before:h-10 before:bg-primary/10 before:rounded-full before:skew-12">
+      {items.map((item, index) => (
+        <SwiperSlide key={item.id}>
+          <div className="relative flex flex-col items-center bg-white border border-primary/20 rounded-md p-4 overflow-hidden">
+            {/* Badge */}
+            <span className="absolute top-2 -left-12 -rotate-45 z-30 text-xs font-bold text-white bg-green py-2 pr-2 w-40 text-center uppercase">
+              {item.badge}
+            </span>
 
-              <span className="absolute top-2 -left-12 -rotate-45 z-30 text-xs font-bold text-white bg-green py-2 pr-2 w-40 text-center uppercase">Best Deal</span>
+            {/* Frame */}
+            <div className="relative w-[200px] h-72">
+              {uploadedImages[index] && (
+                <img
+                  src={uploadedImages[index]!}
+                  alt="Uploaded"
+                  style={{
+                    top: item.uploadPosition.top,
+                    left: item.uploadPosition.left,
+                    width: item.uploadPosition.width,
+                    height: item.uploadPosition.height,
+                  }}
+                  className="absolute object-cover z-30"
+                />
+              )}
 
-              {/* Frame + Image */}
-              <div className="relative w-[200px] h-72 overflow-hidden">
-                {/* Uploaded Image */}
-                {uploadedImages[index] && (
-                  <img
-                    src={uploadedImages[index]!}
-                    alt="Uploaded"
-                    className="absolute top-[20.6%] left-[20.6%] w-[118px] h-[170px] object-cover z-30"
-                  />
-                )}
+              <Image
+                src={item.frameImage}
+                alt="Frame"
+                fill
+                priority
+                className="object-contain pointer-events-none"
+              />
+            </div>
 
-                {/* Frame Image */}
+            {/* Actions */}
+            <div className="flex items-center justify-between w-full pt-5">
+              <label className="w-8/12 text-xs text-primary cursor-pointer">
+                <span className="border border-dashed border-primary p-2 hover:border-green transition duration-300 hover:text-green">
+                  Upload Photo
+                </span>
+                <input
+                  type="file"
+                  accept="image/*"
+                  onChange={(e) => handleUpload(index, e)}
+                  className="hidden"
+                />
+              </label>
+
+              <a
+                href={`#design-${item.id}`}
+                data-fancybox
+                className="btn btn-green"
+              >
+                Design
+              </a>
+
+              <div id={`design-${item.id}`} className="hidden">
                 <Image
-                  src="/images/frame-photo-3.png"
-                  alt="Frame"
-                  // capture='environment'
-                  fill
-                  className="object-contain z-20 pointer-events-none"
-                  priority
+                  src={item.designImage}
+                  width={600}
+                  height={600}
+                  alt="Frame Design"
                 />
               </div>
-
-              {/* Upload Button */}
-              <div className="flex items-center justify-between w-full pt-5">
-                <label className="text-xs text-primary cursor-pointer w-8/12">
-                  <span className="border border-dashed border-primary p-2 hover:border-green transition-all duration-300 hover:text-green">Upload Photo</span>
-                  <input
-                    type="file"
-                    accept="image/*"
-                    onChange={(e) => handleUpload(index, e)}
-                    className="hidden"
-                  />
-                </label>
-                <a href="#design" data-fancybox className="btn btn-green">Design</a>
-                <div className="hidden" id="design">
-                  <h5>Choose Design</h5>
-                </div>
-              </div>
             </div>
-          </SwiperSlide>
-        )
-      )}
+          </div>
+        </SwiperSlide>
+      ))}
     </Swiper>
+       
   );
 };
 

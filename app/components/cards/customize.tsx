@@ -90,13 +90,14 @@ const CustomizeCard = () => {
       spaceBetween={10}
       breakpoints={{
         640: { slidesPerView: 2 },
-        768: { slidesPerView: 3 },
+        768: { slidesPerView: 2 },
         1024: { slidesPerView: 4 },
       }}
-          pagination={{
-          type: 'progressbar',
-        }}
-        navigation={true}
+
+      pagination={{
+        type: 'progressbar',
+      }}
+      navigation={true}
       autoplay={false}
       loop
       className="card-swiper pb-11"
@@ -156,7 +157,7 @@ const CustomizeCard = () => {
                 Design
               </a>
 
-              <div id={`design-${item.id}`} className="hidden">
+              <div id={`design-${item.id}`} className="hidden max-w-[90%] lg:max-w-[40%]!">
                 <Image
                   src={item.designImage}
                   width={600}
@@ -169,7 +170,7 @@ const CustomizeCard = () => {
         </SwiperSlide>
       ))}
     </Swiper>
-       
+
   );
 };
 

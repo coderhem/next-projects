@@ -66,6 +66,8 @@ w-10;
    items-center
    rounded-full
    hover:bg-transparent
+   focus:bg-transparent
+   active:bg-transparent
 }
 
 .card-swiper .swiper-button-next svg,
@@ -87,7 +89,7 @@ w-10;
 .card-swiper .swiper-button-next:focus svg path,
 .card-swiper .swiper-button-prev:focus svg path{
   @apply
-  fill-green
+  fill-green;
 }
 
 .card-swiper .swiper-pagination-progressbar .swiper-pagination-progressbar-fill{

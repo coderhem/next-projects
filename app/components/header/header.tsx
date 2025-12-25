@@ -5,6 +5,7 @@ import navLinksData from './header.json';
 import Image from 'next/image';
 import headerLogo from '../../../public/images/frame-hub-header-logo.png';
 import Link from 'next/link';
+import { useCartStore } from '@/app/store/cartStore';
 
 interface topHeaderItem {
  anchorLink: string;
@@ -25,6 +26,9 @@ const Header: React.FC = ({ }) => {
  const handleClick = () => {
   setActive((prev) => !prev);
  }
+
+   const cart = useCartStore((state) => state.cart);
+;
 
  useEffect(() => {
   if (active) {
@@ -103,7 +107,7 @@ const Header: React.FC = ({ }) => {
          <div className="[&_a]:text-white! [&_a]:text-2xl [&_a]:relative flex gap-8">
           <Link href="/cart">
            <i className="fa fa-shopping-cart" aria-hidden="true"></i>
-           <span className='absolute bg-pink -right-3 text-white text-xs rounded-full size-4 inline-flex justify-center items-center'>0</span>
+           <span className='absolute bg-pink -right-3 text-white text-xs rounded-full size-4 inline-flex justify-center items-center'>{cart.length}</span>
           </Link>
           <Link href="/login">
            <i className="fa fa-user" aria-hidden="true"></i>

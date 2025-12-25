@@ -1,6 +1,7 @@
 {
  "cardSliderData": [
   {
+   "id": 1,
    "imgSrc": "/images/frame-photo-3.png",
    "imgWidth": 400,
    "imgHeight": 400,
@@ -16,6 +17,7 @@
    "priceText": 750
   },
   {
+    "id": 2,
    "imgSrc": "/images/frame-photo.png",
    "imgWidth": 400,
    "imgHeight": 400,
@@ -31,6 +33,7 @@
    "priceText": 750
   },
   {
+    "id": 3,
    "imgSrc": "/images/frame-photo-2.png",
    "imgWidth": 400,
    "imgHeight": 400,
@@ -46,6 +49,7 @@
    "priceText": 750
   },
   {
+    "id": 4,
    "imgSrc": "/images/frame-photo-2.png",
    "imgWidth": 400,
    "imgHeight": 400,
@@ -61,6 +65,7 @@
    "priceText": 750
   },
   {
+   "id": 5,
    "imgSrc": "/images/frame-photo-3.png",
    "imgWidth": 400,
    "imgHeight": 400,

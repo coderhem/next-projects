@@ -103,7 +103,7 @@ const CustomizeCard = () => {
       className="card-swiper pb-11"
     >
       {items.map((item, index) => (
-        <SwiperSlide key={item.id}>
+        <SwiperSlide key={index}>
           <div className="relative flex flex-col items-center bg-white border border-primary/20 rounded-md p-4 overflow-hidden">
             {/* Badge */}
             <span className="absolute top-2 -left-12 -rotate-45 z-30 text-xs font-bold text-white bg-green py-2 pr-2 w-40 text-center uppercase">

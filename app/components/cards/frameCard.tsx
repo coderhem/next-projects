@@ -6,8 +6,10 @@ import "swiper/css/pagination";
 import { Autoplay, Pagination } from "swiper/modules";
 import cardSliderContent from "./card.json";
 import Image from "next/image";
+import { useCartStore } from "@/app/store/cartStore";
 
 interface CardSlider {
+  id: number;
   imgSrc: string;
   imgAlt: string;
   imgWidth: number;
@@ -22,6 +24,9 @@ interface CardSlider {
 }
 
 const FrameCard: React.FC = () => {
+
+  const addToCart = useCartStore((state) => state.addToCart);
+
   const handleMouseMove = (
     e: React.MouseEvent<HTMLDivElement>,
     img: HTMLImageElement | null
@@ -70,7 +75,7 @@ const FrameCard: React.FC = () => {
       {cardSliderContent.cardSliderData.map((item: CardSlider, index: number) => {
         const imgRef = useRef<HTMLImageElement | null>(null);
         return (
-          <SwiperSlide key={index} className=" h-auto!">
+          <SwiperSlide key={`${item.id}-${index}`} className=" h-auto!">
             <div className="card-swiper shadow border border-primary/20 relative rounded-md bg-white pb-3 flex justify-between flex-col  h-full">
               <div className="image-container overflow-hidden px-4 pt-3 flex justify-center"
                 onMouseMove={(e) =>
@@ -103,7 +108,13 @@ const FrameCard: React.FC = () => {
                 <div dangerouslySetInnerHTML={{ __html: item.frameDescription }} />
                 <div className="pt-4 flex justify-between items-center">
                   <span className="text-pink font-semibold">Rs.{item.priceText}</span>
-                  <a href={item.cartBtnLink} className={item.cartBtnClass}>{item.cartButton}</a>
+                  <button
+                    onClick={() =>
+                      addToCart({
+                        id: item.id,
+                      })
+                    }
+                    className={item.cartBtnClass}>{item.cartButton}</button>
                 </div>
               </div>
             </div>
